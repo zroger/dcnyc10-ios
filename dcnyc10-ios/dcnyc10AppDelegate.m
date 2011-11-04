@@ -12,6 +12,8 @@
 
 #import "dcnyc10SecondViewController.h"
 
+#import <RestKit/RestKit.h>
+
 @implementation dcnyc10AppDelegate
 
 @synthesize window = _window;
