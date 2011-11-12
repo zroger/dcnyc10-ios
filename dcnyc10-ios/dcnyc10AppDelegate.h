@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RestKit/RestKit.h>
 
-@interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,RKObjectLoaderDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
+- (void) initObjectManager;
+- (void) demoReachability;
+- (void) loadRemoteObjects;
 
 @end
