@@ -131,10 +131,10 @@
 
 - (void)demoReachability {
     // Check if the network is available
-    [[RKClient sharedClient] isNetworkAvailable];
-    // Register for changes in network availability
-    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
-    [center addObserver:self selector:@selector(reachabilityDidChange:) name:RKReachabilityStateChangedNotification object:nil];
+//    [[RKClient sharedClient] isNetworkReachable];
+//    // Register for changes in network availability
+//    NSNotificationCenter* center = [NSNotificationCenter defaultCenter];
+//    [center addObserver:self selector:@selector(reachabilityDidChange:) name:RKReachabilityDidChangeNotification object:nil];
 }
 
 - (void)reachabilityDidChange:(NSNotification *)notification {
