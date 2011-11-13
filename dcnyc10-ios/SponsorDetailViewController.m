@@ -13,6 +13,8 @@
 @synthesize sponsor;
 @synthesize titleTextView;
 @synthesize descriptionTextView;
+@synthesize urlTextView;
+@synthesize logoImageView;
 @synthesize scrollView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -41,6 +43,13 @@
 
     self.title = sponsor.title;
 
+    titleTextView.text = [sponsor title];
+    descriptionTextView.text = [sponsor body];
+    urlTextView.text = [sponsor url];
+
+    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
+    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+    logoImageView.image = [UIImage imageWithData:imageData];
 }
 
 - (void)viewDidUnload

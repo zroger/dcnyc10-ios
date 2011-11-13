@@ -9,6 +9,7 @@
 #import "SessionsTable.h"
 #import "CodSession.h"
 #import "SessionDetail.h"
+#import "SessionTableViewCell.h"
 
 @implementation SessionsTable
 
@@ -54,6 +55,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = NSLocalizedString(@"Sessions", @"Sessions");
+
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
     self.fetchedResultsController = [CodSession fetchRequestAllGroupedBy:@"start" 
                                                            withPredicate:predicate
@@ -67,13 +70,6 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.title = NSLocalizedString(@"Sessions", @"Sessions");
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -115,9 +111,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    NSArray *sections = [fetchedResultsController sections];
-    NSLog(@"%@", sections);
-    return [sections count];
+    return [[fetchedResultsController sections] count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -130,43 +124,43 @@
     [dateFormatter setDateFormat:@"EEE MMM d, h:mm a"];
 
     return [dateFormatter stringFromDate:session.start];
-    
-    
-//    NSLog(@"%@", session.start);
-//    return sectionInfo.name;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-//    NSError* error = nil;
-//    NSUInteger count = [CodSession count:&error];
-//    return count;
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    CodSession *session = [fetchedResultsController objectAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [session title];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Room %@", [session room]];
+- (void)configureCell:(SessionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.session = [fetchedResultsController objectAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSLog(@"cell created");
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+
+        // Create a temporary UIViewController to instantiate the custom cell.
+        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SessionTableViewCell" bundle:nil];
+        // Grab a pointer to the custom cell.
+        cell = (SessionTableViewCell *)temporaryController.view;
+        // Release the temporary UIViewController.
+        [temporaryController release];
     }
 
     // Configure the cell...
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78.0;
 }
 
 /*
@@ -214,9 +208,8 @@
 {
     // Navigation logic may go here. Create and push another view controller.
     SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-//    detailViewController.session = [sessions objectAtIndex:indexPath.row];
+
+    // Pass the selected object to the new view controller.
     detailViewController.session = [fetchedResultsController objectAtIndexPath:indexPath];
 
     [self.navigationController pushViewController:detailViewController animated:YES];
@@ -246,7 +239,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(SessionTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
