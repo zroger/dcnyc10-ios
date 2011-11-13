@@ -11,6 +11,7 @@
 #import "dcnyc10SecondViewController.h"
 
 #import "SessionsTable.h"
+#import "DashboardViewController.h"
 
 #import "CodSession.h"
 #import <RestKit/CoreData/CoreData.h>
@@ -19,6 +20,7 @@
 
 @synthesize window = _window;
 @synthesize tabBarController = _tabBarController;
+@synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
@@ -31,18 +33,17 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UIViewController *viewController1, *viewController2;
+    DashboardViewController *dashboard;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        SessionsTable *sessionsController = [[[SessionsTable alloc] initWithNibName:@"SessionsTable" bundle:nil] autorelease];
-        viewController1 = [[[UINavigationController alloc] initWithRootViewController:sessionsController] autorelease];
-        viewController2 = [[[dcnyc10SecondViewController alloc] initWithNibName:@"dcnyc10SecondViewController_iPhone" bundle:nil] autorelease];
+        dashboard = [[[DashboardViewController alloc] initWithNibName:@"DashboardViewController" bundle:nil] autorelease];
     } else {
-        viewController1 = [[[SessionsTable alloc] initWithNibName:@"SessionsTable" bundle:nil] autorelease];
-        viewController2 = [[[dcnyc10SecondViewController alloc] initWithNibName:@"dcnyc10SecondViewController_iPad" bundle:nil] autorelease];
+        // TODO: iPad view.
+        dashboard = [[[DashboardViewController alloc] initWithNibName:@"DashboardViewController" bundle:nil] autorelease];
     }
-    self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-    self.window.rootViewController = self.tabBarController;
+
+    self.navigationController = [[[UINavigationController alloc] initWithRootViewController:dashboard] autorelease];
+
+    self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];
 
     [self initObjectManager];

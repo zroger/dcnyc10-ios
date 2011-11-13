@@ -40,14 +40,13 @@
     // Do any additional setup after loading the view from its nib.
     self.title = session.title;
     titleTextView.text = session.title;
-    descriptionTextView.text = session.body;
-    
+    descriptionTextView.text = session.body;    
+
     CGRect frame = descriptionTextView.frame;
     frame.size.height = descriptionTextView.contentSize.height;
     descriptionTextView.frame = frame;
-
-    frame.size.height = scrollView.contentSize.height;
-    scrollView.frame = frame;    
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
 }
 
 - (void)viewDidUnload

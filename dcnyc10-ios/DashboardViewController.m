@@ -7,6 +7,7 @@
 //
 
 #import "DashboardViewController.h"
+#import "SessionsTable.h"
 
 @implementation DashboardViewController
 
@@ -43,10 +44,28 @@
     // e.g. self.myOutlet = nil;
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    self.title = @"DrupalCampNYC 10";
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    // Change the title to "Home" to get a shorter back button.
+    self.title = @"Home";
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)gotoSessions:(id)sender
+{
+    SessionsTable *sessionsTableController = [[SessionsTable alloc] initWithNibName:@"SessionsTable" bundle:nil];
+    [self.navigationController pushViewController:sessionsTableController animated:YES];
+    [sessionsTableController release];
 }
 
 @end

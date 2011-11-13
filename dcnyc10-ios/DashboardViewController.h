@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DashboardViewController : UINavigationController
+@interface DashboardViewController : UIViewController
+
+- (IBAction)gotoSessions:(id)sender;
 
 @end
