@@ -34,6 +34,14 @@
 		62336F62146D7017003E1F6D /* SessionsTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62336F60146D7017003E1F6D /* SessionsTable.xib */; };
 		62467361146DED400014D13D /* SessionDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6246735F146DED400014D13D /* SessionDetail.m */; };
 		62467362146DED400014D13D /* SessionDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62467360146DED400014D13D /* SessionDetail.xib */; };
+		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
+		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
+		62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E8B146F702F001E00A1 /* bg_full-screen-light.png */; };
+		62786E8F146F80B0001E00A1 /* CodSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E8E146F80B0001E00A1 /* CodSponsor.m */; };
+		62786E93146F8311001E00A1 /* SponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E91146F8311001E00A1 /* SponsorsTableViewController.m */; };
+		62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */; };
+		62786E98146F8C7F001E00A1 /* SponsorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */; };
+		62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */; };
 		62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E31514648BFF00EC7C9D /* libRestKitCoreData.a */; };
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
@@ -170,6 +178,17 @@
 		6246735E146DED400014D13D /* SessionDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetail.h; sourceTree = "<group>"; };
 		6246735F146DED400014D13D /* SessionDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetail.m; sourceTree = "<group>"; };
 		62467360146DED400014D13D /* SessionDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionDetail.xib; sourceTree = "<group>"; };
+		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
+		62786E8B146F702F001E00A1 /* bg_full-screen-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_full-screen-light.png"; sourceTree = "<group>"; };
+		62786E8D146F80B0001E00A1 /* CodSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSponsor.h; sourceTree = "<group>"; };
+		62786E8E146F80B0001E00A1 /* CodSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSponsor.m; sourceTree = "<group>"; };
+		62786E90146F8311001E00A1 /* SponsorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorsTableViewController.h; sourceTree = "<group>"; };
+		62786E91146F8311001E00A1 /* SponsorsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorsTableViewController.m; sourceTree = "<group>"; };
+		62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorsTableViewController.xib; sourceTree = "<group>"; };
+		62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorDetailViewController.h; sourceTree = "<group>"; };
+		62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorDetailViewController.m; sourceTree = "<group>"; };
+		62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorDetailViewController.xib; sourceTree = "<group>"; };
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62E08867146EDE2A00DC1585 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
@@ -212,6 +231,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				62786E87146F6E73001E00A1 /* Default@2x.png */,
 				62A1B27C1465C04600140C9F /* CoreData.framework */,
 				6215E32014648CE300EC7C9D /* CFNetwork.framework */,
 				6215E32114648CE300EC7C9D /* MobileCoreServices.framework */,
@@ -292,6 +312,8 @@
 			children = (
 				6215E328146490C300EC7C9D /* CodSession.h */,
 				6215E329146490C300EC7C9D /* CodSession.m */,
+				62786E8D146F80B0001E00A1 /* CodSponsor.h */,
+				62786E8E146F80B0001E00A1 /* CodSponsor.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -308,6 +330,12 @@
 				62E08867146EDE2A00DC1585 /* DashboardViewController.h */,
 				62E08868146EDE2A00DC1585 /* DashboardViewController.m */,
 				62E08869146EDE2A00DC1585 /* DashboardViewController.xib */,
+				62786E90146F8311001E00A1 /* SponsorsTableViewController.h */,
+				62786E91146F8311001E00A1 /* SponsorsTableViewController.m */,
+				62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */,
+				62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */,
+				62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */,
+				62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -315,6 +343,8 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				62786E8B146F702F001E00A1 /* bg_full-screen-light.png */,
+				62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */,
 				62E0886C146EDE7C00DC1585 /* Dashboard */,
 				6215E2D41464853B00EC7C9D /* first.png */,
 				6215E2D61464853B00EC7C9D /* first@2x.png */,
@@ -510,6 +540,11 @@
 				62E0887C146EDE9B00DC1585 /* icn_main-speakers.png in Resources */,
 				62E0887D146EDE9B00DC1585 /* icn_main-sponsors.png in Resources */,
 				62E0887E146EDE9B00DC1585 /* icn_main-tweets.png in Resources */,
+				62786E88146F6E73001E00A1 /* Default@2x.png in Resources */,
+				62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */,
+				62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */,
+				62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */,
+				62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +563,9 @@
 				62336F61146D7017003E1F6D /* SessionsTable.m in Sources */,
 				62467361146DED400014D13D /* SessionDetail.m in Sources */,
 				62E0886A146EDE2A00DC1585 /* DashboardViewController.m in Sources */,
+				62786E8F146F80B0001E00A1 /* CodSponsor.m in Sources */,
+				62786E93146F8311001E00A1 /* SponsorsTableViewController.m in Sources */,
+				62786E98146F8C7F001E00A1 /* SponsorDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

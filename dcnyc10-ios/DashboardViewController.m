@@ -8,6 +8,7 @@
 
 #import "DashboardViewController.h"
 #import "SessionsTable.h"
+#import "SponsorsTableViewController.h"
 
 @implementation DashboardViewController
 
@@ -66,6 +67,13 @@
     SessionsTable *sessionsTableController = [[SessionsTable alloc] initWithNibName:@"SessionsTable" bundle:nil];
     [self.navigationController pushViewController:sessionsTableController animated:YES];
     [sessionsTableController release];
+}
+
+- (IBAction)gotoSponsors:(id)sender
+{
+    SponsorsTableViewController *sponsorsTableViewController = [[SponsorsTableViewController alloc] initWithNibName:@"SponsorsTableViewController" bundle:nil];
+    [self.navigationController pushViewController:sponsorsTableViewController animated:YES];
+    [SponsorsTableViewController release];
 }
 
 @end

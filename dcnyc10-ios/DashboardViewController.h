@@ -11,5 +11,6 @@
 @interface DashboardViewController : UIViewController
 
 - (IBAction)gotoSessions:(id)sender;
+- (IBAction)gotoSponsors:(id)sender;
 
 @end

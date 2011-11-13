@@ -14,6 +14,8 @@
 #import "DashboardViewController.h"
 
 #import "CodSession.h"
+#import "CodSponsor.h"
+
 #import <RestKit/CoreData/CoreData.h>
 
 @implementation dcnyc10AppDelegate
@@ -112,10 +114,12 @@
     manager.objectStore = objectStore;
 
     [CodSession initObjectMapping];
+    [CodSponsor initObjectMapping];
 }
 
 - (void)loadRemoteObjects {
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/sponsor" delegate:self]; 
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {

@@ -1,35 +1,24 @@
 //
-//  SessionsTable.m
+//  SponsorsTableViewController.m
 //  dcnyc10-ios
 //
-//  Created by Roger Lopez on 11/11/11.
+//  Created by Roger Lopez on 11/12/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SessionsTable.h"
-#import "CodSession.h"
-#import "SessionDetail.h"
+#import "SponsorsTableViewController.h"
+#import "CodSponsor.h"
+#import "SponsorDetailViewController.h"
 
-@implementation SessionsTable
+@implementation SponsorsTableViewController
 
-@synthesize sessions;
 @synthesize fetchedResultsController;
 
 - (void)dealloc {
     self.fetchedResultsController.delegate = nil;
     self.fetchedResultsController = nil;
-
-    [sessions release];
+    
     [super dealloc];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"Sessions", @"Sessions");
-    }
-    return self;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -37,6 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        self.title = NSLocalizedString(@"Sponsors", @"Sponsors");
     }
     return self;
 }
@@ -54,26 +44,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
-    self.fetchedResultsController = [CodSession fetchRequestAllGroupedBy:@"start" 
-                                                           withPredicate:predicate
-                                                                sortedBy:@"start" 
+
+    self.title = NSLocalizedString(@"Sponsors", @"Sponsors");
+
+//    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
+    self.fetchedResultsController = [CodSponsor fetchRequestAllGroupedBy:@"level" 
+                                                           withPredicate:nil
+                                                                sortedBy:@"level" 
                                                                ascending:true];
     self.fetchedResultsController.delegate = self;
-
+    
     NSError *error;
 	if (![self.fetchedResultsController performFetch:&error]) {
 		// Update to handle the error appropriately.
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.title = NSLocalizedString(@"Sessions", @"Sessions");
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewDidUnload
@@ -111,7 +97,6 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -123,35 +108,29 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
-    CodSession *session = [[sectionInfo objects] objectAtIndex:0];
-
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
-    [dateFormatter setDateFormat:@"EEE MMM d, h:mm a"];
-
-    return [dateFormatter stringFromDate:session.start];
-    
-    
-//    NSLog(@"%@", session.start);
-//    return sectionInfo.name;
+    return sectionInfo.name;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-//    NSError* error = nil;
-//    NSUInteger count = [CodSession count:&error];
-//    return count;
+    //    NSError* error = nil;
+    //    NSUInteger count = [CodSession count:&error];
+    //    return count;
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    CodSession *session = [fetchedResultsController objectAtIndexPath:indexPath];
+    CodSponsor *sponsor = [fetchedResultsController objectAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [session title];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Room %@", [session room]];
+    cell.textLabel.text = [sponsor title];
+    cell.detailTextLabel.text = [sponsor url];
+
+    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
+    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+    cell.imageView.image = [UIImage imageWithData:imageData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -163,62 +142,61 @@
         NSLog(@"cell created");
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
     }
-
+    
     // Configure the cell...
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }   
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-//    detailViewController.session = [sessions objectAtIndex:indexPath.row];
-    detailViewController.session = [fetchedResultsController objectAtIndexPath:indexPath];
-
+    SponsorDetailViewController *detailViewController = [[SponsorDetailViewController alloc] initWithNibName:@"SponsorDetailViewController" bundle:nil];
+    // ...
+    // Pass the selected object to the new view controller.
+    detailViewController.sponsor = [fetchedResultsController objectAtIndexPath:indexPath];
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
 }

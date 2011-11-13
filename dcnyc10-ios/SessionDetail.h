@@ -14,7 +14,11 @@
 
 @property (nonatomic, retain) CodSession *session;
 @property (nonatomic, retain) IBOutlet UITextView *titleTextView;
+@property (nonatomic, retain) IBOutlet UITextView *dateTextView;
 @property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
+
+@property (nonatomic, retain) IBOutlet UILabel *roomLabel;
+@property (nonatomic, retain) IBOutlet UILabel *trackLabel;
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
 
