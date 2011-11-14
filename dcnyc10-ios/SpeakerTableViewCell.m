@@ -7,6 +7,7 @@
 //
 
 #import "SpeakerTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation SpeakerTableViewCell
 
@@ -43,9 +44,9 @@
         textLabel.text = [NSString stringWithFormat:@"%@ %@", speaker.first_name, speaker.last_name];
         detailTextLabel.text = speaker.organization;
         
-        NSURL * imageURL = [NSURL URLWithString:speaker.picture];
-        NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-        imageView.image = [UIImage imageWithData:imageData];
+        [imageView setImageWithURL:[NSURL URLWithString:speaker.picture]
+                       placeholderImage:[UIImage imageNamed:@"Contact.png"]];
+
     }
 }
 

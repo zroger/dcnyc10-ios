@@ -10,6 +10,7 @@
 #import "CodSpeaker.h"
 #import "SpeakerDetailView.h"
 #import "SpeakerTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @implementation SpeakerTableView
 
@@ -104,32 +105,24 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+- (void)configureCell:(SpeakerTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     CodSpeaker *speaker = [fetchedResultsController objectAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", speaker.first_name, speaker.last_name];
-    cell.detailTextLabel.text = speaker.organization;
-    
-    NSURL * imageURL = [NSURL URLWithString:speaker.picture];
-    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-    cell.imageView.image = [UIImage imageWithData:imageData];
+    cell.speaker = speaker;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SpeakerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSLog(@"cell created");
-//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
         // Create a temporary UIViewController to instantiate the custom cell.
         UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SpeakerTableViewCell" bundle:nil];
         // Grab a pointer to the custom cell.
         cell = (SpeakerTableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
-
     }
     
     // Configure the cell...

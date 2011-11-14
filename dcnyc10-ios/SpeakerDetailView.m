@@ -49,9 +49,9 @@
     titleLabel.text = self.title;
     organizationLabel.text = speaker.organization;
 
-    NSURL * imageURL = [NSURL URLWithString:speaker.picture];
-    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-    imageView.image = [UIImage imageWithData:imageData];
+    [imageView setImageWithURL:[NSURL URLWithString:speaker.picture]
+              placeholderImage:[UIImage imageNamed:@"Contact.png"]];
+    
 
     CGRect frame = sessionsTableView.frame;
     frame.size.height = speaker.sessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;

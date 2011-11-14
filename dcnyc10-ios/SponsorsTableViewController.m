@@ -9,6 +9,7 @@
 #import "SponsorsTableViewController.h"
 #import "CodSponsor.h"
 #import "SponsorDetailViewController.h"
+#import "UIImageView+WebCache.h"
 
 @implementation SponsorsTableViewController
 
@@ -128,9 +129,12 @@
     cell.textLabel.text = [sponsor title];
     cell.detailTextLabel.text = [sponsor url];
 
-    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
-    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-    cell.imageView.image = [UIImage imageWithData:imageData];
+//    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
+//    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+//    cell.imageView.image = [UIImage imageWithData:imageData];
+    // Here we use the new provided setImageWithURL: method to load the web image
+    [cell.imageView setImageWithURL:[NSURL URLWithString:sponsor.logo]
+                   placeholderImage:[UIImage imageNamed:@"Contact.png"]];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
