@@ -10,6 +10,7 @@
 #import "CodSession.h"
 #import "SessionDetail.h"
 #import "SessionTableViewCell.h"
+#import "TestFlight.h"
 
 @implementation SessionsTable
 
@@ -83,6 +84,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [TestFlight passCheckpoint:@"Sessions Table View"];
 }
 
 - (void)viewDidAppear:(BOOL)animated

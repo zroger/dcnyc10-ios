@@ -10,6 +10,7 @@
 #import "SessionsTable.h"
 #import "SponsorsTableViewController.h"
 #import "SpeakerTableView.h"
+#import "TestFlight.h"
 
 @implementation DashboardViewController
 
@@ -49,6 +50,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     self.title = @"DrupalCampNYC 10";
+    [TestFlight passCheckpoint:@"Dashboard View"];
 }
 
 - (void) viewWillDisappear:(BOOL)animated

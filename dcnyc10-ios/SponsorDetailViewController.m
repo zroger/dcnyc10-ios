@@ -7,6 +7,7 @@
 //
 
 #import "SponsorDetailViewController.h"
+#import "TestFlight.h"
 
 @implementation SponsorDetailViewController
 
@@ -65,4 +66,8 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [TestFlight passCheckpoint:@"Sponsor Detail View"];
+}
 @end

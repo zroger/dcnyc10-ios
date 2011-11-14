@@ -10,6 +10,7 @@
 #import "CodSponsor.h"
 #import "SponsorDetailViewController.h"
 #import "UIImageView+WebCache.h"
+#import "TestFlight.h"
 
 @implementation SponsorsTableViewController
 
@@ -74,6 +75,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [TestFlight passCheckpoint:@"Sponsors Table View"];
 }
 
 - (void)viewDidAppear:(BOOL)animated

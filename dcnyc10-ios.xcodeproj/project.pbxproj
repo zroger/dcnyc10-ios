@@ -44,6 +44,9 @@
 		625EFCED14717C0B00DDED6F /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFCE314717C0B00DDED6F /* UIButton+WebCache.m */; };
 		625EFCEE14717C0B00DDED6F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFCE514717C0B00DDED6F /* UIImageView+WebCache.m */; };
 		625EFCF014717D3900DDED6F /* Contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCEF14717D3900DDED6F /* Contact.png */; };
+		625EFCF61471951F00DDED6F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625EFCF21471951F00DDED6F /* libTestFlight.a */; };
+		625EFCF71471951F00DDED6F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF31471951F00DDED6F /* README.txt */; };
+		625EFCF81471951F00DDED6F /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF41471951F00DDED6F /* release_notes.txt */; };
 		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
 		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
 		62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E8B146F702F001E00A1 /* bg_full-screen-light.png */; };
@@ -219,6 +222,10 @@
 		625EFCE414717C0B00DDED6F /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		625EFCE514717C0B00DDED6F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		625EFCEF14717D3900DDED6F /* Contact.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contact.png; sourceTree = "<group>"; };
+		625EFCF21471951F00DDED6F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		625EFCF31471951F00DDED6F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		625EFCF41471951F00DDED6F /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		625EFCF51471951F00DDED6F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
 		62786E8B146F702F001E00A1 /* bg_full-screen-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_full-screen-light.png"; sourceTree = "<group>"; };
@@ -278,6 +285,7 @@
 				6215E2C01464853B00EC7C9D /* UIKit.framework in Frameworks */,
 				6215E2C21464853B00EC7C9D /* Foundation.framework in Frameworks */,
 				6215E2C41464853B00EC7C9D /* CoreGraphics.framework in Frameworks */,
+				625EFCF61471951F00DDED6F /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				625EFCF11471951F00DDED6F /* TestFlightSDK0.8 */,
 				625EFCD114717C0B00DDED6F /* SDWebImage */,
 				62786E87146F6E73001E00A1 /* Default@2x.png */,
 				62A1B27C1465C04600140C9F /* CoreData.framework */,
@@ -415,6 +424,17 @@
 				625EFCE514717C0B00DDED6F /* UIImageView+WebCache.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		625EFCF11471951F00DDED6F /* TestFlightSDK0.8 */ = {
+			isa = PBXGroup;
+			children = (
+				625EFCF21471951F00DDED6F /* libTestFlight.a */,
+				625EFCF31471951F00DDED6F /* README.txt */,
+				625EFCF41471951F00DDED6F /* release_notes.txt */,
+				625EFCF51471951F00DDED6F /* TestFlight.h */,
+			);
+			path = TestFlightSDK0.8;
 			sourceTree = "<group>";
 		};
 		62A1B27E1465C66E00140C9F /* Images */ = {
@@ -676,6 +696,8 @@
 				625EFCE614717C0B00DDED6F /* LICENSE in Resources */,
 				625EFCE714717C0B00DDED6F /* README.md in Resources */,
 				625EFCF014717D3900DDED6F /* Contact.png in Resources */,
+				625EFCF71471951F00DDED6F /* README.txt in Resources */,
+				625EFCF81471951F00DDED6F /* release_notes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +840,10 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK0.8\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -831,6 +857,10 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK0.8\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -843,7 +873,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
@@ -852,6 +882,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
+				STRIP_INSTALLED_PRODUCT = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -865,6 +896,10 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK0.8\"",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8C7F4EDD-FBF1-4B54-B884-74B2E18E976E";

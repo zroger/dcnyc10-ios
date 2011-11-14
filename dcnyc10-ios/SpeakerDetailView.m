@@ -9,6 +9,8 @@
 #import "SpeakerDetailView.h"
 #import "SessionTableViewCell.h"
 #import "SessionDetail.h"
+#import "TestFlight.h"
+#import "UIImageView+WebCache.h"
 
 @implementation SpeakerDetailView
 
@@ -78,6 +80,11 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [TestFlight passCheckpoint:@"Speaker Detail View"];
 }
 
 #pragma mark - Table view data source

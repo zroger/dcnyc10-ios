@@ -11,6 +11,7 @@
 #import "SpeakerDetailView.h"
 #import "SpeakerTableViewCell.h"
 #import "UIImageView+WebCache.h"
+#import "TestFlight.h"
 
 @implementation SpeakerTableView
 
@@ -77,6 +78,11 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [TestFlight passCheckpoint:@"Speakers Table View"];
 }
 
 #pragma mark - Table view data source
@@ -206,7 +212,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(SpeakerTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
