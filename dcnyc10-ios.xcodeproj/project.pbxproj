@@ -840,7 +840,7 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0.8\"",
@@ -858,7 +858,7 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0.8\"",
@@ -898,7 +898,7 @@
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0.8\"",
