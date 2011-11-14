@@ -111,7 +111,7 @@
 */
 
 - (void) initObjectManager {
-    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.dev:3000/cod-api"];
+    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.zroger.com/cod-api"];
     RKManagedObjectStore* objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
     manager.objectStore = objectStore;
 
