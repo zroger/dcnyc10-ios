@@ -110,7 +110,61 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
+    //return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    CGRect frame;
+    
+    titleTextView.text = session.title;
+    frame = titleTextView.frame;
+    frame.size.height = titleTextView.contentSize.height;
+    titleTextView.frame = frame;
+    
+    frame = dateTextView.frame;
+    frame.origin.y = titleTextView.frame.origin.y + titleTextView.frame.size.height - 10.0;
+    dateTextView.frame = frame;
+    
+    NSDateFormatter *startFormatter = [[NSDateFormatter alloc] init];
+    startFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
+    [startFormatter setDateFormat:@"EEEE, MMMM d\nh:mma"];
+    
+    NSDateFormatter *endFormatter = [[NSDateFormatter alloc] init];
+    endFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
+    [endFormatter setDateFormat:@"h:mma"];
+    
+    dateTextView.text = [NSString stringWithFormat:@"%@ - %@", 
+                         [startFormatter stringFromDate:session.start], 
+                         [endFormatter stringFromDate:session.end]];
+    
+    roomLabel.text = session.room;
+    frame = roomLabel.frame;
+    frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
+    roomLabel.frame = frame;
+    
+    trackLabel.text = session.track;
+    frame = trackLabel.frame;
+    frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
+    trackLabel.frame = frame;
+    
+    frame = roomLabel.superview.frame;
+    frame.size.height = roomLabel.frame.origin.y + roomLabel.frame.size.height + 10.0;
+    roomLabel.superview.frame = frame;    
+    
+    frame = speakersTableView.frame;
+    frame.size.height = session.speakers.count * speakersTableView.rowHeight + speakersTableView.sectionHeaderHeight;
+    frame.origin.y = roomLabel.superview.frame.origin.y + roomLabel.superview.frame.size.height;
+    speakersTableView.frame = frame;
+    
+    descriptionTextView.text = session.body;    
+    frame = descriptionTextView.frame;
+    frame.size.height = descriptionTextView.contentSize.height;
+    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
+    descriptionTextView.frame = frame;
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
 }
 
 -(void)viewWillAppear:(BOOL)animated
