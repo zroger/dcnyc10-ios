@@ -78,8 +78,22 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    [sessionsTableView reloadData];
+    CGRect frame = sessionsTableView.frame;
+    frame.size.height = speaker.sessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;
+    sessionsTableView.frame = frame;
+    
+    frame = descriptionTextView.frame;
+    frame.size.height = descriptionTextView.contentSize.height;
+    frame.origin.y = sessionsTableView.frame.origin.y + sessionsTableView.frame.size.height;
+    descriptionTextView.frame = frame;
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
 }
 
 - (void)viewWillAppear:(BOOL)animated

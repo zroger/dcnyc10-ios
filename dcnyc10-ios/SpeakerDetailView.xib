@@ -60,7 +60,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUIView" id="290362310">
 								<reference key="NSNextResponder" ref="770632796"/>
-								<int key="NSvFlags">274</int>
+								<int key="NSvFlags">290</int>
 								<array class="NSMutableArray" key="NSSubviews">
 									<object class="IBUIImageView" id="882878163">
 										<reference key="NSNextResponder" ref="290362310"/>
@@ -80,7 +80,7 @@
 									</object>
 									<object class="IBUILabel" id="112955617">
 										<reference key="NSNextResponder" ref="290362310"/>
-										<int key="NSvFlags">292</int>
+										<int key="NSvFlags">290</int>
 										<string key="NSFrame">{{98, 20}, {202, 33}}</string>
 										<reference key="NSSuperview" ref="290362310"/>
 										<reference key="NSWindow"/>
@@ -142,7 +142,7 @@
 									</object>
 									<object class="IBUILabel" id="579891835">
 										<reference key="NSNextResponder" ref="290362310"/>
-										<int key="NSvFlags">292</int>
+										<int key="NSvFlags">290</int>
 										<string key="NSFrame">{{99, 50}, {202, 21}}</string>
 										<reference key="NSSuperview" ref="290362310"/>
 										<reference key="NSWindow"/>
@@ -187,7 +187,7 @@
 							</object>
 							<object class="IBUITableView" id="288621052">
 								<reference key="NSNextResponder" ref="770632796"/>
-								<int key="NSvFlags">274</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{0, 100}, {320, 133}}</string>
 								<reference key="NSSuperview" ref="770632796"/>
 								<reference key="NSWindow"/>
@@ -215,11 +215,10 @@
 							</object>
 							<object class="IBUITextView" id="568055507">
 								<reference key="NSNextResponder" ref="770632796"/>
-								<int key="NSvFlags">274</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{0, 233}, {320, 183}}</string>
 								<reference key="NSSuperview" ref="770632796"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:639</string>
 								<reference key="IBUIBackgroundColor" ref="432164018"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
