@@ -15,6 +15,7 @@
 
 #import "CodSession.h"
 #import "CodSponsor.h"
+#import "CodSpeaker.h"
 
 #import <RestKit/CoreData/CoreData.h>
 
@@ -116,6 +117,14 @@
 
     [CodSession initObjectMapping];
     [CodSponsor initObjectMapping];
+    [CodSpeaker initObjectMapping];
+
+
+    RKObjectMapping *sessionMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSession class]];
+    RKObjectMapping *speakerMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSpeaker class]];
+
+    // Define the relationship mapping
+    [sessionMapping mapKeyPath:@"speakers" toRelationship:@"speakers" withMapping:speakerMapping];
 }
 
 - (void)loadRemoteObjects {

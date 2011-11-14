@@ -32,6 +32,8 @@
 @property (nonatomic, retain) NSNumber * capacity;
 @property (nonatomic, retain) NSString * room;
 
+@property (nonatomic, retain) NSSet *speakers;
+
 + (void) initObjectMapping;
 
 @end

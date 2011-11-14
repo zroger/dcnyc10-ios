@@ -12,5 +12,6 @@
 
 - (IBAction)gotoSessions:(id)sender;
 - (IBAction)gotoSponsors:(id)sender;
+- (IBAction)gotoSpeakers:(id)sender;
 
 @end

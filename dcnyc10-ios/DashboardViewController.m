@@ -9,6 +9,7 @@
 #import "DashboardViewController.h"
 #import "SessionsTable.h"
 #import "SponsorsTableViewController.h"
+#import "SpeakerTableView.h"
 
 @implementation DashboardViewController
 
@@ -74,6 +75,13 @@
     SponsorsTableViewController *sponsorsTableViewController = [[SponsorsTableViewController alloc] initWithNibName:@"SponsorsTableViewController" bundle:nil];
     [self.navigationController pushViewController:sponsorsTableViewController animated:YES];
     [SponsorsTableViewController release];
+}
+
+- (IBAction)gotoSpeakers:(id)sender
+{
+    SpeakerTableView *speakersTableView = [[SpeakerTableView alloc] initWithNibName:@"SpeakerTableView" bundle:nil];
+    [self.navigationController pushViewController:speakersTableView animated:YES];
+    [SpeakerTableView release];
 }
 
 @end

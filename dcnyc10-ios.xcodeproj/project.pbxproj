@@ -48,6 +48,13 @@
 		62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */; };
 		62CAFC6B146FF7F10020DB6E /* bg_list-row-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */; };
 		62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */; };
+		62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC70147069F70020DB6E /* CodSpeaker.m */; };
+		62CAFC7814707DB30020DB6E /* SpeakerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC7614707DB20020DB6E /* SpeakerTableView.m */; };
+		62CAFC7914707DB30020DB6E /* SpeakerTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC7714707DB30020DB6E /* SpeakerTableView.xib */; };
+		62CAFC80147080500020DB6E /* SpeakerDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC7E147080500020DB6E /* SpeakerDetailView.m */; };
+		62CAFC81147080500020DB6E /* SpeakerDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC7F147080500020DB6E /* SpeakerDetailView.xib */; };
+		62CAFC84147082BC0020DB6E /* SpeakerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC83147082BC0020DB6E /* SpeakerTableViewCell.m */; };
+		62CAFC86147083920020DB6E /* SpeakerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC85147083920020DB6E /* SpeakerTableViewCell.xib */; };
 		62E0886A146EDE2A00DC1585 /* DashboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E08868146EDE2A00DC1585 /* DashboardViewController.m */; };
 		62E0886B146EDE2A00DC1585 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62E08869146EDE2A00DC1585 /* DashboardViewController.xib */; };
 		62E08876146EDE9B00DC1585 /* icn_main-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E0886D146EDE9B00DC1585 /* icn_main-info.png */; };
@@ -198,6 +205,17 @@
 		62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_list-row-tall.png"; sourceTree = "<group>"; };
 		62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
 		62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
+		62CAFC6F147069F70020DB6E /* CodSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSpeaker.h; sourceTree = "<group>"; };
+		62CAFC70147069F70020DB6E /* CodSpeaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSpeaker.m; sourceTree = "<group>"; };
+		62CAFC7514707DB20020DB6E /* SpeakerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerTableView.h; sourceTree = "<group>"; };
+		62CAFC7614707DB20020DB6E /* SpeakerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerTableView.m; sourceTree = "<group>"; };
+		62CAFC7714707DB30020DB6E /* SpeakerTableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableView.xib; sourceTree = "<group>"; };
+		62CAFC7D147080500020DB6E /* SpeakerDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerDetailView.h; sourceTree = "<group>"; };
+		62CAFC7E147080500020DB6E /* SpeakerDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerDetailView.m; sourceTree = "<group>"; };
+		62CAFC7F147080500020DB6E /* SpeakerDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerDetailView.xib; sourceTree = "<group>"; };
+		62CAFC82147082BC0020DB6E /* SpeakerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeakerTableViewCell.h; sourceTree = "<group>"; };
+		62CAFC83147082BC0020DB6E /* SpeakerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeakerTableViewCell.m; sourceTree = "<group>"; };
+		62CAFC85147083920020DB6E /* SpeakerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpeakerTableViewCell.xib; sourceTree = "<group>"; };
 		62E08867146EDE2A00DC1585 /* DashboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardViewController.h; sourceTree = "<group>"; };
 		62E08868146EDE2A00DC1585 /* DashboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardViewController.m; sourceTree = "<group>"; };
 		62E08869146EDE2A00DC1585 /* DashboardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
@@ -317,6 +335,8 @@
 		6215E3271464909400EC7C9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				62CAFC6F147069F70020DB6E /* CodSpeaker.h */,
+				62CAFC70147069F70020DB6E /* CodSpeaker.m */,
 				6215E328146490C300EC7C9D /* CodSession.h */,
 				6215E329146490C300EC7C9D /* CodSession.m */,
 				62786E8D146F80B0001E00A1 /* CodSponsor.h */,
@@ -328,24 +348,12 @@
 		62336F56146D6F0B003E1F6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				62336F5E146D7017003E1F6D /* SessionsTable.h */,
-				62336F5F146D7017003E1F6D /* SessionsTable.m */,
-				62336F60146D7017003E1F6D /* SessionsTable.xib */,
-				6246735E146DED400014D13D /* SessionDetail.h */,
-				6246735F146DED400014D13D /* SessionDetail.m */,
-				62467360146DED400014D13D /* SessionDetail.xib */,
+				62CAFC7A14707DCE0020DB6E /* Sessions */,
 				62E08867146EDE2A00DC1585 /* DashboardViewController.h */,
 				62E08868146EDE2A00DC1585 /* DashboardViewController.m */,
 				62E08869146EDE2A00DC1585 /* DashboardViewController.xib */,
-				62786E90146F8311001E00A1 /* SponsorsTableViewController.h */,
-				62786E91146F8311001E00A1 /* SponsorsTableViewController.m */,
-				62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */,
-				62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */,
-				62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */,
-				62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */,
-				62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */,
-				62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */,
-				62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */,
+				62CAFC7B14707DDE0020DB6E /* Sponsors */,
+				62CAFC7C14707DE60020DB6E /* Speakers */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -374,6 +382,51 @@
 				6215E2E81464853B00EC7C9D /* dcnyc10SecondViewController_iPad.xib */,
 			);
 			name = Interfaces;
+			sourceTree = "<group>";
+		};
+		62CAFC7A14707DCE0020DB6E /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				62336F5E146D7017003E1F6D /* SessionsTable.h */,
+				62336F5F146D7017003E1F6D /* SessionsTable.m */,
+				62336F60146D7017003E1F6D /* SessionsTable.xib */,
+				6246735E146DED400014D13D /* SessionDetail.h */,
+				6246735F146DED400014D13D /* SessionDetail.m */,
+				62467360146DED400014D13D /* SessionDetail.xib */,
+				62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */,
+				62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */,
+				62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */,
+			);
+			name = Sessions;
+			sourceTree = "<group>";
+		};
+		62CAFC7B14707DDE0020DB6E /* Sponsors */ = {
+			isa = PBXGroup;
+			children = (
+				62786E90146F8311001E00A1 /* SponsorsTableViewController.h */,
+				62786E91146F8311001E00A1 /* SponsorsTableViewController.m */,
+				62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */,
+				62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */,
+				62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */,
+				62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */,
+			);
+			name = Sponsors;
+			sourceTree = "<group>";
+		};
+		62CAFC7C14707DE60020DB6E /* Speakers */ = {
+			isa = PBXGroup;
+			children = (
+				62CAFC7514707DB20020DB6E /* SpeakerTableView.h */,
+				62CAFC7614707DB20020DB6E /* SpeakerTableView.m */,
+				62CAFC7714707DB30020DB6E /* SpeakerTableView.xib */,
+				62CAFC7D147080500020DB6E /* SpeakerDetailView.h */,
+				62CAFC7E147080500020DB6E /* SpeakerDetailView.m */,
+				62CAFC7F147080500020DB6E /* SpeakerDetailView.xib */,
+				62CAFC82147082BC0020DB6E /* SpeakerTableViewCell.h */,
+				62CAFC83147082BC0020DB6E /* SpeakerTableViewCell.m */,
+				62CAFC85147083920020DB6E /* SpeakerTableViewCell.xib */,
+			);
+			name = Speakers;
 			sourceTree = "<group>";
 		};
 		62E0886C146EDE7C00DC1585 /* Dashboard */ = {
@@ -557,6 +610,9 @@
 				62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */,
 				62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */,
 				62CAFC6B146FF7F10020DB6E /* bg_list-row-tall.png in Resources */,
+				62CAFC7914707DB30020DB6E /* SpeakerTableView.xib in Resources */,
+				62CAFC81147080500020DB6E /* SpeakerDetailView.xib in Resources */,
+				62CAFC86147083920020DB6E /* SpeakerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +635,10 @@
 				62786E93146F8311001E00A1 /* SponsorsTableViewController.m in Sources */,
 				62786E98146F8C7F001E00A1 /* SponsorDetailViewController.m in Sources */,
 				62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */,
+				62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */,
+				62CAFC7814707DB30020DB6E /* SpeakerTableView.m in Sources */,
+				62CAFC80147080500020DB6E /* SpeakerDetailView.m in Sources */,
+				62CAFC84147082BC0020DB6E /* SpeakerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

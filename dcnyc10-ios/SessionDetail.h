@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CodSession.h"
 
-@interface SessionDetail : UIViewController {
+@interface SessionDetail : UIViewController <UITableViewDelegate, UITableViewDataSource>
+{
 }
 
 @property (nonatomic, retain) CodSession *session;
@@ -21,5 +22,7 @@
 @property (nonatomic, retain) IBOutlet UILabel *trackLabel;
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
+@property (nonatomic, retain) IBOutlet UITableView *speakersTableView;
 
 @end

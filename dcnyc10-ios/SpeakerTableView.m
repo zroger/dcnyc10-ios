@@ -1,26 +1,24 @@
 //
-//  SessionsTable.m
+//  SpeakerTableView.m
 //  dcnyc10-ios
 //
-//  Created by Roger Lopez on 11/11/11.
+//  Created by Roger Lopez on 11/13/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "SessionsTable.h"
-#import "CodSession.h"
-#import "SessionDetail.h"
-#import "SessionTableViewCell.h"
+#import "SpeakerTableView.h"
+#import "CodSpeaker.h"
+#import "SpeakerDetailView.h"
+#import "SpeakerTableViewCell.h"
 
-@implementation SessionsTable
+@implementation SpeakerTableView
 
-@synthesize sessions;
 @synthesize fetchedResultsController;
 
 - (void)dealloc {
     self.fetchedResultsController.delegate = nil;
     self.fetchedResultsController = nil;
-
-    [sessions release];
+    
     [super dealloc];
 }
 
@@ -28,16 +26,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Sessions", @"Sessions");
-    }
-    return self;
-}
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
         // Custom initialization
+        self.title = NSLocalizedString(@"Speakers", @"Speakers");
     }
     return self;
 }
@@ -55,15 +45,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = NSLocalizedString(@"Sessions", @"Sessions");
+    // Do any additional setup after loading the view from its nib.
 
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
-    self.fetchedResultsController = [CodSession fetchRequestAllGroupedBy:@"start" 
-                                                           withPredicate:predicate
-                                                                sortedBy:@"start" 
+    self.title = NSLocalizedString(@"Speakers", @"Speakers");
+    
+    //    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
+    self.fetchedResultsController = [CodSpeaker fetchRequestAllGroupedBy:@"first_name" 
+                                                           withPredicate:nil
+                                                                sortedBy:@"first_name" 
                                                                ascending:true];
     self.fetchedResultsController.delegate = self;
-
+    
     NSError *error;
 	if (![self.fetchedResultsController performFetch:&error]) {
 		// Update to handle the error appropriately.
@@ -80,26 +72,6 @@
     self.fetchedResultsController = nil;
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -107,110 +79,115 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [[fetchedResultsController sections] count];
+    NSArray *sections = [fetchedResultsController sections];
+    NSLog(@"%@", sections);
+    return [sections count];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
-    CodSession *session = [[sectionInfo objects] objectAtIndex:0];
-
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
-    [dateFormatter setDateFormat:@"EEE MMM d, h:mm a"];
-
-    return [dateFormatter stringFromDate:session.start];
+    return sectionInfo.name;
 }
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    //    NSError* error = nil;
+    //    NSUInteger count = [CodSession count:&error];
+    //    return count;
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(SessionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    cell.session = [fetchedResultsController objectAtIndexPath:indexPath];
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    CodSpeaker *speaker = [fetchedResultsController objectAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", speaker.first_name, speaker.last_name];
+    cell.detailTextLabel.text = speaker.organization;
+    
+    NSURL * imageURL = [NSURL URLWithString:speaker.picture];
+    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
+    cell.imageView.image = [UIImage imageWithData:imageData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSLog(@"cell created");
-
+//        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
         // Create a temporary UIViewController to instantiate the custom cell.
-        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SessionTableViewCell" bundle:nil];
+        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SpeakerTableViewCell" bundle:nil];
         // Grab a pointer to the custom cell.
-        cell = (SessionTableViewCell *)temporaryController.view;
+        cell = (SpeakerTableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
-    }
 
+    }
+    
     // Configure the cell...
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }   
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }   
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
-
+    SpeakerDetailView *detailViewController = [[SpeakerDetailView alloc] initWithNibName:@"SpeakerDetailView" bundle:nil];
+    // ...
     // Pass the selected object to the new view controller.
-    detailViewController.session = [fetchedResultsController objectAtIndexPath:indexPath];
-
+    detailViewController.speaker = [fetchedResultsController objectAtIndexPath:indexPath];
+    
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
-
-    [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
 }
 
 #pragma mark - NSFetchedResultsController delegate
@@ -236,7 +213,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:(SessionTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:

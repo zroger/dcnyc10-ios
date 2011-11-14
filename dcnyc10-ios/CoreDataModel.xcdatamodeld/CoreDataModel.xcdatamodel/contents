@@ -14,6 +14,17 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="track" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="speakers" optional="YES" toMany="YES" minCount="1" deletionRule="Nullify" destinationEntity="CodSpeaker" inverseName="sessions" inverseEntity="CodSpeaker" syncable="YES"/>
+    </entity>
+    <entity name="CodSpeaker" representedClassName="CodSpeaker" syncable="YES">
+        <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="organization" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picture" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CodSession" inverseName="speakers" inverseEntity="CodSession" syncable="YES"/>
     </entity>
     <entity name="CodSponsor" representedClassName="CodSponsor" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -29,5 +40,6 @@
     <elements>
         <element name="CodSession" positionX="160" positionY="192" width="128" height="135"/>
         <element name="CodSponsor" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="CodSpeaker" positionX="160" positionY="192" width="128" height="165"/>
     </elements>
 </model>

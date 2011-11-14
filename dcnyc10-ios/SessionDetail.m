@@ -7,6 +7,8 @@
 //
 
 #import "SessionDetail.h"
+#import "SpeakerTableViewCell.h"
+#import "SpeakerDetailView.h"
 
 @implementation SessionDetail
 
@@ -19,6 +21,7 @@
 @synthesize trackLabel;
 
 @synthesize scrollView;
+@synthesize speakersTableView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -79,20 +82,21 @@
     trackLabel.frame = frame;
     
     frame = roomLabel.superview.frame;
-    frame.size.height = roomLabel.frame.origin.y + roomLabel.frame.size.height;
+    frame.size.height = roomLabel.frame.origin.y + roomLabel.frame.size.height + 10.0;
     roomLabel.superview.frame = frame;    
-    
+
+    frame = speakersTableView.frame;
+    frame.size.height = session.speakers.count * speakersTableView.rowHeight + speakersTableView.sectionHeaderHeight;
+    frame.origin.y = roomLabel.superview.frame.origin.y + roomLabel.superview.frame.size.height;
+    speakersTableView.frame = frame;
+
     descriptionTextView.text = session.body;    
     frame = descriptionTextView.frame;
     frame.size.height = descriptionTextView.contentSize.height;
+    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
     descriptionTextView.frame = frame;
 
-    frame = descriptionTextView.superview.frame;
-    frame.size.height = descriptionTextView.contentSize.height;
-    frame.origin.y = dateTextView.superview.frame.size.height;
-    descriptionTextView.superview.frame = frame;
-    
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.superview.frame.origin.y + descriptionTextView.superview.frame.size.height); 
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
 }
 
 - (void)viewDidUnload
@@ -106,6 +110,64 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view data source
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"Speakers";
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [session.speakers count];
+}
+
+- (void)configureCell:(SpeakerTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"first_name" ascending:YES]];
+    NSArray *sortedSpeakers = [[session.speakers allObjects] sortedArrayUsingDescriptors:sortDescriptors];
+    
+    cell.speaker = [sortedSpeakers objectAtIndex:indexPath.row];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    SpeakerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        NSLog(@"cell created");
+        // Create a temporary UIViewController to instantiate the custom cell.
+        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SpeakerTableViewCell" bundle:nil];
+        // Grab a pointer to the custom cell.
+        cell = (SpeakerTableViewCell *)temporaryController.view;
+        // Release the temporary UIViewController.
+        [temporaryController release];
+    }
+    
+    // Configure the cell...
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"first_name" ascending:YES]];
+    NSArray *sortedSpeakers = [[session.speakers allObjects] sortedArrayUsingDescriptors:sortDescriptors];
+    
+    // Navigation logic may go here. Create and push another view controller.
+    SpeakerDetailView *detailViewController = [[SpeakerDetailView alloc] initWithNibName:@"SpeakerDetailView" bundle:nil];
+    
+    // Pass the selected object to the new view controller.
+    detailViewController.speaker = [sortedSpeakers objectAtIndex:indexPath.row];
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
 }
 
 @end
