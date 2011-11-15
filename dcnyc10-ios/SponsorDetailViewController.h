@@ -13,7 +13,7 @@
 
 @property (nonatomic, retain) CodSponsor *sponsor;
 
-@property (nonatomic, retain) IBOutlet UITextView *titleTextView;
+@property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, retain) IBOutlet UIButton *urlButton;
 @property (nonatomic, retain) IBOutlet UIImageView *logoImageView;
