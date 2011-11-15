@@ -39,7 +39,7 @@
     </entity>
     <elements>
         <element name="CodSession" positionX="160" positionY="192" width="128" height="135"/>
-        <element name="CodSponsor" positionX="160" positionY="192" width="128" height="180"/>
         <element name="CodSpeaker" positionX="160" positionY="192" width="128" height="165"/>
+        <element name="CodSponsor" positionX="160" positionY="192" width="128" height="180"/>
     </elements>
 </model>

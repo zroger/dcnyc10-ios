@@ -29,4 +29,11 @@
     [[RKObjectManager sharedManager].mappingProvider setMapping:speakerMapping forKeyPath:@"speakers"];
 }
 
+- (NSString *) firstInitial {
+    [self willAccessValueForKey:@"firstInitial"];
+    NSString * initial = [[self first_name] substringToIndex:1];
+    [self didAccessValueForKey:@"firstInitial"];
+    return initial;
+}
+
 @end

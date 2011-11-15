@@ -8,13 +8,14 @@
 
 #import "SponsorDetailViewController.h"
 #import "TestFlight.h"
+#import "UIImageView+WebCache.h"
 
 @implementation SponsorDetailViewController
 
 @synthesize sponsor;
 @synthesize titleTextView;
 @synthesize descriptionTextView;
-@synthesize urlTextView;
+@synthesize urlButton;
 @synthesize logoImageView;
 @synthesize scrollView;
 
@@ -46,11 +47,17 @@
 
     titleTextView.text = [sponsor title];
     descriptionTextView.text = [sponsor body];
-    urlTextView.text = [sponsor url];
+    urlButton.titleLabel.text = [sponsor url];
 
-    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
-    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-    logoImageView.image = [UIImage imageWithData:imageData];
+    [logoImageView setImageWithURL:[NSURL URLWithString:sponsor.logo]
+              placeholderImage:[UIImage imageNamed:@"Contact.png"]];
+
+    CGRect frame = descriptionTextView.frame;
+    frame.size.height = descriptionTextView.contentSize.height;
+    descriptionTextView.frame = frame;
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
+
 }
 
 - (void)viewDidUnload
@@ -70,4 +77,16 @@
 {
     [TestFlight passCheckpoint:@"Sponsor Detail View"];
 }
+
+- (void)gotoSponsorUrl:(id)sender
+{
+    NSURL* url = [NSURL URLWithString:sponsor.url];
+    if (url.scheme == nil) {
+        [url release];
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", sponsor.url]];
+    }
+    NSLog(@"%@", [url scheme]);
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 @end

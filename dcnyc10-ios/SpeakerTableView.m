@@ -51,9 +51,9 @@
 
     self.title = NSLocalizedString(@"Speakers", @"Speakers");
     
-    //    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
-    self.fetchedResultsController = [CodSpeaker fetchRequestAllGroupedBy:@"first_name" 
-                                                           withPredicate:nil
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"first_name != NULL"];
+    self.fetchedResultsController = [CodSpeaker fetchRequestAllGroupedBy:@"firstInitial" 
+                                                           withPredicate:predicate
                                                                 sortedBy:@"first_name" 
                                                                ascending:true];
     self.fetchedResultsController.delegate = self;

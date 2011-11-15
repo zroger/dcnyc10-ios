@@ -47,6 +47,8 @@
 		625EFCF61471951F00DDED6F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625EFCF21471951F00DDED6F /* libTestFlight.a */; };
 		625EFCF71471951F00DDED6F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF31471951F00DDED6F /* README.txt */; };
 		625EFCF81471951F00DDED6F /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF41471951F00DDED6F /* release_notes.txt */; };
+		625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */; };
+		625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */; };
 		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
 		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
 		62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E8B146F702F001E00A1 /* bg_full-screen-light.png */; };
@@ -226,6 +228,9 @@
 		625EFCF31471951F00DDED6F /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		625EFCF41471951F00DDED6F /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
 		625EFCF51471951F00DDED6F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		625EFD0F1471ED8D00DDED6F /* SponsorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTableViewCell.h; sourceTree = "<group>"; };
+		625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTableViewCell.m; sourceTree = "<group>"; };
+		625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
 		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
 		62786E8B146F702F001E00A1 /* bg_full-screen-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_full-screen-light.png"; sourceTree = "<group>"; };
@@ -489,6 +494,9 @@
 				62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */,
 				62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */,
 				62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */,
+				625EFD0F1471ED8D00DDED6F /* SponsorTableViewCell.h */,
+				625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */,
+				625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */,
 			);
 			name = Sponsors;
 			sourceTree = "<group>";
@@ -698,6 +706,7 @@
 				625EFCF014717D3900DDED6F /* Contact.png in Resources */,
 				625EFCF71471951F00DDED6F /* README.txt in Resources */,
 				625EFCF81471951F00DDED6F /* release_notes.txt in Resources */,
+				625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +740,7 @@
 				625EFCEC14717C0B00DDED6F /* SDWebImagePrefetcher.m in Sources */,
 				625EFCED14717C0B00DDED6F /* UIButton+WebCache.m in Sources */,
 				625EFCEE14717C0B00DDED6F /* UIImageView+WebCache.m in Sources */,
+				625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

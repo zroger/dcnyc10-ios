@@ -15,9 +15,11 @@
 
 @property (nonatomic, retain) IBOutlet UITextView *titleTextView;
 @property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
-@property (nonatomic, retain) IBOutlet UITextView *urlTextView;
+@property (nonatomic, retain) IBOutlet UIButton *urlButton;
 @property (nonatomic, retain) IBOutlet UIImageView *logoImageView;
 
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+
+- (IBAction)gotoSponsorUrl:(id)sender;
 
 @end

@@ -23,4 +23,6 @@
 
 + (void) initObjectMapping;
 
+- (NSString *) firstInitial;
+
 @end

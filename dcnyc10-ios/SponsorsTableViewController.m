@@ -8,6 +8,7 @@
 
 #import "SponsorsTableViewController.h"
 #import "CodSponsor.h"
+#import "SponsorTableViewCell.h"
 #import "SponsorDetailViewController.h"
 #import "UIImageView+WebCache.h"
 #import "TestFlight.h"
@@ -125,28 +126,24 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    CodSponsor *sponsor = [fetchedResultsController objectAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.text = [sponsor title];
-    cell.detailTextLabel.text = [sponsor url];
-
-//    NSURL * imageURL = [NSURL URLWithString:sponsor.logo];
-//    NSData * imageData = [NSData dataWithContentsOfURL:imageURL];
-//    cell.imageView.image = [UIImage imageWithData:imageData];
-    // Here we use the new provided setImageWithURL: method to load the web image
-    [cell.imageView setImageWithURL:[NSURL URLWithString:sponsor.logo]
-                   placeholderImage:[UIImage imageNamed:@"Contact.png"]];
+- (void)configureCell:(SponsorTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    cell.sponsor = [fetchedResultsController objectAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    SponsorTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSLog(@"cell created");
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier] autorelease];
+        NSLog(@"cell created");
+        // Create a temporary UIViewController to instantiate the custom cell.
+        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SponsorTableViewCell" bundle:nil];
+        // Grab a pointer to the custom cell.
+        cell = (SponsorTableViewCell *)temporaryController.view;
+        // Release the temporary UIViewController.
+        [temporaryController release];
     }
     
     // Configure the cell...
@@ -230,7 +227,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [self configureCell:(SponsorTableViewCell *)[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
