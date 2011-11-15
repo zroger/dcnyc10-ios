@@ -10,8 +10,12 @@
 
 @interface DashboardViewController : UIViewController
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *feedbackButton;
+
 - (IBAction)gotoSessions:(id)sender;
 - (IBAction)gotoSponsors:(id)sender;
 - (IBAction)gotoSpeakers:(id)sender;
+
+- (IBAction)feedback:(id)sender;
 
 @end
