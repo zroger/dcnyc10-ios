@@ -40,7 +40,8 @@
     
     self.title = NSLocalizedString(@"Maps", @"Maps");
     self.scrollView.contentSize=imageView.image.size;
-    self.scrollView.minimumZoomScale = self.view.frame.size.width / imageView.image.size.width;
+    self.scrollView.minimumZoomScale = MIN((self.view.frame.size.width / imageView.image.size.width),
+                                           (self.view.frame.size.height / imageView.image.size.height));
     NSLog(@"minimumZoomScale: %f", self.scrollView.minimumZoomScale);
     
     self.scrollView.delegate=self;
