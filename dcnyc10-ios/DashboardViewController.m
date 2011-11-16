@@ -101,7 +101,36 @@
     MapView *mapView = [[MapView alloc] initWithNibName:@"MapView" bundle:nil];
     [self.navigationController pushViewController:mapView animated:YES];
     [mapView release];
-    
+}
+
+- (IBAction)gotoTweets:(id)sender
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+
+- (IBAction)gotoNews:(id)sender
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+
+- (IBAction)gotoInfo:(id)sender
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+
+- (IBAction)gotoSocial:(id)sender
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show]; 
+}
+
+- (IBAction)gotoSettings:(id)sender
+{
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];    
 }
 
 @end

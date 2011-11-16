@@ -45,7 +45,8 @@
     }
 
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:dashboard] autorelease];
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:55/255.0 green:76/255.0 blue:107/255.0 alpha:1.0];
+//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:55/255.0 green:76/255.0 blue:107/255.0 alpha:1.0];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:61/255.0 green:82/255.0 blue:104/255.0 alpha:1.0];
     
     self.window.rootViewController = self.navigationController;
     [self.window makeKeyAndVisible];

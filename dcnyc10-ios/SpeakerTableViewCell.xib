@@ -46,12 +46,14 @@
 								<string key="NSFrameSize">{320, 77}</string>
 								<reference key="NSSuperview" ref="82516942"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="521952885"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
+								<int key="IBUIContentMode">3</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">bg_list-row-tall.png</string>
+									<string key="NSResourceName">bg-repeat_light.png</string>
 								</object>
 							</object>
 							<object class="IBUILabel" id="929872651">
@@ -92,7 +94,7 @@
 								<string key="NSFrame">{{84, 43}, {216, 21}}</string>
 								<reference key="NSSuperview" ref="82516942"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="240188620"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -135,7 +137,7 @@
 						<string key="NSFrameSize">{300, 77}</string>
 						<reference key="NSSuperview" ref="903885000"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="521952885"/>
+						<reference key="NSNextKeyView" ref="240188620"/>
 						<string key="NSReuseIdentifierKey">_NS:395</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -307,8 +309,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">bg_list-row-tall.png</string>
-			<string key="NS.object.0">{640, 143}</string>
+			<string key="NS.key.0">bg-repeat_light.png</string>
+			<string key="NS.object.0">{640, 458}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

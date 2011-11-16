@@ -62,6 +62,9 @@
 		627D4398147343C0001256B8 /* icn_main-tweets.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D438F147343C0001256B8 /* icn_main-tweets.png */; };
 		627D439B14734475001256B8 /* bg-repeat_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439914734475001256B8 /* bg-repeat_light.png */; };
 		627D439C14734475001256B8 /* bg-repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439A14734475001256B8 /* bg-repeat.png */; };
+		627D439E1473463C001256B8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439D1473463B001256B8 /* Default.png */; };
+		627D43A114734896001256B8 /* LogoType.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439F14734896001256B8 /* LogoType.png */; };
+		627D43A214734896001256B8 /* LogoType@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D43A014734896001256B8 /* LogoType@2x.png */; };
 		62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E31514648BFF00EC7C9D /* libRestKitCoreData.a */; };
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
@@ -243,6 +246,9 @@
 		627D438F147343C0001256B8 /* icn_main-tweets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_main-tweets.png"; sourceTree = "<group>"; };
 		627D439914734475001256B8 /* bg-repeat_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-repeat_light.png"; sourceTree = "<group>"; };
 		627D439A14734475001256B8 /* bg-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-repeat.png"; sourceTree = "<group>"; };
+		627D439D1473463B001256B8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		627D439F14734896001256B8 /* LogoType.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogoType.png; sourceTree = "<group>"; };
+		627D43A014734896001256B8 /* LogoType@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LogoType@2x.png"; sourceTree = "<group>"; };
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
@@ -292,6 +298,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				627D439D1473463B001256B8 /* Default.png */,
 				625EFCF11471951F00DDED6F /* TestFlightSDK0.8 */,
 				625EFCD114717C0B00DDED6F /* SDWebImage */,
 				62786E87146F6E73001E00A1 /* Default@2x.png */,
@@ -445,6 +452,8 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				627D439F14734896001256B8 /* LogoType.png */,
+				627D43A014734896001256B8 /* LogoType@2x.png */,
 				627D439914734475001256B8 /* bg-repeat_light.png */,
 				627D439A14734475001256B8 /* bg-repeat.png */,
 				627D437F14733931001256B8 /* map_projections.png */,
@@ -691,6 +700,9 @@
 				627D4398147343C0001256B8 /* icn_main-tweets.png in Resources */,
 				627D439B14734475001256B8 /* bg-repeat_light.png in Resources */,
 				627D439C14734475001256B8 /* bg-repeat.png in Resources */,
+				627D439E1473463C001256B8 /* Default.png in Resources */,
+				627D43A114734896001256B8 /* LogoType.png in Resources */,
+				627D43A214734896001256B8 /* LogoType@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

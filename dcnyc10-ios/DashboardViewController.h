@@ -13,9 +13,14 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *feedbackButton;
 
 - (IBAction)gotoSessions:(id)sender;
-- (IBAction)gotoSponsors:(id)sender;
 - (IBAction)gotoSpeakers:(id)sender;
 - (IBAction)gotoMaps:(id)sender;
+- (IBAction)gotoTweets:(id)sender;
+- (IBAction)gotoSponsors:(id)sender;
+- (IBAction)gotoNews:(id)sender;
+- (IBAction)gotoInfo:(id)sender;
+- (IBAction)gotoSocial:(id)sender;
+- (IBAction)gotoSettings:(id)sender;
 
 - (IBAction)feedback:(id)sender;
 
