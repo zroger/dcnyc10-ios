@@ -15,9 +15,9 @@
 @synthesize sponsor;
 @synthesize titleLabel;
 @synthesize descriptionTextView;
-@synthesize urlButton;
 @synthesize logoImageView;
 @synthesize scrollView;
+@synthesize actionBarButtonItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,6 +46,9 @@
     self.title = sponsor.title;
 
     CGRect frame;
+
+    // Show the action button in the navigation bar.
+    self.navigationItem.rightBarButtonItem = actionBarButtonItem;
     
     // Logo Image View
     [logoImageView setImageWithURL:[NSURL URLWithString:sponsor.logo]
@@ -55,11 +58,6 @@
     titleLabel.text = [sponsor title];
     [titleLabel sizeToFit];
     
-    // URL Button
-    frame = urlButton.frame;
-    frame.origin.y = titleLabel.frame.origin.y + (titleLabel.frame.size.height / 2) - (urlButton.frame.size.height / 2);
-    urlButton.frame = frame;
-
     // Description Text View
     descriptionTextView.text = [sponsor body];
     frame = descriptionTextView.frame;
