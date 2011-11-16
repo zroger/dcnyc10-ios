@@ -43,7 +43,7 @@
 							<object class="IBUIImageView" id="240188620">
 								<reference key="NSNextResponder" ref="82516942"/>
 								<int key="NSvFlags">274</int>
-								<string key="NSFrameSize">{320, 77}</string>
+								<string key="NSFrameSize">{320, 72}</string>
 								<reference key="NSSuperview" ref="82516942"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="521952885"/>
@@ -123,7 +123,7 @@
 							<object class="IBUIImageView" id="521952885">
 								<reference key="NSNextResponder" ref="82516942"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{0, 1}, {76, 76}}</string>
+								<string key="NSFrameSize">{72, 72}</string>
 								<reference key="NSSuperview" ref="82516942"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="929872651"/>
@@ -134,7 +134,7 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							</object>
 						</array>
-						<string key="NSFrameSize">{300, 77}</string>
+						<string key="NSFrameSize">{300, 71}</string>
 						<reference key="NSSuperview" ref="903885000"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="240188620"/>
@@ -150,7 +150,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 78}</string>
+				<string key="NSFrameSize">{320, 72}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="82516942"/>
@@ -311,7 +311,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="NS.key.0">bg_list-row-tall.png</string>
-			<string key="NS.object.0">{640, 143}</string>
+			<string key="NS.object.0">{320, 72}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

@@ -237,7 +237,7 @@ gKgKA</string>
 										<int key="IBUISeparatorStyle">1</int>
 										<int key="IBUISectionIndexMinimumDisplayRowCount">0</int>
 										<bool key="IBUIShowsSelectionImmediatelyOnTouchBegin">YES</bool>
-										<float key="IBUIRowHeight">78</float>
+										<float key="IBUIRowHeight">72</float>
 										<float key="IBUISectionHeaderHeight">22</float>
 										<float key="IBUISectionFooterHeight">22</float>
 									</object>
