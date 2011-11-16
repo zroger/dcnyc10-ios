@@ -43,6 +43,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationItem.rightBarButtonItem = feedbackButton;
+
+    UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
+
+    [tileImage release];
 }
 
 - (void)viewDidUnload

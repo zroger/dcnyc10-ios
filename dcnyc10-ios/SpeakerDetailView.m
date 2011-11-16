@@ -65,8 +65,10 @@
     descriptionTextView.frame = frame;
     
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
-    
 
+    UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
+    [tileImage release];
 }
 
 - (void)viewDidUnload
