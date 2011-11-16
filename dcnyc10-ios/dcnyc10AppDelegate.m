@@ -8,8 +8,6 @@
 
 #import "dcnyc10AppDelegate.h"
 
-#import "dcnyc10SecondViewController.h"
-
 #import "SessionsTable.h"
 #import "DashboardViewController.h"
 
