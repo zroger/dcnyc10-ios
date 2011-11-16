@@ -314,7 +314,7 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUINavigationBar" id="388719062">
+			<object class="IBUINavigationBar" id="625853826">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">290</int>
 				<string key="NSFrameSize">{320, 44}</string>
@@ -324,14 +324,14 @@
 				<string key="NSReuseIdentifierKey">_NS:260</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<array key="IBUIItems">
-					<object class="IBUINavigationItem" id="68876688">
-						<reference key="IBUINavigationBar" ref="388719062"/>
+					<object class="IBUINavigationItem" id="631357823">
+						<reference key="IBUINavigationBar" ref="625853826"/>
 						<string key="IBUITitle">Title</string>
-						<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="95194690">
+						<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="1012419389">
 							<string key="IBUITitle">Feedback</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<int key="IBUIStyle">1</int>
-							<reference key="IBUINavigationItem" ref="68876688"/>
+							<reference key="IBUINavigationItem" ref="631357823"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -352,7 +352,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">feedbackButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="95194690"/>
+						<reference key="destination" ref="1012419389"/>
 					</object>
 					<int key="connectionID">51</int>
 				</object>
@@ -376,6 +376,15 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">gotoMaps:</string>
+						<reference key="source" ref="955194949"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">gotoSponsors:</string>
 						<reference key="source" ref="573615883"/>
 						<reference key="destination" ref="372490531"/>
@@ -386,7 +395,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">feedback:</string>
-						<reference key="source" ref="95194690"/>
+						<reference key="source" ref="1012419389"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">50</int>
@@ -480,24 +489,24 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">45</int>
-						<reference key="object" ref="388719062"/>
+						<reference key="object" ref="625853826"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="68876688"/>
+							<reference ref="631357823"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="68876688"/>
+						<reference key="object" ref="631357823"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="95194690"/>
+							<reference ref="1012419389"/>
 						</array>
-						<reference key="parent" ref="388719062"/>
+						<reference key="parent" ref="625853826"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">49</int>
-						<reference key="object" ref="95194690"/>
-						<reference key="parent" ref="68876688"/>
+						<reference key="object" ref="1012419389"/>
+						<reference key="parent" ref="631357823"/>
 					</object>
 				</array>
 			</object>
@@ -534,7 +543,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">51</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -543,6 +552,7 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="feedback:">id</string>
+						<string key="gotoMaps:">id</string>
 						<string key="gotoSessions:">id</string>
 						<string key="gotoSpeakers:">id</string>
 						<string key="gotoSponsors:">id</string>
@@ -550,6 +560,10 @@
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="feedback:">
 							<string key="name">feedback:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="gotoMaps:">
+							<string key="name">gotoMaps:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="gotoSessions:">

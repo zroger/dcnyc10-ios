@@ -57,6 +57,9 @@
 		62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */; };
 		62786E98146F8C7F001E00A1 /* SponsorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */; };
 		62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */; };
+		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
+		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
+		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
 		62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E31514648BFF00EC7C9D /* libRestKitCoreData.a */; };
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
@@ -242,6 +245,10 @@
 		62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorDetailViewController.h; sourceTree = "<group>"; };
 		62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorDetailViewController.m; sourceTree = "<group>"; };
 		62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorDetailViewController.xib; sourceTree = "<group>"; };
+		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
+		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		627D438314733972001256B8 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
@@ -400,6 +407,7 @@
 				62E08869146EDE2A00DC1585 /* DashboardViewController.xib */,
 				62CAFC7B14707DDE0020DB6E /* Sponsors */,
 				62CAFC7C14707DE60020DB6E /* Speakers */,
+				627D43861473425A001256B8 /* Maps */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -442,9 +450,20 @@
 			path = TestFlightSDK0.8;
 			sourceTree = "<group>";
 		};
+		627D43861473425A001256B8 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				627D438114733972001256B8 /* MapView.h */,
+				627D438214733972001256B8 /* MapView.m */,
+				627D438314733972001256B8 /* MapView.xib */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				627D437F14733931001256B8 /* map_projections.png */,
 				625EFCEF14717D3900DDED6F /* Contact.png */,
 				62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */,
 				62786E8B146F702F001E00A1 /* bg_full-screen-light.png */,
@@ -707,6 +726,8 @@
 				625EFCF71471951F00DDED6F /* README.txt in Resources */,
 				625EFCF81471951F00DDED6F /* release_notes.txt in Resources */,
 				625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */,
+				627D438014733931001256B8 /* map_projections.png in Resources */,
+				627D438514733972001256B8 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -741,6 +762,7 @@
 				625EFCED14717C0B00DDED6F /* UIButton+WebCache.m in Sources */,
 				625EFCEE14717C0B00DDED6F /* UIImageView+WebCache.m in Sources */,
 				625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */,
+				627D438414733972001256B8 /* MapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

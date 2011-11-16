@@ -10,6 +10,8 @@
 #import "SessionsTable.h"
 #import "SponsorsTableViewController.h"
 #import "SpeakerTableView.h"
+#import "MapView.h"
+
 #import "TestFlight.h"
 
 @implementation DashboardViewController
@@ -79,18 +81,27 @@
 {
     SponsorsTableViewController *sponsorsTableViewController = [[SponsorsTableViewController alloc] initWithNibName:@"SponsorsTableViewController" bundle:nil];
     [self.navigationController pushViewController:sponsorsTableViewController animated:YES];
-    [SponsorsTableViewController release];
+    [sponsorsTableViewController release];
 }
 
 - (IBAction)gotoSpeakers:(id)sender
 {
     SpeakerTableView *speakersTableView = [[SpeakerTableView alloc] initWithNibName:@"SpeakerTableView" bundle:nil];
     [self.navigationController pushViewController:speakersTableView animated:YES];
-    [SpeakerTableView release];
+    [speakersTableView release];
 }
 
 - (IBAction)feedback:(id)sender
 {
     [TestFlight openFeedbackView];
 }
+
+- (IBAction)gotoMaps:(id)sender
+{
+    MapView *mapView = [[MapView alloc] initWithNibName:@"MapView" bundle:nil];
+    [self.navigationController pushViewController:mapView animated:YES];
+    [mapView release];
+    
+}
+
 @end

@@ -15,6 +15,7 @@
 - (IBAction)gotoSessions:(id)sender;
 - (IBAction)gotoSponsors:(id)sender;
 - (IBAction)gotoSpeakers:(id)sender;
+- (IBAction)gotoMaps:(id)sender;
 
 - (IBAction)feedback:(id)sender;
 
