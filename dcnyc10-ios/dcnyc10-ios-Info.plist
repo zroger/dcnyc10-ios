@@ -12,6 +12,7 @@
 	<array>
 		<string>114-plain-icon.png</string>
 		<string>57-plain-icon.png</string>
+		<string>72-plain-icon.png</string>
 	</array>
 	<key>CFBundleIcons</key>
 	<dict>
@@ -21,6 +22,7 @@
 			<array>
 				<string>114-plain-icon.png</string>
 				<string>57-plain-icon.png</string>
+				<string>72-plain-icon.png</string>
 			</array>
 			<key>UIPrerenderedIcon</key>
 			<false/>
@@ -39,7 +41,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>beta5</string>
+	<string>beta6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -55,9 +57,9 @@
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 </dict>
 </plist>
