@@ -112,7 +112,13 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
-    return sectionInfo.name;
+    
+    if ([[sectionInfo name] isEqualToString:@"premium"]) {
+        return @"Premium Sponsors";
+    }
+    else {
+        return @"Standard Sponsors";
+    }
 }
 
 
