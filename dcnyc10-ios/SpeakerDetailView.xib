@@ -45,13 +45,13 @@
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="770632796"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">bg_full-screen-light.png</string>
+							<string key="NSResourceName">bg-repeat_light.png</string>
 						</object>
 					</object>
 					<object class="IBUIScrollView" id="770632796">
@@ -216,10 +216,10 @@
 							<object class="IBUITextView" id="568055507">
 								<reference key="NSNextResponder" ref="770632796"/>
 								<int key="NSvFlags">290</int>
-								<string key="NSFrame">{{0, 233}, {320, 183}}</string>
+								<string key="NSFrame">{{0, 286}, {320, 130}}</string>
 								<reference key="NSSuperview" ref="770632796"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="25803938"/>
 								<string key="NSReuseIdentifierKey">_NS:639</string>
 								<reference key="IBUIBackgroundColor" ref="432164018"/>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -262,11 +262,10 @@
 				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="25803938"/>
+				<reference key="NSNextKeyView" ref="770632796"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">3</int>
-					<bytes key="NSWhite">MQA</bytes>
-					<reference key="NSCustomColorSpace" ref="405027322"/>
+					<int key="NSColorSpace">2</int>
+					<bytes key="NSRGB">MC42NTg4MjM1NDk3IDAuNjE5NjA3ODY1OCAwLjU5NjA3ODQ1NTQAA</bytes>
 				</object>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
 				<object class="IBUISimulatedNavigationBarMetrics" key="IBUISimulatedTopBarMetrics">
@@ -421,11 +420,6 @@
 						<string key="objectName">Sessions Table</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">9</int>
-						<reference key="object" ref="25803938"/>
-						<reference key="parent" ref="191373211"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
 						<reference key="object" ref="112955617"/>
 						<reference key="parent" ref="290362310"/>
@@ -450,6 +444,11 @@
 						<int key="objectID">14</int>
 						<reference key="object" ref="568055507"/>
 						<reference key="parent" ref="770632796"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">9</int>
+						<reference key="object" ref="25803938"/>
+						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
 			</object>
@@ -532,8 +531,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bg-repeat_light.png">{640, 458}</string>
 			<string key="bg_dark-brown-repeating.png">{198, 198}</string>
-			<string key="bg_full-screen-light.png">{640, 960}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

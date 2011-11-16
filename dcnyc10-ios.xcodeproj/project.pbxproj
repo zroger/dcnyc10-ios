@@ -42,7 +42,6 @@
 		625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */; };
 		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
 		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
-		62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E8B146F702F001E00A1 /* bg_full-screen-light.png */; };
 		62786E8F146F80B0001E00A1 /* CodSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E8E146F80B0001E00A1 /* CodSponsor.m */; };
 		62786E93146F8311001E00A1 /* SponsorsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E91146F8311001E00A1 /* SponsorsTableViewController.m */; };
 		62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */; };
@@ -69,7 +68,6 @@
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
 		62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */; };
-		62CAFC6B146FF7F10020DB6E /* bg_list-row-tall.png in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */; };
 		62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */; };
 		62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC70147069F70020DB6E /* CodSpeaker.m */; };
 		62CAFC7814707DB30020DB6E /* SpeakerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC7614707DB20020DB6E /* SpeakerTableView.m */; };
@@ -222,7 +220,6 @@
 		625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
 		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
-		62786E8B146F702F001E00A1 /* bg_full-screen-light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_full-screen-light.png"; sourceTree = "<group>"; };
 		62786E8D146F80B0001E00A1 /* CodSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSponsor.h; sourceTree = "<group>"; };
 		62786E8E146F80B0001E00A1 /* CodSponsor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSponsor.m; sourceTree = "<group>"; };
 		62786E90146F8311001E00A1 /* SponsorsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorsTableViewController.h; sourceTree = "<group>"; };
@@ -252,7 +249,6 @@
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
-		62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_list-row-tall.png"; sourceTree = "<group>"; };
 		62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
 		62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
 		62CAFC6F147069F70020DB6E /* CodSpeaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSpeaker.h; sourceTree = "<group>"; };
@@ -458,8 +454,6 @@
 				627D439A14734475001256B8 /* bg-repeat.png */,
 				627D437F14733931001256B8 /* map_projections.png */,
 				625EFCEF14717D3900DDED6F /* Contact.png */,
-				62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */,
-				62786E8B146F702F001E00A1 /* bg_full-screen-light.png */,
 				62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */,
 				62E0886C146EDE7C00DC1585 /* Dashboard */,
 			);
@@ -673,11 +667,9 @@
 				62E0886B146EDE2A00DC1585 /* DashboardViewController.xib in Resources */,
 				62786E88146F6E73001E00A1 /* Default@2x.png in Resources */,
 				62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */,
-				62786E8C146F702F001E00A1 /* bg_full-screen-light.png in Resources */,
 				62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */,
 				62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */,
 				62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */,
-				62CAFC6B146FF7F10020DB6E /* bg_list-row-tall.png in Resources */,
 				62CAFC7914707DB30020DB6E /* SpeakerTableView.xib in Resources */,
 				62CAFC81147080500020DB6E /* SpeakerDetailView.xib in Resources */,
 				62CAFC86147083920020DB6E /* SpeakerTableViewCell.xib in Resources */,

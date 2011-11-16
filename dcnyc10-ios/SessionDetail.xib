@@ -47,11 +47,12 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="422775206"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
+						<int key="IBUIContentMode">2</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">bg_full-screen-light.png</string>
+							<string key="NSResourceName">bg-repeat_light.png</string>
 						</object>
 					</object>
 					<object class="IBUIScrollView" id="422775206">
@@ -104,7 +105,7 @@
 												<reference key="NSWindow"/>
 												<reference key="NSNextKeyView" ref="936977497"/>
 												<string key="NSReuseIdentifierKey">_NS:567</string>
-												<int key="IBUIContentMode">3</int>
+												<int key="IBUIContentMode">2</int>
 												<bool key="IBUIUserInteractionEnabled">NO</bool>
 												<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 												<object class="NSCustomResource" key="IBUIImage">
@@ -251,6 +252,7 @@ gKgKA</string>
 											<int key="NSColorSpace">2</int>
 											<bytes key="NSRGB">MC4yMTk2MDc4NTk4IDAuMTkyMTU2ODgxMSAwLjE3NjQ3MDU5MjYAA</bytes>
 										</object>
+										<bool key="IBUIClipsSubviews">YES</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 									</object>
 									<object class="IBUITableView" id="1047720355">
@@ -300,7 +302,7 @@ gKgKA</string>
 				<reference key="NSNextKeyView" ref="550854654"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
-					<bytes key="NSRGB">MC44Nzg0MzE0Mzk0IDAuODcwNTg4MzAyNiAwLjg1NDkwMjAyOQA</bytes>
+					<bytes key="NSRGB">MC42NTg4MjM1NDk3IDAuNjE5NjA3ODY1OCAwLjU5NjA3ODQ1NTQAA</bytes>
 				</object>
 				<bool key="IBUIClipsSubviews">YES</bool>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
@@ -578,8 +580,8 @@ gKgKA</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bg-repeat_light.png">{640, 458}</string>
 			<string key="bg_dark-brown-repeating.png">{198, 198}</string>
-			<string key="bg_full-screen-light.png">{640, 960}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
