@@ -47,11 +47,12 @@
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="185740851"/>
 						<string key="NSReuseIdentifierKey">_NS:567</string>
+						<int key="IBUIContentMode">3</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">bg_full-screen-light.png</string>
+							<string key="NSResourceName">bg-repeat_light.png</string>
 						</object>
 					</object>
 					<object class="IBUIButton" id="185740851">
@@ -314,7 +315,7 @@
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
-			<object class="IBUINavigationBar" id="625853826">
+			<object class="IBUINavigationBar" id="1059009086">
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">290</int>
 				<string key="NSFrameSize">{320, 44}</string>
@@ -324,14 +325,14 @@
 				<string key="NSReuseIdentifierKey">_NS:260</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<array key="IBUIItems">
-					<object class="IBUINavigationItem" id="631357823">
-						<reference key="IBUINavigationBar" ref="625853826"/>
+					<object class="IBUINavigationItem" id="1034053117">
+						<reference key="IBUINavigationBar" ref="1059009086"/>
 						<string key="IBUITitle">Title</string>
-						<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="1012419389">
+						<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="769538234">
 							<string key="IBUITitle">Feedback</string>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 							<int key="IBUIStyle">1</int>
-							<reference key="IBUINavigationItem" ref="631357823"/>
+							<reference key="IBUINavigationItem" ref="1034053117"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -352,7 +353,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">feedbackButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1012419389"/>
+						<reference key="destination" ref="769538234"/>
 					</object>
 					<int key="connectionID">51</int>
 				</object>
@@ -395,7 +396,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">feedback:</string>
-						<reference key="source" ref="1012419389"/>
+						<reference key="source" ref="769538234"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">50</int>
@@ -489,24 +490,24 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">45</int>
-						<reference key="object" ref="625853826"/>
+						<reference key="object" ref="1059009086"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="631357823"/>
+							<reference ref="1034053117"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="631357823"/>
+						<reference key="object" ref="1034053117"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="1012419389"/>
+							<reference ref="769538234"/>
 						</array>
-						<reference key="parent" ref="625853826"/>
+						<reference key="parent" ref="1059009086"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">49</int>
-						<reference key="object" ref="1012419389"/>
-						<reference key="parent" ref="631357823"/>
+						<reference key="object" ref="769538234"/>
+						<reference key="parent" ref="1034053117"/>
 					</object>
 				</array>
 			</object>
@@ -602,16 +603,16 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="bg_full-screen-light.png">{640, 960}</string>
-			<string key="icn_main-info.png">{116, 149}</string>
+			<string key="bg-repeat_light.png">{640, 458}</string>
+			<string key="icn_main-info.png">{116, 155}</string>
 			<string key="icn_main-maps.png">{116, 155}</string>
-			<string key="icn_main-news.png">{116, 149}</string>
-			<string key="icn_main-sessions.png">{116, 149}</string>
+			<string key="icn_main-news.png">{116, 155}</string>
+			<string key="icn_main-sessions.png">{116, 155}</string>
 			<string key="icn_main-settings.png">{116, 155}</string>
-			<string key="icn_main-social.png">{116, 149}</string>
-			<string key="icn_main-speakers.png">{117, 155}</string>
-			<string key="icn_main-sponsors.png">{118, 155}</string>
-			<string key="icn_main-tweets.png">{116, 149}</string>
+			<string key="icn_main-social.png">{116, 155}</string>
+			<string key="icn_main-speakers.png">{116, 155}</string>
+			<string key="icn_main-sponsors.png">{116, 155}</string>
+			<string key="icn_main-tweets.png">{116, 155}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>

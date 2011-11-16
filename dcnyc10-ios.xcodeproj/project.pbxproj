@@ -69,6 +69,8 @@
 		627D4396147343C0001256B8 /* icn_main-speakers.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D438D147343C0001256B8 /* icn_main-speakers.png */; };
 		627D4397147343C0001256B8 /* icn_main-sponsors.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D438E147343C0001256B8 /* icn_main-sponsors.png */; };
 		627D4398147343C0001256B8 /* icn_main-tweets.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D438F147343C0001256B8 /* icn_main-tweets.png */; };
+		627D439B14734475001256B8 /* bg-repeat_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439914734475001256B8 /* bg-repeat_light.png */; };
+		627D439C14734475001256B8 /* bg-repeat.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D439A14734475001256B8 /* bg-repeat.png */; };
 		62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E31514648BFF00EC7C9D /* libRestKitCoreData.a */; };
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
@@ -258,6 +260,8 @@
 		627D438D147343C0001256B8 /* icn_main-speakers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_main-speakers.png"; sourceTree = "<group>"; };
 		627D438E147343C0001256B8 /* icn_main-sponsors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_main-sponsors.png"; sourceTree = "<group>"; };
 		627D438F147343C0001256B8 /* icn_main-tweets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_main-tweets.png"; sourceTree = "<group>"; };
+		627D439914734475001256B8 /* bg-repeat_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-repeat_light.png"; sourceTree = "<group>"; };
+		627D439A14734475001256B8 /* bg-repeat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-repeat.png"; sourceTree = "<group>"; };
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
@@ -463,6 +467,8 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				627D439914734475001256B8 /* bg-repeat_light.png */,
+				627D439A14734475001256B8 /* bg-repeat.png */,
 				627D437F14733931001256B8 /* map_projections.png */,
 				625EFCEF14717D3900DDED6F /* Contact.png */,
 				62CAFC6A146FF7F10020DB6E /* bg_list-row-tall.png */,
@@ -728,6 +734,8 @@
 				627D4396147343C0001256B8 /* icn_main-speakers.png in Resources */,
 				627D4397147343C0001256B8 /* icn_main-sponsors.png in Resources */,
 				627D4398147343C0001256B8 /* icn_main-tweets.png in Resources */,
+				627D439B14734475001256B8 /* bg-repeat_light.png in Resources */,
+				627D439C14734475001256B8 /* bg-repeat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
