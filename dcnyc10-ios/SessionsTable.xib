@@ -36,10 +36,9 @@
 				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">2</int>
-					<bytes key="NSRGB">MC44Nzg0MzE0Mzk0IDAuODcwNTg4MzAyNiAwLjg1NDkwMjAyOQA</bytes>
+					<bytes key="NSRGB">MC42NTg4MjM1NDk3IDAuNjE5NjA3ODY1OCAwLjU5NjA3ODQ1NTQAA</bytes>
 				</object>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClipsSubviews">YES</bool>

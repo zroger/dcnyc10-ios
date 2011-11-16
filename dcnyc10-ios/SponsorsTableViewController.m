@@ -202,6 +202,8 @@
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
 }
 
 #pragma mark - NSFetchedResultsController delegate

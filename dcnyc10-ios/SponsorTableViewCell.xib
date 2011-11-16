@@ -46,14 +46,13 @@
 								<string key="NSFrameSize">{320, 66}</string>
 								<reference key="NSSuperview" ref="387963141"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
 								<int key="IBUIContentMode">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">bg_list-row-tall.png</string>
+									<string key="NSResourceName">bg-repeat_light.png</string>
 								</object>
 							</object>
 							<object class="IBUIImageView" id="52002564">
@@ -157,6 +156,7 @@
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="387963141"/>
 				<string key="NSReuseIdentifierKey">_NS:384</string>
+				<bool key="IBUIClipsSubviews">YES</bool>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUIAccessoryType">1</int>
 				<reference key="IBUIContentView" ref="387963141"/>
@@ -311,8 +311,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="NS.key.0">bg_list-row-tall.png</string>
-			<string key="NS.object.0">{640, 143}</string>
+			<string key="NS.key.0">bg-repeat_light.png</string>
+			<string key="NS.object.0">{640, 458}</string>
 		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
