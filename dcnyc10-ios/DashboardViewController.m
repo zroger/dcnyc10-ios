@@ -10,6 +10,7 @@
 #import "SessionsTable.h"
 #import "SponsorsTableViewController.h"
 #import "SpeakerTableView.h"
+#import "NewsTableView.h"
 #import "MapView.h"
 
 #import "TestFlight.h"
@@ -115,8 +116,9 @@
 
 - (IBAction)gotoNews:(id)sender
 {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];
+    NewsTableView *newsTableView = [[NewsTableView alloc] initWithNibName:@"NewsTableView" bundle:nil];
+    [self.navigationController pushViewController:newsTableView animated:YES];
+    [newsTableView release];
 }
 
 - (IBAction)gotoInfo:(id)sender

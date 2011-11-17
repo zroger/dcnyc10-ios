@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="872" systemVersion="11C74" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CodNews" representedClassName="CodNews" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="changed" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="nid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="CodSession" representedClassName="CodSession" syncable="YES">
         <attribute name="accepted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
@@ -41,5 +49,6 @@
         <element name="CodSession" positionX="160" positionY="192" width="128" height="135"/>
         <element name="CodSpeaker" positionX="160" positionY="192" width="128" height="165"/>
         <element name="CodSponsor" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="CodNews" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

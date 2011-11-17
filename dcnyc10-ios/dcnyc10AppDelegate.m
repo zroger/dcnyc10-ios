@@ -14,6 +14,7 @@
 #import "CodSession.h"
 #import "CodSponsor.h"
 #import "CodSpeaker.h"
+#import "CodNews.h"
 
 #import <RestKit/CoreData/CoreData.h>
 
@@ -45,7 +46,6 @@
     }
 
     self.navigationController = [[[UINavigationController alloc] initWithRootViewController:dashboard] autorelease];
-//    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:55/255.0 green:76/255.0 blue:107/255.0 alpha:1.0];
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:61/255.0 green:82/255.0 blue:104/255.0 alpha:1.0];
     
     self.window.rootViewController = self.navigationController;
@@ -121,6 +121,7 @@
     [CodSession initObjectMapping];
     [CodSponsor initObjectMapping];
     [CodSpeaker initObjectMapping];
+    [CodNews initObjectMapping];
 
 
     RKObjectMapping *sessionMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSession class]];
@@ -133,6 +134,7 @@
 - (void)loadRemoteObjects {
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/sponsor" delegate:self]; 
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/news" delegate:self]; 
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
