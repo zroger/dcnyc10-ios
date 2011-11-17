@@ -41,7 +41,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>beta6</string>
+	<string>beta7</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
