@@ -83,8 +83,25 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    CGRect frame;
+    
+    // Title Label
+    [titleLabel sizeToFit];
+    
+    // Description Web View
+    [descriptionWebView sizeToContent];
+    
+    frame = descriptionWebView.frame;
+    frame.origin.y = titleLabel.frame.origin.y + titleLabel.frame.size.height;
+    descriptionWebView.frame = frame;
+    
+    // Resize scroll view
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
 }
 
 - (void)viewWillAppear:(BOOL)animated

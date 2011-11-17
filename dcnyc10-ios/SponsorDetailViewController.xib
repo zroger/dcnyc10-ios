@@ -70,13 +70,14 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUIImageView" id="413088141">
 								<reference key="NSNextResponder" ref="865672972"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrameSize">{320, 250}</string>
 								<reference key="NSSuperview" ref="865672972"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="475161568"/>
 								<string key="NSReuseIdentifierKey">_NS:567</string>
-								<int key="IBUIContentMode">3</int>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<int key="IBUIContentMode">2</int>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -86,7 +87,7 @@
 							</object>
 							<object class="IBUIImageView" id="475161568">
 								<reference key="NSNextResponder" ref="865672972"/>
-								<int key="NSvFlags">274</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 20}, {280, 210}}</string>
 								<reference key="NSSuperview" ref="865672972"/>
 								<reference key="NSWindow"/>
@@ -102,11 +103,11 @@
 							</object>
 							<object class="IBUILabel" id="552011845">
 								<reference key="NSNextResponder" ref="865672972"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 259}, {280, 30}}</string>
 								<reference key="NSSuperview" ref="865672972"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="792839814"/>
+								<reference key="NSNextKeyView" ref="56064730"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -134,9 +135,9 @@
 									<int key="NSfFlags">16</int>
 								</object>
 							</object>
-							<object class="IBUIWebView" id="792839814">
+							<object class="IBUIWebView" id="56064730">
 								<reference key="NSNextResponder" ref="865672972"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 297}, {280, 128}}</string>
 								<reference key="NSSuperview" ref="865672972"/>
 								<reference key="NSWindow"/>
@@ -222,7 +223,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">descriptionWebView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="792839814"/>
+						<reference key="destination" ref="56064730"/>
 					</object>
 					<int key="connectionID">38</int>
 				</object>
@@ -237,7 +238,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="792839814"/>
+						<reference key="source" ref="56064730"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">37</int>
@@ -277,7 +278,7 @@
 							<reference ref="475161568"/>
 							<reference ref="413088141"/>
 							<reference ref="552011845"/>
-							<reference ref="792839814"/>
+							<reference ref="56064730"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -320,7 +321,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">36</int>
-						<reference key="object" ref="792839814"/>
+						<reference key="object" ref="56064730"/>
 						<reference key="parent" ref="865672972"/>
 					</object>
 				</array>
