@@ -134,4 +134,13 @@
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, bodyWebView.frame.origin.y + bodyWebView.frame.size.height); 
 }
 
+-(BOOL) webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if ( inType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    
+    return YES;
+}
+
 @end
