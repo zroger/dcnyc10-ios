@@ -42,7 +42,7 @@
 						<reference key="NSNextResponder" ref="930037636"/>
 						<int key="NSvFlags">274</int>
 						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIImageView" id="60461545">
+							<object class="IBUIImageView" id="577830176">
 								<reference key="NSNextResponder" ref="614841759"/>
 								<int key="NSvFlags">290</int>
 								<string key="NSFrameSize">{320, 100}</string>
@@ -125,7 +125,7 @@
 							</object>
 							<object class="IBUIWebView" id="1060702861">
 								<reference key="NSNextResponder" ref="614841759"/>
-								<int key="NSvFlags">292</int>
+								<int key="NSvFlags">290</int>
 								<string key="NSFrame">{{20, 100}, {280, 321}}</string>
 								<reference key="NSSuperview" ref="614841759"/>
 								<reference key="NSWindow"/>
@@ -143,7 +143,7 @@
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="930037636"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="60461545"/>
+						<reference key="NSNextKeyView" ref="577830176"/>
 						<string key="NSReuseIdentifierKey">_NS:190</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -212,7 +212,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">headerImageView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="60461545"/>
+						<reference key="destination" ref="577830176"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
@@ -259,7 +259,7 @@
 							<reference ref="46958561"/>
 							<reference ref="39674318"/>
 							<reference ref="1060702861"/>
-							<reference ref="60461545"/>
+							<reference ref="577830176"/>
 						</array>
 						<reference key="parent" ref="930037636"/>
 					</object>
@@ -280,7 +280,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="60461545"/>
+						<reference key="object" ref="577830176"/>
 						<reference key="parent" ref="614841759"/>
 					</object>
 				</array>

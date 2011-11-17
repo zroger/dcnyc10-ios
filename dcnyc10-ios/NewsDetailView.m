@@ -101,8 +101,30 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    CGRect frame;
+    
+    // Title Label
+    [titleLabel sizeToFit];
+
+    // Header image
+    frame = headerImageView.frame;
+    frame.size.height = titleLabel.frame.origin.y + titleLabel.frame.size.height + 20.0;
+    headerImageView.frame = frame; 
+    
+    // Body Web View
+    [bodyWebView sizeToContent];
+    frame = bodyWebView.frame;
+    frame.origin.y = headerImageView.frame.origin.y + headerImageView.frame.size.height + 20.0;
+    bodyWebView.frame = frame;
+
+    // Scroll View
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, bodyWebView.frame.origin.y + bodyWebView.frame.size.height); 
+    
 }
 
 #pragma mark - UIWebViewDelegate methods
