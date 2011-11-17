@@ -14,7 +14,7 @@
 
 @synthesize sponsor;
 @synthesize titleLabel;
-@synthesize descriptionTextView;
+@synthesize descriptionWebView;
 @synthesize logoImageView;
 @synthesize scrollView;
 @synthesize actionBarButtonItem;
@@ -58,15 +58,16 @@
     titleLabel.text = [sponsor title];
     [titleLabel sizeToFit];
     
-    // Description Text View
-    descriptionTextView.text = [sponsor body];
-    frame = descriptionTextView.frame;
-    frame.size.height = descriptionTextView.contentSize.height;
+    // Description Web View
+    [descriptionWebView loadHTMLString:sponsor.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
+    [descriptionWebView sizeToContent];
+
+    frame = descriptionWebView.frame;
     frame.origin.y = titleLabel.frame.origin.y + titleLabel.frame.size.height;
-    descriptionTextView.frame = frame;
+    descriptionWebView.frame = frame;
 
     // Resize scroll view
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
@@ -100,6 +101,13 @@
     }
     NSLog(@"%@", [url scheme]);
     [[UIApplication sharedApplication] openURL:url];
+}
+
+#pragma mark - UIWebViewDelegate methods
+
+- (void)webViewDidFinishLoad:(UIWebView *)aWebView {
+    [descriptionWebView sizeToContent];
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
 }
 
 @end

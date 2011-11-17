@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "CodSession.h"
+#import "DCNYC10WebView.h"
 
-@interface SessionDetail : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface SessionDetail : UIViewController <UITableViewDelegate, UITableViewDataSource, UIWebViewDelegate>
 {
 }
 
 @property (nonatomic, retain) CodSession *session;
 @property (nonatomic, retain) IBOutlet UITextView *titleTextView;
 @property (nonatomic, retain) IBOutlet UITextView *dateTextView;
-@property (nonatomic, retain) IBOutlet UITextView *descriptionTextView;
+@property (nonatomic, retain) IBOutlet DCNYC10WebView *descriptionWebView;
 
 @property (nonatomic, retain) IBOutlet UILabel *roomLabel;
 @property (nonatomic, retain) IBOutlet UILabel *trackLabel;

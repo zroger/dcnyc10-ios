@@ -16,7 +16,7 @@
 @synthesize session;
 @synthesize titleTextView;
 @synthesize dateTextView;
-@synthesize descriptionTextView;
+@synthesize descriptionWebView;
 
 @synthesize roomLabel;
 @synthesize trackLabel;
@@ -91,13 +91,14 @@
     frame.origin.y = roomLabel.superview.frame.origin.y + roomLabel.superview.frame.size.height;
     speakersTableView.frame = frame;
 
-    descriptionTextView.text = session.body;    
-    frame = descriptionTextView.frame;
-    frame.size.height = descriptionTextView.contentSize.height;
-    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
-    descriptionTextView.frame = frame;
+    [descriptionWebView loadHTMLString:session.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
+    [descriptionWebView sizeToContent];
 
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
+    frame = descriptionWebView.frame;
+    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
+    descriptionWebView.frame = frame;
+
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
     
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
@@ -162,13 +163,14 @@
     frame.origin.y = roomLabel.superview.frame.origin.y + roomLabel.superview.frame.size.height;
     speakersTableView.frame = frame;
     
-    descriptionTextView.text = session.body;    
-    frame = descriptionTextView.frame;
-    frame.size.height = descriptionTextView.contentSize.height;
-    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
-    descriptionTextView.frame = frame;
+    [descriptionWebView loadHTMLString:session.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
+    [descriptionWebView sizeToContent];
     
-    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionTextView.frame.origin.y + descriptionTextView.frame.size.height); 
+    frame = descriptionWebView.frame;
+    frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
+    descriptionWebView.frame = frame;
+    
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -232,6 +234,13 @@
     [detailViewController release];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES]; 
+}
+
+#pragma mark - UIWebViewDelegate methods
+
+- (void)webViewDidFinishLoad:(UIWebView *)aWebView {
+    [descriptionWebView sizeToContent];
+    scrollView.contentSize = CGSizeMake(self.view.frame.size.width, descriptionWebView.frame.origin.y + descriptionWebView.frame.size.height); 
 }
 
 @end

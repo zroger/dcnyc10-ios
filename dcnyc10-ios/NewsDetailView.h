@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CodNews.h"
+#import "DCNYC10WebView.h"
 
 @interface NewsDetailView : UIViewController <UIWebViewDelegate>
 
@@ -15,7 +16,8 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *titleLabel;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
-@property (nonatomic, retain) IBOutlet UIWebView *bodyWebView;
+@property (nonatomic, retain) IBOutlet DCNYC10WebView *bodyWebView;
 @property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UIImageView *headerImageView;
 
 @end

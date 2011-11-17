@@ -32,6 +32,7 @@
 		62336F62146D7017003E1F6D /* SessionsTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62336F60146D7017003E1F6D /* SessionsTable.xib */; };
 		62467361146DED400014D13D /* SessionDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6246735F146DED400014D13D /* SessionDetail.m */; };
 		62467362146DED400014D13D /* SessionDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62467360146DED400014D13D /* SessionDetail.xib */; };
+		6250FA611474B990008CA8BA /* DCNYC10WebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6250FA601474B990008CA8BA /* DCNYC10WebView.m */; };
 		625EFCE614717C0B00DDED6F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCD214717C0B00DDED6F /* LICENSE */; };
 		625EFCE714717C0B00DDED6F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCD314717C0B00DDED6F /* README.md */; };
 		625EFCE814717C0B00DDED6F /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFCD514717C0B00DDED6F /* SDImageCache.m */; };
@@ -236,6 +237,8 @@
 		6246735E146DED400014D13D /* SessionDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionDetail.h; sourceTree = "<group>"; };
 		6246735F146DED400014D13D /* SessionDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionDetail.m; sourceTree = "<group>"; };
 		62467360146DED400014D13D /* SessionDetail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionDetail.xib; sourceTree = "<group>"; };
+		6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNYC10WebView.h; sourceTree = "<group>"; };
+		6250FA601474B990008CA8BA /* DCNYC10WebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNYC10WebView.m; sourceTree = "<group>"; };
 		625EFCD214717C0B00DDED6F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		625EFCD314717C0B00DDED6F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		625EFCD414717C0B00DDED6F /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -409,6 +412,7 @@
 		6215E2C51464853B00EC7C9D /* dcnyc10-ios */ = {
 			isa = PBXGroup;
 			children = (
+				6250FA5B1474B85A008CA8BA /* Classes */,
 				62336F56146D6F0B003E1F6D /* Views */,
 				6215E3271464909400EC7C9D /* Models */,
 				6215E2CE1464853B00EC7C9D /* dcnyc10AppDelegate.h */,
@@ -493,6 +497,15 @@
 				627D43861473425A001256B8 /* Maps */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		6250FA5B1474B85A008CA8BA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */,
+				6250FA601474B990008CA8BA /* DCNYC10WebView.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		625EFCD114717C0B00DDED6F /* SDWebImage */ = {
@@ -885,6 +898,7 @@
 				622CD4D61474935D003C8CBD /* NewsTableView.m in Sources */,
 				622CD4DB14749371003C8CBD /* NewsDetailView.m in Sources */,
 				622CD4DF14749386003C8CBD /* NewsTableViewCell.m in Sources */,
+				6250FA611474B990008CA8BA /* DCNYC10WebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

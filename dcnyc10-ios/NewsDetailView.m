@@ -15,6 +15,7 @@
 @synthesize dateLabel;
 @synthesize bodyWebView;
 @synthesize scrollView;
+@synthesize headerImageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -52,13 +53,15 @@
     titleLabel.text = article.title;
     [titleLabel sizeToFit];
     
+    frame = headerImageView.frame;
+    frame.size.height = titleLabel.frame.origin.y + titleLabel.frame.size.height + 20.0;
+    headerImageView.frame = frame; 
+    
     [bodyWebView loadHTMLString:article.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
+    [bodyWebView sizeToContent];
+
     frame = bodyWebView.frame;
-    frame.origin.y = titleLabel.frame.origin.y + titleLabel.frame.size.height + 20.0;
-    frame.size.height = 1;
-    bodyWebView.frame = frame;
-    CGSize fittingSize = [bodyWebView sizeThatFits:CGSizeZero];
-    frame.size = fittingSize;
+    frame.origin.y = headerImageView.frame.origin.y + headerImageView.frame.size.height + 20.0;
     bodyWebView.frame = frame;
 
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, bodyWebView.frame.origin.y + bodyWebView.frame.size.height); 
@@ -105,16 +108,7 @@
 #pragma mark - UIWebViewDelegate methods
 
 - (void)webViewDidFinishLoad:(UIWebView *)aWebView {
-    CGRect frame = bodyWebView.frame;
-    frame.size.height = 1;
-    bodyWebView.frame = frame;
-    CGSize fittingSize = [bodyWebView sizeThatFits:CGSizeZero];
-    frame.size = fittingSize;
-    bodyWebView.frame = frame;
-    
-    NSLog(@"size: %f, %f", fittingSize.width, fittingSize.height);
-
-
+    [bodyWebView sizeToContent];
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, bodyWebView.frame.origin.y + bodyWebView.frame.size.height); 
 }
 
