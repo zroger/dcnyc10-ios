@@ -202,7 +202,7 @@ gKgKA</string>
 										<string key="NSFrame">{{0, 89}, {320, 100}}</string>
 										<reference key="NSSuperview" ref="401480084"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="827687153"/>
+										<reference key="NSNextKeyView" ref="722825485"/>
 										<string key="NSReuseIdentifierKey">_NS:418</string>
 										<reference key="IBUIBackgroundColor" ref="1015160963"/>
 										<bool key="IBUIClipsSubviews">YES</bool>
@@ -215,9 +215,9 @@ gKgKA</string>
 										<float key="IBUISectionHeaderHeight">22</float>
 										<float key="IBUISectionFooterHeight">22</float>
 									</object>
-									<object class="IBUIWebView" id="827687153">
+									<object class="IBUIWebView" id="722825485">
 										<reference key="NSNextResponder" ref="401480084"/>
-										<int key="NSvFlags">292</int>
+										<int key="NSvFlags">290</int>
 										<string key="NSFrame">{{20, 197}, {280, 219}}</string>
 										<reference key="NSSuperview" ref="401480084"/>
 										<reference key="NSWindow"/>
@@ -331,7 +331,7 @@ gKgKA</string>
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">descriptionWebView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="827687153"/>
+						<reference key="destination" ref="722825485"/>
 					</object>
 					<int key="connectionID">34</int>
 				</object>
@@ -354,7 +354,7 @@ gKgKA</string>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="827687153"/>
+						<reference key="source" ref="722825485"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">35</int>
@@ -401,7 +401,7 @@ gKgKA</string>
 						<array class="NSMutableArray" key="children">
 							<reference ref="74140805"/>
 							<reference ref="1047720355"/>
-							<reference ref="827687153"/>
+							<reference ref="722825485"/>
 						</array>
 						<reference key="parent" ref="422775206"/>
 						<string key="objectName">Inner Content View</string>
@@ -447,7 +447,7 @@ gKgKA</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">33</int>
-						<reference key="object" ref="827687153"/>
+						<reference key="object" ref="722825485"/>
 						<reference key="parent" ref="401480084"/>
 					</object>
 				</array>

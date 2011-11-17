@@ -123,7 +123,6 @@
 {
     CGRect frame;
     
-    titleTextView.text = session.title;
     frame = titleTextView.frame;
     frame.size.height = titleTextView.contentSize.height;
     titleTextView.frame = frame;
@@ -132,24 +131,10 @@
     frame.origin.y = titleTextView.frame.origin.y + titleTextView.frame.size.height - 10.0;
     dateTextView.frame = frame;
     
-    NSDateFormatter *startFormatter = [[NSDateFormatter alloc] init];
-    startFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
-    [startFormatter setDateFormat:@"EEEE, MMMM d\nh:mma"];
-    
-    NSDateFormatter *endFormatter = [[NSDateFormatter alloc] init];
-    endFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
-    [endFormatter setDateFormat:@"h:mma"];
-    
-    dateTextView.text = [NSString stringWithFormat:@"%@ - %@", 
-                         [startFormatter stringFromDate:session.start], 
-                         [endFormatter stringFromDate:session.end]];
-    
-    roomLabel.text = session.room;
     frame = roomLabel.frame;
     frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
     roomLabel.frame = frame;
     
-    trackLabel.text = session.track;
     frame = trackLabel.frame;
     frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
     trackLabel.frame = frame;
@@ -163,9 +148,7 @@
     frame.origin.y = roomLabel.superview.frame.origin.y + roomLabel.superview.frame.size.height;
     speakersTableView.frame = frame;
     
-    [descriptionWebView loadHTMLString:session.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
-    [descriptionWebView sizeToContent];
-    
+    [descriptionWebView sizeToContent];    
     frame = descriptionWebView.frame;
     frame.origin.y = speakersTableView.frame.origin.y + speakersTableView.frame.size.height + 20.0;
     descriptionWebView.frame = frame;
