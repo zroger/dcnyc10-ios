@@ -10,6 +10,7 @@
 #import "CodSpeaker.h"
 #import "MREntitiesConverter.h"
 #import "TestFlight.h"
+#import "dcnyc10AppDelegate.h"
 
 @implementation SessionTableViewCell
 
@@ -91,13 +92,18 @@
 }
 
 - (IBAction)toggleFavorite:(id)sender {
+    dcnyc10AppDelegate *appDelegate = (dcnyc10AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         [session setFavorite:[NSNumber numberWithBool:NO]];
         [starButton setImage:[UIImage imageNamed:@"btn_favorite-inactive.png"] forState:UIControlStateNormal];
+        [appDelegate cancelNotificationForSession:session];
     }
     else {
         [session setFavorite:[NSNumber numberWithBool:YES]];
         [starButton setImage:[UIImage imageNamed:@"btn_favorite-active.png"] forState:UIControlStateNormal];
+
+        [appDelegate scheduleNotificationForSession:session interval:10];
     }
     
     NSError *error = nil;

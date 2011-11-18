@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <RestKit/RestKit.h>
+#import "CodSession.h"
 
 @interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,RKObjectLoaderDelegate>
 
@@ -19,5 +20,8 @@
 - (void) initObjectManager;
 - (void) demoReachability;
 - (void) loadRemoteObjects;
+
+- (void)scheduleNotificationForSession:(CodSession *)session interval:(int)minutesBefore;
+- (void)cancelNotificationForSession:(CodSession *)session;
 
 @end

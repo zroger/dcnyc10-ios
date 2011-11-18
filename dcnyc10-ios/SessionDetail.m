@@ -11,6 +11,7 @@
 #import "SpeakerDetailView.h"
 #import "TestFlight.h"
 #import "MREntitiesConverter.h"
+#import "dcnyc10AppDelegate.h"
 
 @implementation SessionDetail
 
@@ -247,13 +248,17 @@
 }
 
 - (IBAction)toggleFavorite:(id)sender {
+    dcnyc10AppDelegate *appDelegate = (dcnyc10AppDelegate *)[[UIApplication sharedApplication] delegate];
+
     if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
         [session setFavorite:[NSNumber numberWithBool:NO]];
         [starButton setImage:[UIImage imageNamed:@"star-inactive.png"]];
+        [appDelegate cancelNotificationForSession:session];
     }
     else {
         [session setFavorite:[NSNumber numberWithBool:YES]];
-        [starButton setImage:[UIImage imageNamed:@"star-active.png"]];
+        [starButton setImage:[UIImage imageNamed:@"star-active.png"]];        
+        [appDelegate scheduleNotificationForSession:session interval:10];
     }
     
     NSError *error = nil;

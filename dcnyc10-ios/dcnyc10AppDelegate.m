@@ -57,6 +57,8 @@
     
     [TestFlight takeOff:@"e950ffa307d0514132a19056b73baebb_NDA4NDkyMDExLTExLTE0IDEwOjQ3OjUxLjQ4OTM2Mw "];
     
+    NSLog(@"launchOptions: %@", launchOptions);
+
     return YES;
 }
 
@@ -169,5 +171,39 @@
     }
 }
 
+- (void)scheduleNotificationForSession:(CodSession *)session interval:(int)minutesBefore 
+{    
+    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
+    if (localNotif == nil) {
+        return;
+    }
+    
+    localNotif.fireDate = [session.start dateByAddingTimeInterval:-(minutesBefore*60)];
+    localNotif.timeZone = [NSTimeZone defaultTimeZone];
+    localNotif.alertBody = [NSString stringWithFormat:@"%@ starts in %i minutes in room %@.", session.title, minutesBefore, session.room];
+    
+    localNotif.alertAction = NSLocalizedString(@"View Details", nil);
+    localNotif.soundName = UILocalNotificationDefaultSoundName;
+//    localNotif.applicationIconBadgeNumber = 1;
+
+    localNotif.userInfo = [NSDictionary dictionaryWithObject:session.nid forKey:@"sessionId"];
+
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+    
+    [localNotif release];
+}
+
+- (void)cancelNotificationForSession:(CodSession *)session 
+{    
+    NSArray *oldNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+    NSLog(@"oldNotifications: %@", oldNotifications);
+    
+    for (UILocalNotification *notification in oldNotifications) {
+        if ([[notification.userInfo objectForKey:@"sessionId"] isEqualToNumber:session.nid]) {
+            [[UIApplication sharedApplication] cancelLocalNotification:notification];
+            NSLog(@"notification cancelled for session %@", session.title);
+        }
+    }
+}
 
 @end
