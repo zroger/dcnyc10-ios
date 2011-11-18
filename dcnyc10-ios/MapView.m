@@ -77,9 +77,9 @@
     return self.imageView;
 }
 
-- (void)scrollViewDidZoom:(UIScrollView *)scrollView
+- (void)scrollViewDidZoom:(UIScrollView *)inScrollView
 {
-    NSLog(@"zoom; %f", scrollView.zoomScale);
+    NSLog(@"zoom; %f", inScrollView.zoomScale);
 
     [TestFlight passCheckpoint:@"Map view - zoom"];
 }
