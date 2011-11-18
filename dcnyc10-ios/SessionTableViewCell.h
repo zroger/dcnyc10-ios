@@ -18,5 +18,8 @@
 @property (nonatomic, retain) IBOutlet UILabel *timeLabel;
 @property (nonatomic, retain) IBOutlet UILabel *roomLabel;
 @property (nonatomic, retain) IBOutlet UILabel *trackLabel;
+@property (nonatomic, retain) IBOutlet UIButton *starButton;
+
+- (IBAction)toggleFavorite:(id)sender;
 
 @end

@@ -9,6 +9,7 @@
 #import "SessionTableViewCell.h"
 #import "CodSpeaker.h"
 #import "MREntitiesConverter.h"
+#import "TestFlight.h"
 
 @implementation SessionTableViewCell
 
@@ -19,6 +20,7 @@
 @synthesize timeLabel;
 @synthesize roomLabel;
 @synthesize trackLabel;
+@synthesize starButton;
 
 - (void)dealloc
 {
@@ -81,7 +83,27 @@
         else {
             speakerLabel.text = [NSString stringWithFormat:@"%@ %@ and %d others", firstSpeaker.first_name, firstSpeaker.last_name, [speakersArray count] - 1];
         }
+        
+        if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+            [starButton setImage:[UIImage imageNamed:@"btn_favorite-active.png"] forState:UIControlStateNormal];
+        }
     }
+}
+
+- (IBAction)toggleFavorite:(id)sender {
+    if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        [session setFavorite:[NSNumber numberWithBool:NO]];
+        [starButton setImage:[UIImage imageNamed:@"btn_favorite-inactive.png"] forState:UIControlStateNormal];
+    }
+    else {
+        [session setFavorite:[NSNumber numberWithBool:YES]];
+        [starButton setImage:[UIImage imageNamed:@"btn_favorite-active.png"] forState:UIControlStateNormal];
+    }
+    
+    NSError *error = nil;
+    [session.managedObjectContext save:&error];
+    
+    [TestFlight passCheckpoint:@"Favorite toggled from table cell"];
 }
 
 @end

@@ -33,6 +33,8 @@
 
 @dynamic speakers;
 
+@dynamic favorite;
+
 + (void) initObjectMapping {
     RKManagedObjectMapping* sessionMapping = [RKManagedObjectMapping mappingForClass:[CodSession class]];
     [sessionMapping mapAttributes:@"nid", @"title", @"uri",

@@ -34,6 +34,8 @@
 
 @property (nonatomic, retain) NSSet *speakers;
 
+@property (nonatomic, retain) NSNumber *favorite;
+
 + (void) initObjectMapping;
 
 @end
