@@ -19,10 +19,6 @@
 @property (nonatomic, retain) NSArray *sessions;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *refreshButton;
-
-- (IBAction)refreshData:(id)sender;
-
 @end
 
 
