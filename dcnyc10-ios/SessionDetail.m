@@ -10,6 +10,7 @@
 #import "SpeakerTableViewCell.h"
 #import "SpeakerDetailView.h"
 #import "TestFlight.h"
+#import "MREntitiesConverter.h"
 
 @implementation SessionDetail
 
@@ -77,7 +78,9 @@
     frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
     roomLabel.frame = frame;
 
-    trackLabel.text = session.track;
+    // Track
+    MREntitiesConverter *converter = [[[MREntitiesConverter alloc] init] autorelease];
+    trackLabel.text = [converter convertEntiesInString:session.track];
     frame = trackLabel.frame;
     frame.origin.y = dateTextView.frame.origin.y + dateTextView.frame.size.height;
     trackLabel.frame = frame;

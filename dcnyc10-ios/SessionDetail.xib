@@ -160,7 +160,7 @@ gKgKA</string>
 									<object class="IBUILabel" id="973052952">
 										<reference key="NSNextResponder" ref="74140805"/>
 										<int key="NSvFlags">290</int>
-										<string key="NSFrame">{{116, 68}, {92, 21}}</string>
+										<string key="NSFrame">{{116, 68}, {184, 21}}</string>
 										<reference key="NSSuperview" ref="74140805"/>
 										<reference key="NSWindow"/>
 										<reference key="NSNextKeyView" ref="1047720355"/>
@@ -176,6 +176,7 @@ gKgKA</string>
 										<int key="IBUIBaselineAdjustment">1</int>
 										<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
 										<float key="IBUIMinimumFontSize">10</float>
+										<int key="IBUITextAlignment">2</int>
 										<reference key="IBUIFontDescription" ref="894060247"/>
 										<reference key="IBUIFont" ref="192634957"/>
 									</object>
@@ -217,7 +218,6 @@ gKgKA</string>
 								<string key="NSFrame">{{20, 189}, {280, 227}}</string>
 								<reference key="NSSuperview" ref="422775206"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:693</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -230,7 +230,6 @@ gKgKA</string>
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:190</string>
 						<reference key="IBUIBackgroundColor" ref="996695541"/>
 						<bool key="IBUIOpaque">NO</bool>
