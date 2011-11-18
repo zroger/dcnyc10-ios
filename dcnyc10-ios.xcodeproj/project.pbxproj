@@ -63,7 +63,6 @@
 		6279771B1476A53F0011DD81 /* star-inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977171476A53F0011DD81 /* star-inactive@2x.png */; };
 		6279772A1476DC8D0011DD81 /* bg_list-row-tall-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977281476DC8D0011DD81 /* bg_list-row-tall-highlighted.png */; };
 		6279772B1476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977291476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png */; };
-		6279773014770B2D0011DD81 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279772F14770B2C0011DD81 /* MBProgressHUD.m */; };
 		6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279773214770F540011DD81 /* PullRefreshTableViewController.m */; };
 		6279773514770F600011DD81 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6279773414770F600011DD81 /* arrow.png */; };
 		62797737147710070011DD81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62797736147710070011DD81 /* QuartzCore.framework */; };
@@ -299,8 +298,6 @@
 		627977171476A53F0011DD81 /* star-inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-inactive@2x.png"; sourceTree = "<group>"; };
 		627977281476DC8D0011DD81 /* bg_list-row-tall-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_list-row-tall-highlighted.png"; sourceTree = "<group>"; };
 		627977291476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_list-row-tall-highlighted@2x.png"; sourceTree = "<group>"; };
-		6279772E14770B2C0011DD81 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		6279772F14770B2C0011DD81 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		6279773114770F540011DD81 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
 		6279773214770F540011DD81 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		6279773414770F600011DD81 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -530,8 +527,6 @@
 		6250FA5B1474B85A008CA8BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6279772E14770B2C0011DD81 /* MBProgressHUD.h */,
-				6279772F14770B2C0011DD81 /* MBProgressHUD.m */,
 				6279773114770F540011DD81 /* PullRefreshTableViewController.h */,
 				6279773214770F540011DD81 /* PullRefreshTableViewController.m */,
 				6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */,
@@ -961,7 +956,6 @@
 				6250FA611474B990008CA8BA /* DCNYC10WebView.m in Sources */,
 				6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */,
 				62797710147610700011DD81 /* UILabel+DynamicHeight.m in Sources */,
-				6279773014770B2D0011DD81 /* MBProgressHUD.m in Sources */,
 				6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
