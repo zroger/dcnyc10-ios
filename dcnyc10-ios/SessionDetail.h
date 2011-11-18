@@ -26,4 +26,8 @@
 
 @property (nonatomic, retain) IBOutlet UITableView *speakersTableView;
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *starButton;
+
+- (IBAction)toggleFavorite:(id)sender;
+
 @end

@@ -85,6 +85,7 @@
 {
     [super viewWillAppear:animated];
     [TestFlight passCheckpoint:@"Sessions Table View"];
+    [[self tableView] reloadData];
 }
 
 - (void)viewDidAppear:(BOOL)animated

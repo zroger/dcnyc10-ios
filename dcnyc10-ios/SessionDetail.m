@@ -25,6 +25,8 @@
 @synthesize scrollView;
 @synthesize speakersTableView;
 
+@synthesize starButton;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,6 +51,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = session.title;
+    
+    self.navigationItem.rightBarButtonItem = starButton;
+    if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        [starButton setImage:[UIImage imageNamed:@"star-active.png"]];
+    }
 
     CGRect frame;
     
@@ -237,6 +244,22 @@
     }
     
     return YES;
+}
+
+- (IBAction)toggleFavorite:(id)sender {
+    if ([session.favorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+        [session setFavorite:[NSNumber numberWithBool:NO]];
+        [starButton setImage:[UIImage imageNamed:@"star-inactive.png"]];
+    }
+    else {
+        [session setFavorite:[NSNumber numberWithBool:YES]];
+        [starButton setImage:[UIImage imageNamed:@"star-active.png"]];
+    }
+    
+    NSError *error = nil;
+    [session.managedObjectContext save:&error];
+    
+    [TestFlight passCheckpoint:@"Favorite toggled from session detail view"];
 }
 
 @end

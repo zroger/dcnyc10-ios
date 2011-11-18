@@ -57,6 +57,10 @@
 		62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */; };
 		6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279770C1476004F0011DD81 /* MREntitiesConverter.m */; };
 		62797710147610700011DD81 /* UILabel+DynamicHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279770F147610700011DD81 /* UILabel+DynamicHeight.m */; };
+		627977181476A53F0011DD81 /* star-active.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977141476A53E0011DD81 /* star-active.png */; };
+		627977191476A53F0011DD81 /* star-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977151476A53E0011DD81 /* star-active@2x.png */; };
+		6279771A1476A53F0011DD81 /* star-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977161476A53E0011DD81 /* star-inactive.png */; };
+		6279771B1476A53F0011DD81 /* star-inactive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977171476A53F0011DD81 /* star-inactive@2x.png */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -283,6 +287,10 @@
 		6279770C1476004F0011DD81 /* MREntitiesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MREntitiesConverter.m; sourceTree = "<group>"; };
 		6279770E1476106F0011DD81 /* UILabel+DynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DynamicHeight.h"; sourceTree = "<group>"; };
 		6279770F147610700011DD81 /* UILabel+DynamicHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DynamicHeight.m"; sourceTree = "<group>"; };
+		627977141476A53E0011DD81 /* star-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-active.png"; sourceTree = "<group>"; };
+		627977151476A53E0011DD81 /* star-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-active@2x.png"; sourceTree = "<group>"; };
+		627977161476A53E0011DD81 /* star-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-inactive.png"; sourceTree = "<group>"; };
+		627977171476A53F0011DD81 /* star-inactive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-inactive@2x.png"; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -577,6 +585,10 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				627977141476A53E0011DD81 /* star-active.png */,
+				627977151476A53E0011DD81 /* star-active@2x.png */,
+				627977161476A53E0011DD81 /* star-inactive.png */,
+				627977171476A53F0011DD81 /* star-inactive@2x.png */,
 				627D442714737229001256B8 /* bg-repeat.png */,
 				627D442814737229001256B8 /* bg-repeat@2x.png */,
 				627D442514737228001256B8 /* bg-repeat_light.png */,
@@ -878,6 +890,10 @@
 				622CD4D71474935D003C8CBD /* NewsTableView.xib in Resources */,
 				622CD4DC14749371003C8CBD /* NewsDetailView.xib in Resources */,
 				622CD4E114749399003C8CBD /* NewsTableViewCell.xib in Resources */,
+				627977181476A53F0011DD81 /* star-active.png in Resources */,
+				627977191476A53F0011DD81 /* star-active@2x.png in Resources */,
+				6279771A1476A53F0011DD81 /* star-inactive.png in Resources */,
+				6279771B1476A53F0011DD81 /* star-inactive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

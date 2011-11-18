@@ -12,10 +12,13 @@
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBProxyObject</string>
+			<string>IBUIBarButtonItem</string>
 			<string>IBUILabel</string>
 			<string>IBUIWebView</string>
 			<string>IBUITextView</string>
 			<string>IBUITableView</string>
+			<string>IBUINavigationBar</string>
+			<string>IBUINavigationItem</string>
 			<string>IBUIScrollView</string>
 			<string>IBUIView</string>
 		</array>
@@ -34,6 +37,34 @@
 			<object class="IBProxyObject" id="975951072">
 				<string key="IBProxiedObjectIdentifier">IBFirstResponder</string>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+			</object>
+			<object class="IBUINavigationBar" id="330726131">
+				<reference key="NSNextResponder"/>
+				<int key="NSvFlags">290</int>
+				<string key="NSFrameSize">{320, 44}</string>
+				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
+				<string key="NSReuseIdentifierKey">_NS:260</string>
+				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+				<object class="NSColor" key="IBUITintColor">
+					<int key="NSColorSpace">2</int>
+					<bytes key="NSRGB">MC4xMTc2NDcwNjY3IDAuMTkyMTU2ODgxMSAwLjI1MDk4MDQwNwA</bytes>
+				</object>
+				<array key="IBUIItems">
+					<object class="IBUINavigationItem" id="321384330">
+						<reference key="IBUINavigationBar" ref="330726131"/>
+						<string key="IBUITitle">Title</string>
+						<object class="IBUIBarButtonItem" key="IBUIRightBarButtonItem" id="612768559">
+							<object class="NSCustomResource" key="IBUIImage">
+								<string key="NSClassName">NSImage</string>
+								<string key="NSResourceName">star-inactive.png</string>
+							</object>
+							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+							<reference key="IBUINavigationItem" ref="321384330"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+				</array>
 			</object>
 			<object class="IBUIView" id="191373211">
 				<reference key="NSNextResponder"/>
@@ -218,6 +249,7 @@ gKgKA</string>
 								<string key="NSFrame">{{20, 189}, {280, 227}}</string>
 								<reference key="NSSuperview" ref="422775206"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:693</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
 									<int key="NSColorSpace">1</int>
@@ -230,6 +262,7 @@ gKgKA</string>
 						<string key="NSFrameSize">{320, 416}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="74140805"/>
 						<string key="NSReuseIdentifierKey">_NS:190</string>
 						<reference key="IBUIBackgroundColor" ref="996695541"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -322,6 +355,14 @@ gKgKA</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">starButton</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="612768559"/>
+					</object>
+					<int key="connectionID">39</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">dataSource</string>
 						<reference key="source" ref="1047720355"/>
 						<reference key="destination" ref="372490531"/>
@@ -343,6 +384,14 @@ gKgKA</string>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">toggleFavorite:</string>
+						<reference key="source" ref="612768559"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">40</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -426,6 +475,27 @@ gKgKA</string>
 						<reference key="object" ref="68659242"/>
 						<reference key="parent" ref="422775206"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">36</int>
+						<reference key="object" ref="330726131"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="321384330"/>
+						</array>
+						<reference key="parent" ref="0"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">37</int>
+						<reference key="object" ref="321384330"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="612768559"/>
+						</array>
+						<reference key="parent" ref="330726131"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">38</int>
+						<reference key="object" ref="612768559"/>
+						<reference key="parent" ref="321384330"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -442,13 +512,16 @@ gKgKA</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="33.CustomClassName">DCNYC10WebView</string>
 				<string key="33.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="36.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="37.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
 			<dictionary class="NSMutableDictionary" key="unlocalizedProperties"/>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">35</int>
+			<int key="maxID">40</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -463,12 +536,24 @@ gKgKA</string>
 				<object class="IBPartialClassDescription">
 					<string key="className">SessionDetail</string>
 					<string key="superclassName">UIViewController</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">toggleFavorite:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">toggleFavorite:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">toggleFavorite:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="dateTextView">UITextView</string>
 						<string key="descriptionWebView">DCNYC10WebView</string>
 						<string key="roomLabel">UILabel</string>
 						<string key="scrollView">UIScrollView</string>
 						<string key="speakersTableView">UITableView</string>
+						<string key="starButton">UIBarButtonItem</string>
 						<string key="titleTextView">UITextView</string>
 						<string key="trackLabel">UILabel</string>
 					</dictionary>
@@ -493,6 +578,10 @@ gKgKA</string>
 							<string key="name">speakersTableView</string>
 							<string key="candidateClassName">UITableView</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="starButton">
+							<string key="name">starButton</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="titleTextView">
 							<string key="name">titleTextView</string>
 							<string key="candidateClassName">UITextView</string>
@@ -513,6 +602,10 @@ gKgKA</string>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">star-inactive.png</string>
+			<string key="NS.object.0">{20, 20}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
 </archive>
