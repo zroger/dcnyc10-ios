@@ -11,11 +11,13 @@
 #import "SessionDetail.h"
 #import "SessionTableViewCell.h"
 #import "TestFlight.h"
+#import "MBProgressHUD.h"
 
 @implementation SessionsTable
 
 @synthesize sessions;
 @synthesize fetchedResultsController;
+@synthesize refreshButton;
 
 - (void)dealloc {
     self.fetchedResultsController.delegate = nil;
@@ -57,6 +59,7 @@
 {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Sessions", @"Sessions");
+    self.navigationItem.rightBarButtonItem = refreshButton;
 
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
     self.fetchedResultsController = [CodSession fetchRequestAllGroupedBy:@"start" 
@@ -272,5 +275,23 @@
     // The fetch controller has sent all current change notifications, so tell the table view to process all updates.
     [self.tableView endUpdates];
 }
+
+- (IBAction)refreshData:(id)sender
+{
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [self.tableView reloadData];
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh sessions" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+}
+
 
 @end

@@ -8,14 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
 
-@interface SessionsTable : UITableViewController <NSFetchedResultsControllerDelegate> {
+@interface SessionsTable : UITableViewController <NSFetchedResultsControllerDelegate, RKObjectLoaderDelegate> {
     NSArray *sessions;
     NSFetchedResultsController *fetchedResultsController;
 }
 
 @property (nonatomic, retain) NSArray *sessions;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *refreshButton;
+
+- (IBAction)refreshData:(id)sender;
 
 @end
 
