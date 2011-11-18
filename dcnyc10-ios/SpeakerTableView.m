@@ -245,4 +245,21 @@
     [self.tableView endUpdates];
 }
 
+- (void) refresh
+{
+    // Speakers are loaded as children of sessions.
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+    [self.tableView reloadData];
+    [self stopLoading];
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh speakers" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+    [self stopLoading];
+}
+
 @end

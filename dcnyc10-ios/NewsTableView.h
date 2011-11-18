@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import <RestKit/CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface NewsTableView : UITableViewController <NSFetchedResultsControllerDelegate> 
+@interface NewsTableView : PullRefreshTableViewController <NSFetchedResultsControllerDelegate, RKObjectLoaderDelegate> 
 {
     NSFetchedResultsController *fetchedResultsController;
 }

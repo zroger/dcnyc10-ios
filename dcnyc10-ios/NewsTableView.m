@@ -206,4 +206,20 @@
     [self.tableView endUpdates];
 }
 
+- (void) refresh
+{
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/news" delegate:self]; 
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+    [self.tableView reloadData];
+    [self stopLoading];
+}
+
+- (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh news" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
+    [alert show];
+    [self stopLoading];
+}
+
 @end

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface SponsorsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate> 
+@interface SponsorsTableViewController : PullRefreshTableViewController <NSFetchedResultsControllerDelegate, RKObjectLoaderDelegate> 
 {
     NSFetchedResultsController *fetchedResultsController;
 }
