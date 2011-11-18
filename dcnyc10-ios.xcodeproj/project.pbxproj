@@ -489,9 +489,7 @@
 			children = (
 				622CD4D21474933C003C8CBD /* News */,
 				62CAFC7A14707DCE0020DB6E /* Sessions */,
-				62E08867146EDE2A00DC1585 /* DashboardViewController.h */,
-				62E08868146EDE2A00DC1585 /* DashboardViewController.m */,
-				62E08869146EDE2A00DC1585 /* DashboardViewController.xib */,
+				6279770A1475C92A0011DD81 /* Dashboard */,
 				62CAFC7B14707DDE0020DB6E /* Sponsors */,
 				62CAFC7C14707DE60020DB6E /* Speakers */,
 				627D43861473425A001256B8 /* Maps */,
@@ -544,6 +542,16 @@
 				625EFCF51471951F00DDED6F /* TestFlight.h */,
 			);
 			path = TestFlightSDK0.8;
+			sourceTree = "<group>";
+		};
+		6279770A1475C92A0011DD81 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				62E08867146EDE2A00DC1585 /* DashboardViewController.h */,
+				62E08868146EDE2A00DC1585 /* DashboardViewController.m */,
+				62E08869146EDE2A00DC1585 /* DashboardViewController.xib */,
+			);
+			name = Dashboard;
 			sourceTree = "<group>";
 		};
 		627D43861473425A001256B8 /* Maps */ = {

@@ -7,6 +7,7 @@
 //
 
 #import "SessionTableViewCell.h"
+#import "CodSpeaker.h"
 
 @implementation SessionTableViewCell
 
@@ -57,6 +58,20 @@
         titleLabel.text = session.title;
         roomLabel.text = session.room;
         trackLabel.text = session.track;
+    
+        NSArray *speakersArray = [session.speakers allObjects];
+        CodSpeaker *firstSpeaker = [speakersArray objectAtIndex:0];
+
+        if ([speakersArray count] == 1) {
+            speakerLabel.text = [NSString stringWithFormat:@"%@ %@", firstSpeaker.first_name, firstSpeaker.last_name];
+        }
+        else if ([speakersArray count] == 2) {
+            CodSpeaker *secondSpeaker = [speakersArray objectAtIndex:1];
+            speakerLabel.text = [NSString stringWithFormat:@"%@ %@ and %@ %@", firstSpeaker.first_name, firstSpeaker.last_name, secondSpeaker.first_name, secondSpeaker.last_name];
+        }
+        else {
+            speakerLabel.text = [NSString stringWithFormat:@"%@ %@ and %d others", firstSpeaker.first_name, firstSpeaker.last_name, [speakersArray count] - 1];
+        }
     }
 }
 
