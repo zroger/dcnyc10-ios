@@ -276,21 +276,28 @@
     [self.tableView endUpdates];
 }
 
-- (IBAction)refreshData:(id)sender
+- (void) refresh
 {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
 }
 
+- (IBAction)refreshData:(id)sender
+{
+    [self refresh];
+}
+
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     [self.tableView reloadData];
+    [self stopLoading];
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh sessions" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
     [alert show];
+    [self stopLoading];
 }
 
 

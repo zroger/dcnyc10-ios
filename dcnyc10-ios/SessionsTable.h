@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import <RestKit/RestKit.h>
+#import "PullRefreshTableViewController.h"
 
-@interface SessionsTable : UITableViewController <NSFetchedResultsControllerDelegate, RKObjectLoaderDelegate> {
+@interface SessionsTable : PullRefreshTableViewController <NSFetchedResultsControllerDelegate, RKObjectLoaderDelegate> {
     NSArray *sessions;
     NSFetchedResultsController *fetchedResultsController;
 }

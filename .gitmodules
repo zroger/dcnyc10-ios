@@ -7,3 +7,6 @@
 [submodule "MBProgressHUD"]
 	path = MBProgressHUD
 	url = git://github.com/matej/MBProgressHUD.git
+[submodule "PullToRefresh"]
+	path = PullToRefresh
+	url = https://github.com/leah/PullToRefresh.git

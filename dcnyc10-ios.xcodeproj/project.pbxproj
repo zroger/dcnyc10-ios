@@ -64,6 +64,9 @@
 		6279772A1476DC8D0011DD81 /* bg_list-row-tall-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977281476DC8D0011DD81 /* bg_list-row-tall-highlighted.png */; };
 		6279772B1476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977291476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png */; };
 		6279773014770B2D0011DD81 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279772F14770B2C0011DD81 /* MBProgressHUD.m */; };
+		6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279773214770F540011DD81 /* PullRefreshTableViewController.m */; };
+		6279773514770F600011DD81 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6279773414770F600011DD81 /* arrow.png */; };
+		62797737147710070011DD81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62797736147710070011DD81 /* QuartzCore.framework */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -298,6 +301,10 @@
 		627977291476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_list-row-tall-highlighted@2x.png"; sourceTree = "<group>"; };
 		6279772E14770B2C0011DD81 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		6279772F14770B2C0011DD81 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		6279773114770F540011DD81 /* PullRefreshTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullRefreshTableViewController.h; sourceTree = "<group>"; };
+		6279773214770F540011DD81 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
+		6279773414770F600011DD81 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		62797736147710070011DD81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -370,6 +377,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62797737147710070011DD81 /* QuartzCore.framework in Frameworks */,
 				62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */,
 				62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */,
 				6215E32314648CE300EC7C9D /* CFNetwork.framework in Frameworks */,
@@ -392,6 +400,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				62797736147710070011DD81 /* QuartzCore.framework */,
 				627D4431147376AA001256B8 /* Default-Landscape~ipad.png */,
 				627D442F14737641001256B8 /* 72-plain-icon.png */,
 				627D442D14737604001256B8 /* Default-Portrait~ipad.png */,
@@ -523,6 +532,8 @@
 			children = (
 				6279772E14770B2C0011DD81 /* MBProgressHUD.h */,
 				6279772F14770B2C0011DD81 /* MBProgressHUD.m */,
+				6279773114770F540011DD81 /* PullRefreshTableViewController.h */,
+				6279773214770F540011DD81 /* PullRefreshTableViewController.m */,
 				6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */,
 				6250FA601474B990008CA8BA /* DCNYC10WebView.m */,
 				6279770B1476004F0011DD81 /* MREntitiesConverter.h */,
@@ -594,6 +605,7 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6279773414770F600011DD81 /* arrow.png */,
 				627977281476DC8D0011DD81 /* bg_list-row-tall-highlighted.png */,
 				627977291476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png */,
 				627977141476A53E0011DD81 /* star-active.png */,
@@ -907,6 +919,7 @@
 				6279771B1476A53F0011DD81 /* star-inactive@2x.png in Resources */,
 				6279772A1476DC8D0011DD81 /* bg_list-row-tall-highlighted.png in Resources */,
 				6279772B1476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png in Resources */,
+				6279773514770F600011DD81 /* arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -949,6 +962,7 @@
 				6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */,
 				62797710147610700011DD81 /* UILabel+DynamicHeight.m in Sources */,
 				6279773014770B2D0011DD81 /* MBProgressHUD.m in Sources */,
+				6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
