@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * organization;
 @property (nonatomic, retain) NSString * uri;
 @property (nonatomic, retain) NSSet * sessions;
+@property (nonatomic, readonly) NSArray *acceptedSessions;
 
 + (void) initObjectMapping;
 

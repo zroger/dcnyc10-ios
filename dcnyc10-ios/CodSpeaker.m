@@ -20,6 +20,7 @@
 @dynamic organization;
 @dynamic uri;
 @dynamic sessions;
+@dynamic acceptedSessions;
 
 + (void) initObjectMapping {
     RKManagedObjectMapping* speakerMapping = [RKManagedObjectMapping mappingForClass:[CodSpeaker class]];
@@ -36,4 +37,15 @@
     return initial;
 }
 
+- (NSArray *) acceptedSessions 
+{
+    [self willAccessValueForKey:@"approvedSessions"];
+
+    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"created" ascending:YES]];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"accepted == TRUE"];
+    NSArray *results = [[self.sessions filteredSetUsingPredicate:predicate] sortedArrayUsingDescriptors:sortDescriptors];
+
+    [self didAccessValueForKey:@"approvedSessions"];
+    return results;    
+}
 @end

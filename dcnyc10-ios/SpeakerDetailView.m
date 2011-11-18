@@ -56,7 +56,7 @@
     
 
     CGRect frame = sessionsTableView.frame;
-    frame.size.height = speaker.sessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;
+    frame.size.height = speaker.acceptedSessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;
     sessionsTableView.frame = frame;
     
     frame = descriptionTextView.frame;
@@ -87,7 +87,7 @@
 {
     [sessionsTableView reloadData];
     CGRect frame = sessionsTableView.frame;
-    frame.size.height = speaker.sessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;
+    frame.size.height = speaker.acceptedSessions.count * sessionsTableView.rowHeight + sessionsTableView.sectionHeaderHeight;
     sessionsTableView.frame = frame;
     
     frame = descriptionTextView.frame;
@@ -112,14 +112,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [speaker.sessions count];
+    return [speaker.acceptedSessions count];
 }
 
 - (void)configureCell:(SessionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
-    NSArray *sortedSessions = [[speaker.sessions allObjects] sortedArrayUsingDescriptors:sortDescriptors];
-
-    cell.session = [sortedSessions objectAtIndex:indexPath.row];
+    cell.session = [speaker.acceptedSessions objectAtIndex:indexPath.row];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -146,14 +143,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES]];
-    NSArray *sortedSessions = [[speaker.sessions allObjects] sortedArrayUsingDescriptors:sortDescriptors];
-    
     // Navigation logic may go here. Create and push another view controller.
     SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
     
     // Pass the selected object to the new view controller.
-    detailViewController.session = [sortedSessions objectAtIndex:indexPath.row];
+    detailViewController.session = [speaker.acceptedSessions objectAtIndex:indexPath.row];
     
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
