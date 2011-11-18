@@ -124,7 +124,10 @@
     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
     [dateFormatter setDateFormat:@"EEE MMM d, h:mm a"];
 
-    return [dateFormatter stringFromDate:session.start];
+    NSString *title = [dateFormatter stringFromDate:session.start];
+    [dateFormatter release];
+    
+    return title;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

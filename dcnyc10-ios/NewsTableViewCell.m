@@ -48,6 +48,7 @@
         [dateFormatter setDateFormat:@"EEEE MMMM d, YYYY"];
         
         detailTextLabel.text = [dateFormatter stringFromDate:article.created];        
+        [dateFormatter release];
     }
 }
 

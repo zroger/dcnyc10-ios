@@ -11,7 +11,7 @@
 
 - (id)init
 {
-    if([super init]) {
+    if(self = [super init]) {
         resultString = [[NSMutableString alloc] init];
     }
     return self;
@@ -30,7 +30,7 @@
     NSXMLParser* xmlParse = [[NSXMLParser alloc] initWithData:data];
     [xmlParse setDelegate:self];
     [xmlParse parse];
-    NSString* returnStr = [[NSString alloc] initWithFormat:@"%@",resultString];
+    NSString* returnStr = [[[NSString alloc] initWithFormat:@"%@",resultString] autorelease];
     return returnStr;
 }
 

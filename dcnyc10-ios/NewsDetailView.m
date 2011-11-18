@@ -49,6 +49,7 @@
     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
     [dateFormatter setDateFormat:@"EEEE MMMM d, YYYY"];
     dateLabel.text = [dateFormatter stringFromDate:article.created];        
+    [dateFormatter release];
 
     // Title Label
     titleLabel.text = article.title;
@@ -69,8 +70,6 @@
     
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
-    [tileImage release];
-
 }
 
 - (void)viewDidUnload

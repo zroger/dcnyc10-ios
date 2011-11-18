@@ -68,7 +68,6 @@
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
-    [tileImage release];
 }
 
 - (void)viewDidUnload

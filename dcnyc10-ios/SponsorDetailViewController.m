@@ -72,7 +72,6 @@
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
-    [tileImage release];
 }
 
 - (void)viewDidUnload
@@ -114,7 +113,6 @@
 {
     NSURL* url = [NSURL URLWithString:sponsor.url];
     if (url.scheme == nil) {
-        [url release];
         url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", sponsor.url]];
     }
     NSLog(@"%@", [url scheme]);

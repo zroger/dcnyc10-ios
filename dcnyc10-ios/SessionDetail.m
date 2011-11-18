@@ -72,6 +72,8 @@
     dateTextView.text = [NSString stringWithFormat:@"%@ - %@", 
                          [startFormatter stringFromDate:session.start], 
                          [endFormatter stringFromDate:session.end]];
+    [startFormatter release];
+    [endFormatter release];
 
     roomLabel.text = session.room;
     frame = roomLabel.frame;
@@ -105,7 +107,6 @@
     
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
-    [tileImage release];
 }
 
 - (void)viewDidUnload
