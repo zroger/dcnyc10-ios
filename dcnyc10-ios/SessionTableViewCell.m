@@ -8,6 +8,7 @@
 
 #import "SessionTableViewCell.h"
 #import "CodSpeaker.h"
+#import "MREntitiesConverter.h"
 
 @implementation SessionTableViewCell
 
@@ -57,8 +58,16 @@
 
         titleLabel.text = session.title;
         roomLabel.text = session.room;
-        trackLabel.text = session.track;
-    
+        
+        // Track
+        MREntitiesConverter *converter = [[[MREntitiesConverter alloc] init] autorelease];
+        trackLabel.text = [converter convertEntiesInString:session.track];
+
+        NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+        formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
+        [formatter setDateFormat:@"h:mma"];
+        timeLabel.text = [formatter stringFromDate:session.start];
+
         NSArray *speakersArray = [session.speakers allObjects];
         CodSpeaker *firstSpeaker = [speakersArray objectAtIndex:0];
 

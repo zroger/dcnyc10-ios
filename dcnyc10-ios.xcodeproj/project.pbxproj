@@ -55,6 +55,7 @@
 		62786E94146F8311001E00A1 /* SponsorsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E92146F8311001E00A1 /* SponsorsTableViewController.xib */; };
 		62786E98146F8C7F001E00A1 /* SponsorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */; };
 		62786E99146F8C7F001E00A1 /* SponsorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */; };
+		6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279770C1476004F0011DD81 /* MREntitiesConverter.m */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -277,6 +278,8 @@
 		62786E95146F8C7E001E00A1 /* SponsorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorDetailViewController.h; sourceTree = "<group>"; };
 		62786E96146F8C7E001E00A1 /* SponsorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorDetailViewController.m; sourceTree = "<group>"; };
 		62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorDetailViewController.xib; sourceTree = "<group>"; };
+		6279770B1476004F0011DD81 /* MREntitiesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MREntitiesConverter.h; sourceTree = "<group>"; };
+		6279770C1476004F0011DD81 /* MREntitiesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MREntitiesConverter.m; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -502,6 +505,8 @@
 			children = (
 				6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */,
 				6250FA601474B990008CA8BA /* DCNYC10WebView.m */,
+				6279770B1476004F0011DD81 /* MREntitiesConverter.h */,
+				6279770C1476004F0011DD81 /* MREntitiesConverter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -907,6 +912,7 @@
 				622CD4DB14749371003C8CBD /* NewsDetailView.m in Sources */,
 				622CD4DF14749386003C8CBD /* NewsTableViewCell.m in Sources */,
 				6250FA611474B990008CA8BA /* DCNYC10WebView.m in Sources */,
+				6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
