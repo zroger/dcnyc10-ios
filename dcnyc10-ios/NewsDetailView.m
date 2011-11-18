@@ -7,6 +7,7 @@
 //
 
 #import "NewsDetailView.h"
+#import "UILabel+DynamicHeight.h"
 
 @implementation NewsDetailView
 
@@ -51,7 +52,7 @@
 
     // Title Label
     titleLabel.text = article.title;
-    [titleLabel sizeToFit];
+    [titleLabel sizeWithDynamicHeight];
     
     frame = headerImageView.frame;
     frame.size.height = titleLabel.frame.origin.y + titleLabel.frame.size.height + 20.0;
@@ -109,7 +110,7 @@
     CGRect frame;
     
     // Title Label
-    [titleLabel sizeToFit];
+    [titleLabel sizeWithDynamicHeight];
 
     // Header image
     frame = headerImageView.frame;

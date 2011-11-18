@@ -9,6 +9,7 @@
 #import "SponsorDetailViewController.h"
 #import "TestFlight.h"
 #import "UIImageView+WebCache.h"
+#import "UILabel+DynamicHeight.h"
 
 @implementation SponsorDetailViewController
 
@@ -56,7 +57,7 @@
     
     // Title Label
     titleLabel.text = [sponsor title];
-    [titleLabel sizeToFit];
+    [titleLabel sizeWithDynamicHeight];
     
     // Description Web View
     [descriptionWebView loadHTMLString:sponsor.body baseURL:[NSURL URLWithString:@"http://drupalcampnyc.org/"]];
@@ -91,7 +92,7 @@
     CGRect frame;
     
     // Title Label
-    [titleLabel sizeToFit];
+    [titleLabel sizeWithDynamicHeight];
     
     // Description Web View
     [descriptionWebView sizeToContent];
