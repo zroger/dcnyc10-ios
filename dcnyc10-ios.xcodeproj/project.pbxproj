@@ -281,7 +281,7 @@
 		62786E97146F8C7F001E00A1 /* SponsorDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorDetailViewController.xib; sourceTree = "<group>"; };
 		6279770B1476004F0011DD81 /* MREntitiesConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MREntitiesConverter.h; sourceTree = "<group>"; };
 		6279770C1476004F0011DD81 /* MREntitiesConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MREntitiesConverter.m; sourceTree = "<group>"; };
-		6279770E1476106F0011DD81 /* UILabel+DynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; path = "UILabel+DynamicHeight.h"; sourceTree = "<group>"; };
+		6279770E1476106F0011DD81 /* UILabel+DynamicHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DynamicHeight.h"; sourceTree = "<group>"; };
 		6279770F147610700011DD81 /* UILabel+DynamicHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DynamicHeight.m"; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
@@ -1061,7 +1061,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7F7C9D0C-C5A0-4915-8F3C-0A1503B21658";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B480793F-9E8E-4A5E-A98F-92F691B1A3EB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = "Ad Hoc";
