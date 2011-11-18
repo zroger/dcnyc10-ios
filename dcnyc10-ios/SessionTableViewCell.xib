@@ -58,13 +58,28 @@
 						<reference key="NSNextResponder" ref="444223823"/>
 						<int key="NSvFlags">256</int>
 						<array class="NSMutableArray" key="NSSubviews">
+							<object class="IBUIImageView" id="1011937847">
+								<reference key="NSNextResponder" ref="643879857"/>
+								<int key="NSvFlags">274</int>
+								<string key="NSFrame">{{-10, 0}, {320, 72}}</string>
+								<reference key="NSSuperview" ref="643879857"/>
+								<reference key="NSWindow"/>
+								<bool key="IBUIOpaque">NO</bool>
+								<bool key="IBUIClipsSubviews">YES</bool>
+								<bool key="IBUIMultipleTouchEnabled">YES</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">bg_list-row-tall-highlighted.png</string>
+								</object>
+							</object>
 							<object class="IBUIImageView" id="789011071">
 								<reference key="NSNextResponder" ref="643879857"/>
 								<int key="NSvFlags">274</int>
 								<string key="NSFrameSize">{320, 72}</string>
 								<reference key="NSSuperview" ref="643879857"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="445937102"/>
+								<reference key="NSNextKeyView" ref="248123627"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -74,7 +89,7 @@
 									<string key="NSResourceName">bg_list-row-tall.png</string>
 								</object>
 							</object>
-							<object class="IBUIButton" id="445937102">
+							<object class="IBUIButton" id="248123627">
 								<reference key="NSNextResponder" ref="643879857"/>
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{66, 63}</string>
@@ -348,14 +363,22 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">starButton</string>
 						<reference key="source" ref="444223823"/>
-						<reference key="destination" ref="445937102"/>
+						<reference key="destination" ref="248123627"/>
 					</object>
 					<int key="connectionID">20</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">selectedBackgroundView</string>
+						<reference key="source" ref="444223823"/>
+						<reference key="destination" ref="1011937847"/>
+					</object>
+					<int key="connectionID">25</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">toggleFavorite:</string>
-						<reference key="source" ref="445937102"/>
+						<reference key="source" ref="248123627"/>
 						<reference key="destination" ref="444223823"/>
 						<int key="IBEventType">7</int>
 					</object>
@@ -394,9 +417,10 @@
 							<reference ref="596484630"/>
 							<reference ref="354401159"/>
 							<reference ref="703882986"/>
-							<reference ref="445937102"/>
+							<reference ref="248123627"/>
 							<reference ref="243685606"/>
 							<reference ref="158932396"/>
+							<reference ref="1011937847"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -432,7 +456,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">19</int>
-						<reference key="object" ref="445937102"/>
+						<reference key="object" ref="248123627"/>
+						<reference key="parent" ref="444223823"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">24</int>
+						<reference key="object" ref="1011937847"/>
 						<reference key="parent" ref="444223823"/>
 					</object>
 				</array>
@@ -448,6 +477,7 @@
 				<string key="12.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="13.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="24.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.CustomClassName">SessionTableViewCell</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -457,7 +487,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">21</int>
+			<int key="maxID">25</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -521,6 +551,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="bg_list-row-tall-highlighted.png">{320, 72}</string>
 			<string key="bg_list-row-tall.png">{320, 72}</string>
 			<string key="btn_favorite-inactive.png">{66, 63}</string>
 		</dictionary>
