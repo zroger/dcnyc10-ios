@@ -18,6 +18,7 @@
 @implementation DashboardViewController
 
 @synthesize feedbackButton;
+@synthesize landscapeView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,8 +48,9 @@
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
+    self.landscapeView.backgroundColor = [UIColor colorWithPatternImage:tileImage];
 
-    [tileImage release];
+    [self.view addSubview:landscapeView];    
 }
 
 - (void)viewDidUnload
@@ -70,8 +72,15 @@
     self.title = @"Home";
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation 
 {
+    if (interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown) {
+        [landscapeView setHidden:YES];
+    } 
+    else {
+        [landscapeView setHidden:NO];
+        landscapeView.frame = self.view.frame;
+    }
     return YES;
 }
 

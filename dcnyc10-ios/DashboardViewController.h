@@ -11,6 +11,7 @@
 @interface DashboardViewController : UIViewController
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *feedbackButton;
+@property (nonatomic, retain) IBOutlet UIView *landscapeView;
 
 - (IBAction)gotoSessions:(id)sender;
 - (IBAction)gotoSpeakers:(id)sender;
