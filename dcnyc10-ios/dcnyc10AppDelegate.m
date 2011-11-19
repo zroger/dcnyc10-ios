@@ -10,6 +10,7 @@
 
 #import "SessionsTable.h"
 #import "DashboardViewController.h"
+#import "SessionDetail.h"
 
 #import "CodSession.h"
 #import "CodSponsor.h"
@@ -177,7 +178,10 @@
     if (localNotif == nil) {
         return;
     }
-    
+
+    // DEBUG code.  set alert for +30 seconds.
+    // localNotif.fireDate = [NSDate dateWithTimeIntervalSinceNow:(30)];
+
     localNotif.fireDate = [session.start dateByAddingTimeInterval:-(minutesBefore*60)];
     localNotif.timeZone = [NSTimeZone defaultTimeZone];
     localNotif.alertBody = [NSString stringWithFormat:@"%@ starts in %i minutes in room %@.", session.title, minutesBefore, session.room];
@@ -189,6 +193,8 @@
     localNotif.userInfo = [NSDictionary dictionaryWithObject:session.nid forKey:@"sessionId"];
 
     [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
+
+    NSLog(@"notification created for session %@", session.title);
     
     [localNotif release];
 }
@@ -204,6 +210,48 @@
             NSLog(@"notification cancelled for session %@", session.title);
         }
     }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if (application.applicationState == UIApplicationStateInactive ) {
+        [self gotoSessionDetailwithSessionId:[notification.userInfo objectForKey:@"sessionId"]];
+    }
+    
+    if(application.applicationState == UIApplicationStateActive ) { 
+        UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Active" message:notification.alertBody delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"View Session", nil] autorelease];
+        
+        // Store session id in the alert view's tag.  This seems like a hack,
+        // but I'm not sure how else to pass a variable into the delegate.
+        alert.tag = [[notification.userInfo objectForKey:@"sessionId"] integerValue];
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"button clicked: %i", buttonIndex);
+    if (buttonIndex == 1) {
+        [self gotoSessionDetailwithSessionId:[NSNumber numberWithInt:alertView.tag]];
+    }
+}
+
+- (void)gotoSessionDetail:(CodSession *)session
+{
+    // Navigation logic may go here. Create and push another view controller.
+    SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
+    
+    // Pass the selected object to the new view controller.
+    detailViewController.session = session;
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+}
+
+- (void)gotoSessionDetailwithSessionId:(NSNumber *)sessionId
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"nid = %@", sessionId];
+    CodSession *session = [CodSession objectWithPredicate:predicate];
+    [self gotoSessionDetail:session];
 }
 
 @end

@@ -10,7 +10,7 @@
 #import <RestKit/RestKit.h>
 #import "CodSession.h"
 
-@interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,RKObjectLoaderDelegate>
+@interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,RKObjectLoaderDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
@@ -23,5 +23,8 @@
 
 - (void)scheduleNotificationForSession:(CodSession *)session interval:(int)minutesBefore;
 - (void)cancelNotificationForSession:(CodSession *)session;
+
+- (void)gotoSessionDetail:(CodSession *)session;
+- (void)gotoSessionDetailwithSessionId:(NSNumber *)sessionId;
 
 @end
