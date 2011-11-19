@@ -66,6 +66,8 @@
 		6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279773214770F540011DD81 /* PullRefreshTableViewController.m */; };
 		6279773514770F600011DD81 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6279773414770F600011DD81 /* arrow.png */; };
 		62797737147710070011DD81 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62797736147710070011DD81 /* QuartzCore.framework */; };
+		6279773B1477FBAE0011DD81 /* NotificationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977391477FBAB0011DD81 /* NotificationHelper.m */; };
+		6279773C1477FBAE0011DD81 /* NotificationHelper.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6279773A1477FBAC0011DD81 /* NotificationHelper.xib */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -302,6 +304,9 @@
 		6279773214770F540011DD81 /* PullRefreshTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullRefreshTableViewController.m; sourceTree = "<group>"; };
 		6279773414770F600011DD81 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		62797736147710070011DD81 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		627977381477FBAA0011DD81 /* NotificationHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationHelper.h; sourceTree = "<group>"; };
+		627977391477FBAB0011DD81 /* NotificationHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationHelper.m; sourceTree = "<group>"; };
+		6279773A1477FBAC0011DD81 /* NotificationHelper.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationHelper.xib; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -520,6 +525,9 @@
 				62CAFC7B14707DDE0020DB6E /* Sponsors */,
 				62CAFC7C14707DE60020DB6E /* Speakers */,
 				627D43861473425A001256B8 /* Maps */,
+				627977381477FBAA0011DD81 /* NotificationHelper.h */,
+				627977391477FBAB0011DD81 /* NotificationHelper.m */,
+				6279773A1477FBAC0011DD81 /* NotificationHelper.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -915,6 +923,7 @@
 				6279772A1476DC8D0011DD81 /* bg_list-row-tall-highlighted.png in Resources */,
 				6279772B1476DC8D0011DD81 /* bg_list-row-tall-highlighted@2x.png in Resources */,
 				6279773514770F600011DD81 /* arrow.png in Resources */,
+				6279773C1477FBAE0011DD81 /* NotificationHelper.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,6 +966,7 @@
 				6279770D1476004F0011DD81 /* MREntitiesConverter.m in Sources */,
 				62797710147610700011DD81 /* UILabel+DynamicHeight.m in Sources */,
 				6279773314770F540011DD81 /* PullRefreshTableViewController.m in Sources */,
+				6279773B1477FBAE0011DD81 /* NotificationHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
