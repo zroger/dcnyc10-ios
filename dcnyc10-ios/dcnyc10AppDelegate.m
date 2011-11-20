@@ -36,6 +36,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSDictionary *appDefaults = [NSDictionary
+                                 dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:@"sessionNotifications"];    
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     DashboardViewController *dashboard;
@@ -169,46 +173,6 @@
          NSLog(@"Online via WiFi!");
     } else if (RKReachabilityReachableViaWWAN == status) {
          NSLog(@"Online via Edge or 3G!");
-    }
-}
-
-- (void)scheduleNotificationForSession:(CodSession *)session interval:(int)minutesBefore 
-{    
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil) {
-        return;
-    }
-
-    // DEBUG code.  set alert for +30 seconds.
-    // localNotif.fireDate = [NSDate dateWithTimeIntervalSinceNow:(30)];
-
-    localNotif.fireDate = [session.start dateByAddingTimeInterval:-(minutesBefore*60)];
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
-    localNotif.alertBody = [NSString stringWithFormat:@"%@ starts in %i minutes in room %@.", session.title, minutesBefore, session.room];
-    
-    localNotif.alertAction = NSLocalizedString(@"View Details", nil);
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-//    localNotif.applicationIconBadgeNumber = 1;
-
-    localNotif.userInfo = [NSDictionary dictionaryWithObject:session.nid forKey:@"sessionId"];
-
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-
-    NSLog(@"notification created for session %@", session.title);
-    
-    [localNotif release];
-}
-
-- (void)cancelNotificationForSession:(CodSession *)session 
-{    
-    NSArray *oldNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
-    NSLog(@"oldNotifications: %@", oldNotifications);
-    
-    for (UILocalNotification *notification in oldNotifications) {
-        if ([[notification.userInfo objectForKey:@"sessionId"] isEqualToNumber:session.nid]) {
-            [[UIApplication sharedApplication] cancelLocalNotification:notification];
-            NSLog(@"notification cancelled for session %@", session.title);
-        }
     }
 }
 

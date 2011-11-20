@@ -101,7 +101,7 @@
     
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
     formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
-    [formatter setDateFormat:@"h:mma"];
+    [formatter setDateFormat:@"MM-dd-YYYY h:mm:ss a"];
     cell.detailTextLabel.text = [formatter stringFromDate:notification.fireDate];
     
     return cell;

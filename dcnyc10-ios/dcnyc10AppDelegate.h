@@ -21,9 +21,6 @@
 - (void) demoReachability;
 - (void) loadRemoteObjects;
 
-- (void)scheduleNotificationForSession:(CodSession *)session interval:(int)minutesBefore;
-- (void)cancelNotificationForSession:(CodSession *)session;
-
 - (void)gotoSessionDetail:(CodSession *)session;
 - (void)gotoSessionDetailwithSessionId:(NSNumber *)sessionId;
 

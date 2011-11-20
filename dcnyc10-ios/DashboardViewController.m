@@ -12,6 +12,7 @@
 #import "SpeakerTableView.h"
 #import "NewsTableView.h"
 #import "MapView.h"
+#import "SettingsView.h"
 
 #import "TestFlight.h"
 
@@ -144,8 +145,8 @@
 
 - (IBAction)gotoSettings:(id)sender
 {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];    
+    SettingsView *settingsView = [[[SettingsView alloc] initWithNibName:@"SettingsView" bundle:nil] autorelease];
+    [self.navigationController pushViewController:settingsView animated:YES];
 }
 
 @end
