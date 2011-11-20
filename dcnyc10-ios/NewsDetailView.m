@@ -18,6 +18,17 @@
 @synthesize scrollView;
 @synthesize headerImageView;
 
+- (void) dealloc
+{
+    [article release];
+    [titleLabel release];
+    [dateLabel release];
+    [bodyWebView release];
+    [scrollView release];
+    [headerImageView release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

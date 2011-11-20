@@ -21,6 +21,13 @@
 @synthesize feedbackButton;
 @synthesize landscapeView;
 
+- (void) dealloc
+{
+    [feedbackButton release];
+    [landscapeView release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

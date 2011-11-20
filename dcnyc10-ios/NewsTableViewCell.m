@@ -16,6 +16,15 @@
 @synthesize detailTextLabel;
 @synthesize imageView;
 
+- (void) dealloc
+{
+    [article release];
+    [textLabel release];
+    [detailTextLabel release];
+    [imageView release];
+    [super dealloc];
+}
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

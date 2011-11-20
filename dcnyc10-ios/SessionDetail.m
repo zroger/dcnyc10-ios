@@ -28,6 +28,21 @@
 
 @synthesize starButton;
 
+- (void) dealloc
+{
+    [session release];
+    [titleTextView release];
+    [dateTextView release];
+    [descriptionWebView release];
+    [roomLabel release];
+    [trackLabel release];
+    [scrollView release];
+    [speakersTableView release];
+    [starButton release];
+    
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

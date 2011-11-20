@@ -24,13 +24,12 @@
 @implementation dcnyc10AppDelegate
 
 @synthesize window = _window;
-@synthesize tabBarController = _tabBarController;
 @synthesize navigationController = _navigationController;
 
 - (void)dealloc
 {
     [_window release];
-    [_tabBarController release];
+    [_navigationController release];
     [super dealloc];
 }
 
@@ -105,20 +104,6 @@
      See also applicationDidEnterBackground:.
      */
 }
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 - (void) initObjectManager {
     RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.zroger.com/cod-api"];

@@ -20,6 +20,17 @@
 @synthesize scrollView;
 @synthesize actionBarButtonItem;
 
+- (void) dealloc
+{
+    [sponsor release];
+    [titleLabel release];
+    [descriptionWebView release];
+    [logoImageView release];
+    [scrollView release];
+    [actionBarButtonItem release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

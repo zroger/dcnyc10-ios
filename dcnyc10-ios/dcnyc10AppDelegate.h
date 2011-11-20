@@ -13,8 +13,6 @@
 @interface dcnyc10AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,RKObjectLoaderDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) UITabBarController *tabBarController;
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 - (void) initObjectManager;

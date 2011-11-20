@@ -23,6 +23,20 @@
 @synthesize sessionsTableView;
 @synthesize descriptionTextView;
 
+- (void) dealloc
+{
+    [speaker release];
+    [scrollView release];
+    [topView release];
+    [titleLabel release];
+    [organizationLabel release];
+    [imageView release];
+    [sessionsTableView release];
+    [descriptionTextView release];
+    
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

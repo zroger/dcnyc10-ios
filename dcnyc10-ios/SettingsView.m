@@ -17,6 +17,13 @@
 
 @synthesize alertsSwitch;
 
+- (void) dealloc
+{
+    [cell0 release];
+    [cell1 release];
+    [super dealloc];
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];

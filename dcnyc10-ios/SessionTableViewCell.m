@@ -31,6 +31,7 @@
     [timeLabel release];
     [roomLabel release];
     [trackLabel release];
+    [starButton release];
 
     [super dealloc];
 }

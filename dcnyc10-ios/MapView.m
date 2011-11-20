@@ -14,6 +14,13 @@
 @synthesize imageView;
 @synthesize scrollView;
 
+- (void) dealloc
+{
+    [imageView release];
+    [scrollView release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
