@@ -46,10 +46,25 @@
         <attribute name="uri" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="TwitterMessage" representedClassName="TwitterMessage" syncable="YES">
+        <attribute name="created_at" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="id_str" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TwitterUser" inverseName="tweets" inverseEntity="TwitterUser" syncable="YES"/>
+    </entity>
+    <entity name="TwitterUser" representedClassName="TwitterUser" syncable="YES">
+        <attribute name="id_str" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="profile_image_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="screen_name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tweets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TwitterMessage" inverseName="user" inverseEntity="TwitterMessage" syncable="YES"/>
+    </entity>
     <elements>
         <element name="CodNews" positionX="160" positionY="192" width="128" height="135"/>
         <element name="CodSession" positionX="160" positionY="192" width="128" height="270"/>
         <element name="CodSpeaker" positionX="160" positionY="192" width="128" height="165"/>
         <element name="CodSponsor" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="TwitterUser" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="TwitterMessage" positionX="160" positionY="192" width="128" height="105"/>
     </elements>
 </model>

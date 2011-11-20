@@ -16,6 +16,8 @@
 #import "CodSponsor.h"
 #import "CodSpeaker.h"
 #import "CodNews.h"
+#import "TwitterMessage.h"
+#import "TwitterUser.h"
 
 #import <RestKit/CoreData/CoreData.h>
 
@@ -114,6 +116,7 @@
     [CodSponsor initObjectMapping];
     [CodSpeaker initObjectMapping];
     [CodNews initObjectMapping];
+    [TwitterMessage initObjectMapping];
 
 
     RKObjectMapping *sessionMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSession class]];

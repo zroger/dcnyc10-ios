@@ -75,6 +75,14 @@
 		627977741478A2250011DD81 /* at@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977701478A2250011DD81 /* at@2x.png */; };
 		627977751478A2250011DD81 /* hash.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977711478A2250011DD81 /* hash.png */; };
 		627977761478A2250011DD81 /* hash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 627977721478A2250011DD81 /* hash@2x.png */; };
+		6279778F147960BB0011DD81 /* TwitterTabbedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279778D147960BB0011DD81 /* TwitterTabbedViewController.m */; };
+		62797790147960BB0011DD81 /* TwitterTabbedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6279778E147960BB0011DD81 /* TwitterTabbedViewController.xib */; };
+		627977931479649B0011DD81 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977921479649B0011DD81 /* TwitterUser.m */; };
+		627977961479649C0011DD81 /* TwitterMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977951479649C0011DD81 /* TwitterMessage.m */; };
+		6279779A147966DF0011DD81 /* TwitterTweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62797798147966DE0011DD81 /* TwitterTweetsTableViewController.m */; };
+		6279779B147966DF0011DD81 /* TwitterTweetsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62797799147966DE0011DD81 /* TwitterTweetsTableViewController.xib */; };
+		6279779E1479717B0011DD81 /* TwitterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279779D1479717B0011DD81 /* TwitterTableViewCell.m */; };
+		627977A0147972CC0011DD81 /* TwitterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -323,6 +331,19 @@
 		627977701478A2250011DD81 /* at@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "at@2x.png"; sourceTree = "<group>"; };
 		627977711478A2250011DD81 /* hash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hash.png; sourceTree = "<group>"; };
 		627977721478A2250011DD81 /* hash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hash@2x.png"; sourceTree = "<group>"; };
+		6279778C147960BB0011DD81 /* TwitterTabbedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTabbedViewController.h; sourceTree = "<group>"; };
+		6279778D147960BB0011DD81 /* TwitterTabbedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTabbedViewController.m; sourceTree = "<group>"; };
+		6279778E147960BB0011DD81 /* TwitterTabbedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTabbedViewController.xib; sourceTree = "<group>"; };
+		627977911479649B0011DD81 /* TwitterUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterUser.h; sourceTree = "<group>"; };
+		627977921479649B0011DD81 /* TwitterUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterUser.m; sourceTree = "<group>"; };
+		627977941479649C0011DD81 /* TwitterMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterMessage.h; sourceTree = "<group>"; };
+		627977951479649C0011DD81 /* TwitterMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterMessage.m; sourceTree = "<group>"; };
+		62797797147966DE0011DD81 /* TwitterTweetsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTweetsTableViewController.h; sourceTree = "<group>"; };
+		62797798147966DE0011DD81 /* TwitterTweetsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTweetsTableViewController.m; sourceTree = "<group>"; };
+		62797799147966DE0011DD81 /* TwitterTweetsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTweetsTableViewController.xib; sourceTree = "<group>"; };
+		6279779C1479717A0011DD81 /* TwitterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewCell.h; sourceTree = "<group>"; };
+		6279779D1479717B0011DD81 /* TwitterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewCell.m; sourceTree = "<group>"; };
+		6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTableViewCell.xib; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -504,6 +525,10 @@
 		6215E3271464909400EC7C9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				627977941479649C0011DD81 /* TwitterMessage.h */,
+				627977951479649C0011DD81 /* TwitterMessage.m */,
+				627977911479649B0011DD81 /* TwitterUser.h */,
+				627977921479649B0011DD81 /* TwitterUser.m */,
 				622CD4CF14748FB5003C8CBD /* CodNews.h */,
 				622CD4D014748FB5003C8CBD /* CodNews.m */,
 				62CAFC6F147069F70020DB6E /* CodSpeaker.h */,
@@ -535,6 +560,7 @@
 		62336F56146D6F0B003E1F6D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62797786147960750011DD81 /* Twitter */,
 				627977561478780C0011DD81 /* Settings */,
 				622CD4D21474933C003C8CBD /* News */,
 				62CAFC7A14707DCE0020DB6E /* Sessions */,
@@ -622,6 +648,22 @@
 				6279775E1478809B0011DD81 /* SettingsView.xib */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		62797786147960750011DD81 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				6279778C147960BB0011DD81 /* TwitterTabbedViewController.h */,
+				6279778D147960BB0011DD81 /* TwitterTabbedViewController.m */,
+				6279778E147960BB0011DD81 /* TwitterTabbedViewController.xib */,
+				62797797147966DE0011DD81 /* TwitterTweetsTableViewController.h */,
+				62797798147966DE0011DD81 /* TwitterTweetsTableViewController.m */,
+				62797799147966DE0011DD81 /* TwitterTweetsTableViewController.xib */,
+				6279779C1479717A0011DD81 /* TwitterTableViewCell.h */,
+				6279779D1479717B0011DD81 /* TwitterTableViewCell.m */,
+				6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */,
+			);
+			name = Twitter;
 			sourceTree = "<group>";
 		};
 		627D43861473425A001256B8 /* Maps */ = {
@@ -962,6 +1004,9 @@
 				627977741478A2250011DD81 /* at@2x.png in Resources */,
 				627977751478A2250011DD81 /* hash.png in Resources */,
 				627977761478A2250011DD81 /* hash@2x.png in Resources */,
+				62797790147960BB0011DD81 /* TwitterTabbedViewController.xib in Resources */,
+				6279779B147966DF0011DD81 /* TwitterTweetsTableViewController.xib in Resources */,
+				627977A0147972CC0011DD81 /* TwitterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1007,6 +1052,11 @@
 				6279773B1477FBAE0011DD81 /* NotificationHelper.m in Sources */,
 				6279775F1478809B0011DD81 /* SettingsView.m in Sources */,
 				62797763147887A40011DD81 /* NotificationsController.m in Sources */,
+				6279778F147960BB0011DD81 /* TwitterTabbedViewController.m in Sources */,
+				627977931479649B0011DD81 /* TwitterUser.m in Sources */,
+				627977961479649C0011DD81 /* TwitterMessage.m in Sources */,
+				6279779A147966DF0011DD81 /* TwitterTweetsTableViewController.m in Sources */,
+				6279779E1479717B0011DD81 /* TwitterTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

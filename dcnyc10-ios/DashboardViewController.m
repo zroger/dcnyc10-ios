@@ -13,6 +13,7 @@
 #import "NewsTableView.h"
 #import "MapView.h"
 #import "SettingsView.h"
+#import "TwitterTweetsTableViewController.h"
 
 #import "TestFlight.h"
 
@@ -127,8 +128,8 @@
 
 - (IBAction)gotoTweets:(id)sender
 {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];
+    TwitterTweetsTableViewController *controller = [[[TwitterTweetsTableViewController alloc] initWithNibName:@"TwitterTweetsTableViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (IBAction)gotoNews:(id)sender
