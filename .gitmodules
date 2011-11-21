@@ -10,3 +10,6 @@
 [submodule "PullToRefresh"]
 	path = PullToRefresh
 	url = https://github.com/leah/PullToRefresh.git
+[submodule "OHAttributedLabel"]
+	path = OHAttributedLabel
+	url = https://github.com/AliSoftware/OHAttributedLabel.git

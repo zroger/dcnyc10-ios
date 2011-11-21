@@ -83,6 +83,9 @@
 		6279779B147966DF0011DD81 /* TwitterTweetsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62797799147966DE0011DD81 /* TwitterTweetsTableViewController.xib */; };
 		6279779E1479717B0011DD81 /* TwitterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6279779D1479717B0011DD81 /* TwitterTableViewCell.m */; };
 		627977A0147972CC0011DD81 /* TwitterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */; };
+		627977A51479CC1D0011DD81 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977A21479CC1B0011DD81 /* NSAttributedString+Attributes.m */; };
+		627977A61479CC1D0011DD81 /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977A41479CC1C0011DD81 /* OHAttributedLabel.m */; };
+		627977A81479CC4C0011DD81 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627977A71479CC4B0011DD81 /* CoreText.framework */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -344,6 +347,11 @@
 		6279779C1479717A0011DD81 /* TwitterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterTableViewCell.h; sourceTree = "<group>"; };
 		6279779D1479717B0011DD81 /* TwitterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterTableViewCell.m; sourceTree = "<group>"; };
 		6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwitterTableViewCell.xib; sourceTree = "<group>"; };
+		627977A11479CC1A0011DD81 /* NSAttributedString+Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Attributes.h"; sourceTree = "<group>"; };
+		627977A21479CC1B0011DD81 /* NSAttributedString+Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Attributes.m"; sourceTree = "<group>"; };
+		627977A31479CC1B0011DD81 /* OHAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAttributedLabel.h; sourceTree = "<group>"; };
+		627977A41479CC1C0011DD81 /* OHAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAttributedLabel.m; sourceTree = "<group>"; };
+		627977A71479CC4B0011DD81 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -416,6 +424,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				627977A81479CC4C0011DD81 /* CoreText.framework in Frameworks */,
 				62797737147710070011DD81 /* QuartzCore.framework in Frameworks */,
 				62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */,
 				62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */,
@@ -439,6 +448,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				627977A71479CC4B0011DD81 /* CoreText.framework */,
 				62797736147710070011DD81 /* QuartzCore.framework */,
 				627D4431147376AA001256B8 /* Default-Landscape~ipad.png */,
 				627D442F14737641001256B8 /* 72-plain-icon.png */,
@@ -578,6 +588,10 @@
 		6250FA5B1474B85A008CA8BA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				627977A11479CC1A0011DD81 /* NSAttributedString+Attributes.h */,
+				627977A21479CC1B0011DD81 /* NSAttributedString+Attributes.m */,
+				627977A31479CC1B0011DD81 /* OHAttributedLabel.h */,
+				627977A41479CC1C0011DD81 /* OHAttributedLabel.m */,
 				6279773114770F540011DD81 /* PullRefreshTableViewController.h */,
 				6279773214770F540011DD81 /* PullRefreshTableViewController.m */,
 				6250FA5F1474B990008CA8BA /* DCNYC10WebView.h */,
@@ -1057,6 +1071,8 @@
 				627977961479649C0011DD81 /* TwitterMessage.m in Sources */,
 				6279779A147966DF0011DD81 /* TwitterTweetsTableViewController.m in Sources */,
 				6279779E1479717B0011DD81 /* TwitterTableViewCell.m in Sources */,
+				627977A51479CC1D0011DD81 /* NSAttributedString+Attributes.m in Sources */,
+				627977A61479CC1D0011DD81 /* OHAttributedLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

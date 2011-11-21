@@ -10,6 +10,8 @@
 #import "TwitterMessage.h"
 #import "TestFlight.h"
 #import "TwitterTableViewCell.h"
+#import "NSAttributedString+Attributes.h"
+#import "TwitterUser.h"
 
 @implementation TwitterTweetsTableViewController
 
@@ -18,7 +20,6 @@
 - (void)dealloc {
     self.fetchedResultsController.delegate = nil;
     self.fetchedResultsController = nil;
-    
     [super dealloc];
 }
 
@@ -48,7 +49,8 @@
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
-    
+
+    self.title = @"@drupalcampnyc";
     
     //    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"first_name != NULL"];
     self.fetchedResultsController = [TwitterMessage fetchRequestAllGroupedBy:nil 
@@ -105,7 +107,6 @@
 {
     // Return the number of sections.
     NSArray *sections = [fetchedResultsController sections];
-    NSLog(@"%@", sections);
     return [sections count];
 }
 
@@ -133,7 +134,6 @@
     
     TwitterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        NSLog(@"cell created");
         // Create a temporary UIViewController to instantiate the custom cell.
         UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"TwitterTableViewCell" bundle:nil];
         // Grab a pointer to the custom cell.
@@ -151,14 +151,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
+    TwitterMessage *tweet = [fetchedResultsController objectAtIndexPath:indexPath];    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://twitter.com/%@/status/%@", tweet.user.screen_name, tweet.id_str]];
+    [[UIApplication sharedApplication] openURL:url];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [TwitterTableViewCell heightForCellWithString:[[fetchedResultsController objectAtIndexPath:indexPath] text] andWidth:self.view.frame.size.width];
 }
 
 #pragma mark - NSFetchedResultsController delegate
@@ -225,8 +227,6 @@
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
-    NSLog(@"objectLoader.result: %@", objectLoader.result.asCollection);
-
     // See http://groups.google.com/group/restkit/browse_thread/thread/13b63cf27e97cf78
     NSManagedObject *managedObject = (NSManagedObject *)[objects objectAtIndex:0];
     NSError *error;
@@ -242,7 +242,6 @@
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh tweets" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
     [alert show];
-    NSLog(@"Error: %@", error);
     [self stopLoading];
 }
 

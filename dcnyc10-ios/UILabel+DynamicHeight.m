@@ -14,7 +14,7 @@
 - (void) sizeWithDynamicHeight
 {
     //Calculate the expected size based on the font and linebreak mode of your label
-    CGSize maximumLabelSize = CGSizeMake(296,9999);
+    CGSize maximumLabelSize = CGSizeMake(self.frame.size.width,9999);
     
     CGSize expectedLabelSize = [self.text sizeWithFont:self.font 
                                      constrainedToSize:maximumLabelSize 

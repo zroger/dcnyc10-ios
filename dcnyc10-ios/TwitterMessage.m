@@ -31,6 +31,13 @@
 
     [twitterMessageMapping mapKeyPath:@"user" toRelationship:@"user" withMapping:twitterUserMapping];
     
+    NSDateFormatter* dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    // "created_at": "Tue Nov 15 23:30:11 +0000 2011",
+    [dateFormatter setDateFormat:@"E MMM d HH:mm:ss Z y"];
+    dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+    
+    twitterMessageMapping.dateFormatters = [NSArray arrayWithObject: dateFormatter];
+    
     [[RKObjectManager sharedManager].mappingProvider addObjectMapping:twitterMessageMapping];
 }
 

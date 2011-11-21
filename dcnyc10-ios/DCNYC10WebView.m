@@ -32,6 +32,7 @@
     
     for (id subview in self.subviews) {
         if ([[subview class] isSubclassOfClass: [UIScrollView class]]) {
+            [((UIScrollView *)subview) setScrollEnabled:NO];
             ((UIScrollView *)subview).bounces = NO;            
         }
     }
@@ -46,5 +47,6 @@
     frame.size = fittingSize;
     self.frame = frame;
 }
+
 
 @end
