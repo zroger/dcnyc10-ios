@@ -59,6 +59,7 @@
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
     
+    self.title = @"Info";
     // Do any additional setup after loading the view from its nib.
 }
 
