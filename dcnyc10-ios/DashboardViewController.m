@@ -14,6 +14,7 @@
 #import "MapView.h"
 #import "SettingsView.h"
 #import "TwitterTweetsTableViewController.h"
+#import "InfoViewController.h"
 
 #import "TestFlight.h"
 
@@ -141,8 +142,8 @@
 
 - (IBAction)gotoInfo:(id)sender
 {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Coming soon" message:@"This feature is still in development" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];
+    InfoViewController *controller = [[[InfoViewController alloc] initWithNibName:@"InfoViewController" bundle:nil] autorelease];
+    [self.navigationController pushViewController:controller animated:YES];    
 }
 
 - (IBAction)gotoSocial:(id)sender

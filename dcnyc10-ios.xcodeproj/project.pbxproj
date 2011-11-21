@@ -86,6 +86,8 @@
 		627977A51479CC1D0011DD81 /* NSAttributedString+Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977A21479CC1B0011DD81 /* NSAttributedString+Attributes.m */; };
 		627977A61479CC1D0011DD81 /* OHAttributedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977A41479CC1C0011DD81 /* OHAttributedLabel.m */; };
 		627977A81479CC4C0011DD81 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 627977A71479CC4B0011DD81 /* CoreText.framework */; };
+		627977B01479E1AE0011DD81 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 627977AE1479E1A70011DD81 /* InfoViewController.m */; };
+		627977B11479E1AE0011DD81 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627977AF1479E1AB0011DD81 /* InfoViewController.xib */; };
 		627D438014733931001256B8 /* map_projections.png in Resources */ = {isa = PBXBuildFile; fileRef = 627D437F14733931001256B8 /* map_projections.png */; };
 		627D438414733972001256B8 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627D438214733972001256B8 /* MapView.m */; };
 		627D438514733972001256B8 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627D438314733972001256B8 /* MapView.xib */; };
@@ -352,6 +354,9 @@
 		627977A31479CC1B0011DD81 /* OHAttributedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OHAttributedLabel.h; sourceTree = "<group>"; };
 		627977A41479CC1C0011DD81 /* OHAttributedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OHAttributedLabel.m; sourceTree = "<group>"; };
 		627977A71479CC4B0011DD81 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		627977AD1479E1A50011DD81 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		627977AE1479E1A70011DD81 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		627977AF1479E1AB0011DD81 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 		627D437F14733931001256B8 /* map_projections.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_projections.png; sourceTree = "<group>"; };
 		627D438114733972001256B8 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
 		627D438214733972001256B8 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
@@ -578,9 +583,7 @@
 				62CAFC7B14707DDE0020DB6E /* Sponsors */,
 				62CAFC7C14707DE60020DB6E /* Speakers */,
 				627D43861473425A001256B8 /* Maps */,
-				627977381477FBAA0011DD81 /* NotificationHelper.h */,
-				627977391477FBAB0011DD81 /* NotificationHelper.m */,
-				6279773A1477FBAC0011DD81 /* NotificationHelper.xib */,
+				627977B21479F1130011DD81 /* Info */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -657,6 +660,9 @@
 		627977561478780C0011DD81 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				627977381477FBAA0011DD81 /* NotificationHelper.h */,
+				627977391477FBAB0011DD81 /* NotificationHelper.m */,
+				6279773A1477FBAC0011DD81 /* NotificationHelper.xib */,
 				6279775C1478809B0011DD81 /* SettingsView.h */,
 				6279775D1478809B0011DD81 /* SettingsView.m */,
 				6279775E1478809B0011DD81 /* SettingsView.xib */,
@@ -678,6 +684,16 @@
 				6279779F147972CB0011DD81 /* TwitterTableViewCell.xib */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		627977B21479F1130011DD81 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				627977AD1479E1A50011DD81 /* InfoViewController.h */,
+				627977AE1479E1A70011DD81 /* InfoViewController.m */,
+				627977AF1479E1AB0011DD81 /* InfoViewController.xib */,
+			);
+			name = Info;
 			sourceTree = "<group>";
 		};
 		627D43861473425A001256B8 /* Maps */ = {
@@ -1021,6 +1037,7 @@
 				62797790147960BB0011DD81 /* TwitterTabbedViewController.xib in Resources */,
 				6279779B147966DF0011DD81 /* TwitterTweetsTableViewController.xib in Resources */,
 				627977A0147972CC0011DD81 /* TwitterTableViewCell.xib in Resources */,
+				627977B11479E1AE0011DD81 /* InfoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1090,7 @@
 				6279779E1479717B0011DD81 /* TwitterTableViewCell.m in Sources */,
 				627977A51479CC1D0011DD81 /* NSAttributedString+Attributes.m in Sources */,
 				627977A61479CC1D0011DD81 /* OHAttributedLabel.m in Sources */,
+				627977B01479E1AE0011DD81 /* InfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
