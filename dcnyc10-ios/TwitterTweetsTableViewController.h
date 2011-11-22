@@ -20,4 +20,6 @@
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
+- (void)dismissRefreshError;
+
 @end

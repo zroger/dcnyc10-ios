@@ -19,6 +19,8 @@
 @property (nonatomic, retain) NSArray *sessions;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 
+- (void)dismissRefreshError;
+
 @end
 
 

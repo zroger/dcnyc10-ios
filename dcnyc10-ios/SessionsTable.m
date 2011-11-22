@@ -287,10 +287,16 @@
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Error" message:@"Error trying to refresh sessions" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease];
-    [alert show];
-    [self stopLoading];
+    refreshLabel.text = @"Connection failed.";
+    refreshLabel.backgroundColor = [UIColor customRedColor];
+    [refreshSpinner stopAnimating];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(dismissRefreshError) userInfo:nil repeats:NO];
 }
 
+- (void)dismissRefreshError
+{
+    [self stopLoading];
+    refreshLabel.backgroundColor = [UIColor clearColor];
+}
 
 @end

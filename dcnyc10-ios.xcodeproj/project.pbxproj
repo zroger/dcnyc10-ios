@@ -136,6 +136,7 @@
 		62A1B27B1465C04600140C9F /* libRestKitCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E31514648BFF00EC7C9D /* libRestKitCoreData.a */; };
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
+		62B9A8CB147C22C600AFE113 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B9A8CA147C22C600AFE113 /* UIColor+CustomColors.m */; };
 		62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */; };
 		62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */; };
 		62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC70147069F70020DB6E /* CodSpeaker.m */; };
@@ -415,6 +416,8 @@
 		627D4431147376AA001256B8 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		62A1B27C1465C04600140C9F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		62B9A8C9147C22C600AFE113 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
+		62B9A8CA147C22C600AFE113 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
 		62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
@@ -631,6 +634,8 @@
 				62D8EE05147B2B4100627404 /* ImageScrollView.m */,
 				62D8EE07147B2D4000627404 /* TilingView.h */,
 				62D8EE08147B2D4000627404 /* TilingView.m */,
+				62B9A8C9147C22C600AFE113 /* UIColor+CustomColors.h */,
+				62B9A8CA147C22C600AFE113 /* UIColor+CustomColors.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1135,6 +1140,7 @@
 				627977B01479E1AE0011DD81 /* InfoViewController.m in Sources */,
 				62D8EE06147B2B4100627404 /* ImageScrollView.m in Sources */,
 				62D8EE09147B2D4000627404 /* TilingView.m in Sources */,
+				62B9A8CB147C22C600AFE113 /* UIColor+CustomColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
