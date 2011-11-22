@@ -55,6 +55,7 @@
         
         NSMutableAttributedString* attrStr = [NSMutableAttributedString attributedStringWithString:tweet.text];
         [attrStr setFont:[UIFont systemFontOfSize:14.0]];
+        textLabel.extendBottomToFit = TRUE;
         textLabel.linkColor = [UIColor colorWithRed:194/255.0 green:71/255.0 blue:33/255.0 alpha:1.0];
         textLabel.attributedText = attrStr;
 
@@ -63,7 +64,6 @@
         [dateFormatter setDateFormat:@"EEEE MMMM d, YYYY h:mm a"];
         
         detailTextLabel.text = [dateFormatter stringFromDate:tweet.created_at];        
-//        detailTextLabel.text = [dateFormatter stringFromDate:[NSDate dateWithTimeIntervalSinceNow:0]];        
         [dateFormatter release];
         
         [imageView setImageWithURL:[NSURL URLWithString:tweet.user.profile_image_url]
@@ -77,8 +77,6 @@
 {
     CGRect frame;
 
-    [textLabel sizeToFit];
-
     frame = self.frame;
     frame.size.height = textLabel.frame.size.height + 30.0;
     self.frame = frame;
@@ -91,7 +89,7 @@
     
     // Based on xib
     float baseOffset = 320.0 - 248.0;
-
+    
     CGSize maxSize = CGSizeMake(width - baseOffset, 5000);
     CGSize size = [attrStr sizeConstrainedToSize:maxSize];
     

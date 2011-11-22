@@ -91,7 +91,6 @@
 								<string key="NSFrame">{{52, 122}, {260, 21}}</string>
 								<reference key="NSSuperview" ref="904229513"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:328</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -178,6 +177,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUIAccessoryType">1</int>
 				<reference key="IBUIContentView" ref="904229513"/>
+				<string key="IBUIReuseIdentifier">TwitterTableViewCell</string>
 				<real value="116" key="IBUIRowHeight"/>
 			</object>
 		</array>
