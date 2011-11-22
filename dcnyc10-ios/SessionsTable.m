@@ -144,7 +144,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"SessionTableViewCell";
+    static int cellCount = 0;
     
     SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -156,6 +157,8 @@
         cell = (SessionTableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
+        cellCount++;
+        NSLog(@"Cell created. Total: %i", cellCount);
     }
 
     // Configure the cell...
