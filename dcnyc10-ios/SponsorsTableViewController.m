@@ -55,8 +55,13 @@
                                                            withPredicate:nil
                                                                 sortedBy:@"level" 
                                                                ascending:true];
+    NSArray *sortDescriptors = [NSArray arrayWithObjects:
+                                [NSSortDescriptor sortDescriptorWithKey:@"level" ascending:YES],
+                                [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES],
+                                nil];
+    self.fetchedResultsController.fetchRequest.sortDescriptors = sortDescriptors;
     self.fetchedResultsController.delegate = self;
-    
+
     NSError *error;
 	if (![self.fetchedResultsController performFetch:&error]) {
 		// Update to handle the error appropriately.
