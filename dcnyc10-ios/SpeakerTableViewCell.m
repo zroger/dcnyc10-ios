@@ -50,7 +50,9 @@
         speaker = newSpeaker;
         
         self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        textLabel.text = [NSString stringWithFormat:@"%@ %@", speaker.first_name, speaker.last_name];
+        textLabel.text = [NSString stringWithFormat:@"%@ %@", 
+                          [speaker.first_name capitalizedString], 
+                          [speaker.last_name capitalizedString]];
         detailTextLabel.text = speaker.organization;
         
         [imageView setImageWithURL:[NSURL URLWithString:speaker.picture]

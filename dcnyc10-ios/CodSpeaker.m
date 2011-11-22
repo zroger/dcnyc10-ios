@@ -32,7 +32,7 @@
 
 - (NSString *) firstInitial {
     [self willAccessValueForKey:@"firstInitial"];
-    NSString * initial = [[self first_name] substringToIndex:1];
+    NSString * initial = [[[self first_name] substringToIndex:1] uppercaseString];
     [self didAccessValueForKey:@"firstInitial"];
     return initial;
 }

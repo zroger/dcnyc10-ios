@@ -59,7 +59,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = [NSString stringWithFormat: @"%@ %@", speaker.first_name, speaker.last_name];
+    self.title = [NSString stringWithFormat: @"%@ %@", 
+                  [speaker.first_name capitalizedString], 
+                  [speaker.last_name capitalizedString]];
     // Do any additional setup after loading the view from its nib.
 
     titleLabel.text = self.title;

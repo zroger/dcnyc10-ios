@@ -56,6 +56,10 @@
                                                            withPredicate:predicate
                                                                 sortedBy:@"first_name" 
                                                                ascending:true];
+    
+    NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"first_name" ascending:YES selector:@selector(caseInsensitiveCompare:)] autorelease];
+
+    self.fetchedResultsController.fetchRequest.sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
     self.fetchedResultsController.delegate = self;
     
     NSError *error;
