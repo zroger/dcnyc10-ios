@@ -117,7 +117,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"SpeakerTableViewCell";
+    static int cellCount = 0;
     
     SpeakerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -128,6 +129,8 @@
         cell = (SpeakerTableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
+        cellCount++;
+        NSLog(@"Cell created. Total: %i", cellCount);
     }
     
     // Configure the cell...
