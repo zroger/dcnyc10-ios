@@ -112,12 +112,7 @@
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
     
-    if ([[sectionInfo name] isEqualToString:@"premium"]) {
-        return @"Premium Sponsors";
-    }
-    else {
-        return @"Standard Sponsors";
-    }
+    return [sectionInfo name];
 }
 
 
