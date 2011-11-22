@@ -117,9 +117,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-   NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"NewsTableViewCell";
+    static int cellCount = 0;
+
+    NewsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         NSLog(@"cell created");
         // Create a temporary UIViewController to instantiate the custom cell.
@@ -128,6 +129,8 @@
         cell = (NewsTableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
+        cellCount++;
+        NSLog(@"Cell created. Total: %i", cellCount);
     }
     
     // Configure the cell...
