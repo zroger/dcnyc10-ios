@@ -5,19 +5,22 @@
 //  Created by Roger Lopez on 11/15/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+//  See http://cocoadevblog.heroku.com/iphone-tutorial-uiimage-with-zooming-tapping-rotation
+//
 
 #import "MapView.h"
 #import "TestFlight.h"
 
 @implementation MapView
 
-@synthesize imageView;
 @synthesize scrollView;
+@synthesize tabBar;
 
 - (void) dealloc
 {
-    [imageView release];
+    [images release];
     [scrollView release];
+    [tabBar release];
     [super dealloc];
 }
 
@@ -25,7 +28,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        images = [[NSArray arrayWithObjects: [UIImage imageNamed:@"floorplan-floor2.png"],
+                  [UIImage imageNamed:@"floorplan-floor3.png"], nil] retain];
     }
     return self;
 }
@@ -46,12 +50,11 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = NSLocalizedString(@"Maps", @"Maps");
-    self.scrollView.contentSize=imageView.image.size;
-    self.scrollView.minimumZoomScale = MIN((self.view.frame.size.width / imageView.image.size.width),
-                                           (self.view.frame.size.height / imageView.image.size.height));
-    NSLog(@"minimumZoomScale: %f", self.scrollView.minimumZoomScale);
+
+    [scrollView setDelegate:scrollView];
+    [scrollView displayImage:[images objectAtIndex:0]];
     
-    self.scrollView.delegate=self;
+    [tabBar setSelectedItem:[[tabBar items] objectAtIndex:0]];
 }
 
 - (void)viewDidUnload
@@ -59,6 +62,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    self.scrollView = nil;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -71,23 +75,26 @@
     return YES;
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration      
+{
+    CGPoint restorePoint = [scrollView pointToCenterAfterRotation];
+    CGFloat restoreScale = [scrollView scaleToRestoreAfterRotation];
+    
+    scrollView.frame = scrollView.bounds;
+    
+    [scrollView setMaxMinZoomScalesForCurrentBounds];
+    [scrollView restoreCenterPoint:restorePoint scale:restoreScale];    
+}
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
-    self.scrollView.contentSize=imageView.image.size;
-    self.scrollView.minimumZoomScale = self.view.frame.size.width / imageView.image.size.width;
-    NSLog(@"minimumZoomScale: %f", self.scrollView.minimumZoomScale);
     [TestFlight passCheckpoint:@"Map view - rotated"];
 }
 
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+#pragma mark - UITabBarDelegate 
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
-    return self.imageView;
+    [scrollView displayImage:[images objectAtIndex:item.tag]];    
 }
 
-- (void)scrollViewDidZoom:(UIScrollView *)inScrollView
-{
-    NSLog(@"zoom; %f", inScrollView.zoomScale);
-
-    [TestFlight passCheckpoint:@"Map view - zoom"];
-}
 @end

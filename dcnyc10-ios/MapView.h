@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageScrollView.h"
 
-@interface MapView : UIViewController <UIScrollViewDelegate>
+@interface MapView : UIViewController <UITabBarDelegate> {
+    NSArray *images;
+}
 
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
-@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet ImageScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UITabBar *tabBar;
 
 @end
