@@ -29,7 +29,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         images = [[NSArray arrayWithObjects: [UIImage imageNamed:@"floorplan-floor2.png"],
-                  [UIImage imageNamed:@"floorplan-floor3.png"], nil] retain];
+                   [UIImage imageNamed:@"floorplan-floor3.png"],
+                   [UIImage imageNamed:@"floorplan-floor6.png"],
+                   [UIImage imageNamed:@"floorplan-cafeteria.png"], nil] retain];
     }
     return self;
 }

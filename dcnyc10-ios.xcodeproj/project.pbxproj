@@ -137,6 +137,10 @@
 		62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A1B27C1465C04600140C9F /* CoreData.framework */; };
 		62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */; };
 		62B9A8CB147C22C600AFE113 /* UIColor+CustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B9A8CA147C22C600AFE113 /* UIColor+CustomColors.m */; };
+		62B9A8CE147C88F900AFE113 /* floorplan-cafeteria.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8CC147C88F900AFE113 /* floorplan-cafeteria.png */; };
+		62B9A8CF147C88F900AFE113 /* floorplan-floor6.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8CD147C88F900AFE113 /* floorplan-floor6.png */; };
+		62B9A8D2147C89D800AFE113 /* cafeteria.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8D0147C89D800AFE113 /* cafeteria.png */; };
+		62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8D1147C89D800AFE113 /* cafeteria@2x.png */; };
 		62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */; };
 		62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */; };
 		62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC70147069F70020DB6E /* CodSpeaker.m */; };
@@ -418,6 +422,10 @@
 		62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		62B9A8C9147C22C600AFE113 /* UIColor+CustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CustomColors.h"; sourceTree = "<group>"; };
 		62B9A8CA147C22C600AFE113 /* UIColor+CustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CustomColors.m"; sourceTree = "<group>"; };
+		62B9A8CC147C88F900AFE113 /* floorplan-cafeteria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floorplan-cafeteria.png"; sourceTree = "<group>"; };
+		62B9A8CD147C88F900AFE113 /* floorplan-floor6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floorplan-floor6.png"; sourceTree = "<group>"; };
+		62B9A8D0147C89D800AFE113 /* cafeteria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafeteria.png; sourceTree = "<group>"; };
+		62B9A8D1147C89D800AFE113 /* cafeteria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafeteria@2x.png"; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
 		62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
@@ -740,6 +748,10 @@
 		62A1B27E1465C66E00140C9F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				62B9A8CC147C88F900AFE113 /* floorplan-cafeteria.png */,
+				62B9A8CD147C88F900AFE113 /* floorplan-floor6.png */,
+				62B9A8D0147C89D800AFE113 /* cafeteria.png */,
+				62B9A8D1147C89D800AFE113 /* cafeteria@2x.png */,
 				62D8EE0A147B374600627404 /* six.png */,
 				62D8EE0B147B374600627404 /* six@2x.png */,
 				62D8EE0C147B374600627404 /* three.png */,
@@ -1085,6 +1097,10 @@
 				62D8EE13147B374600627404 /* three@2x.png in Resources */,
 				62D8EE14147B374600627404 /* two.png in Resources */,
 				62D8EE15147B374600627404 /* two@2x.png in Resources */,
+				62B9A8CE147C88F900AFE113 /* floorplan-cafeteria.png in Resources */,
+				62B9A8CF147C88F900AFE113 /* floorplan-floor6.png in Resources */,
+				62B9A8D2147C89D800AFE113 /* cafeteria.png in Resources */,
+				62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

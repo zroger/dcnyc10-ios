@@ -84,6 +84,26 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="97909994"/>
 							</object>
+							<object class="IBUITabBarItem" id="217610142">
+								<int key="IBUITag">2</int>
+								<string key="IBUITitle">6th Floor</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">six.png</string>
+								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUITabBar" ref="97909994"/>
+							</object>
+							<object class="IBUITabBarItem" id="597365035">
+								<int key="IBUITag">3</int>
+								<string key="IBUITitle">Cafeteria</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">cafeteria.png</string>
+								</object>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<reference key="IBUITabBar" ref="97909994"/>
+							</object>
 						</array>
 					</object>
 				</array>
@@ -181,6 +201,8 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="44888220"/>
 							<reference ref="668555125"/>
+							<reference ref="217610142"/>
+							<reference ref="597365035"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -194,6 +216,16 @@
 						<reference key="object" ref="668555125"/>
 						<reference key="parent" ref="97909994"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">31</int>
+						<reference key="object" ref="217610142"/>
+						<reference key="parent" ref="97909994"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">32</int>
+						<reference key="object" ref="597365035"/>
+						<reference key="parent" ref="97909994"/>
+					</object>
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
@@ -205,6 +237,8 @@
 				<string key="26.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="27.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="28.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="31.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="32.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.CustomClassName">ImageScrollView</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			</dictionary>
@@ -212,7 +246,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">30</int>
+			<int key="maxID">32</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -253,6 +287,8 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="cafeteria.png">{30, 30}</string>
+			<string key="six.png">{30, 30}</string>
 			<string key="three.png">{30, 30}</string>
 			<string key="two.png">{30, 30}</string>
 		</dictionary>
