@@ -47,7 +47,6 @@
     for (UILocalNotification *notification in oldNotifications) {
         if ([[notification.userInfo objectForKey:@"sessionId"] isEqualToNumber:session.nid]) {
             [[UIApplication sharedApplication] cancelLocalNotification:notification];
-            NSLog(@"notification cancelled for session %@", session.title);
         }
     }
 }

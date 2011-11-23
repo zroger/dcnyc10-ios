@@ -96,7 +96,6 @@
     // Configure the cell...
     NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
     UILocalNotification *notification = [notifications objectAtIndex:indexPath.row];
-    NSLog(@"Notification: %@", notification);
     cell.textLabel.text = [notification alertBody];
     
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];

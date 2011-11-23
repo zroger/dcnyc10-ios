@@ -65,8 +65,6 @@
     [TestFlight takeOff:@"e950ffa307d0514132a19056b73baebb_NDA4NDkyMDExLTExLTE0IDEwOjQ3OjUxLjQ4OTM2Mw "];
 #endif
     
-    NSLog(@"launchOptions: %@", launchOptions);
-
     return YES;
 }
 
@@ -142,7 +140,6 @@
 }
 - (void)objectLoader:(RKObjectLoader *)objectLoader didFailWithError:(NSError *)error {
     // Note that failures here can be at the _application_ level in addition to transport
-    NSLog(@"Rats! Failed to load objects: %@", [error localizedDescription]); 
 }
 
 - (void)demoReachability {

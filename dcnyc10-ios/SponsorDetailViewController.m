@@ -128,7 +128,6 @@
     if (url.scheme == nil) {
         url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@", sponsor.url]];
     }
-    NSLog(@"%@", [url scheme]);
     [[UIApplication sharedApplication] openURL:url];
 }
 

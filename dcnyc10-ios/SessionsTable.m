@@ -151,8 +151,6 @@
     
     SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        NSLog(@"cell created");
-
         // Create a temporary UIViewController to instantiate the custom cell.
         UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SessionTableViewCell" bundle:nil];
         // Grab a pointer to the custom cell.
@@ -160,7 +158,6 @@
         // Release the temporary UIViewController.
         [temporaryController release];
         cellCount++;
-        NSLog(@"Cell created. Total: %i", cellCount);
     }
 
     // Configure the cell...

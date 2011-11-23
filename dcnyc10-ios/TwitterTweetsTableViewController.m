@@ -145,7 +145,6 @@
         // Release the temporary UIViewController.
         [temporaryController release];
         cellCount++;
-        NSLog(@"Cell created. Total: %i", cellCount);
     }
     
     // Configure the cell...
