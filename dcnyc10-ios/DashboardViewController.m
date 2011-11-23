@@ -54,7 +54,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+#ifdef USE_TESTFLIGHT
     self.navigationItem.rightBarButtonItem = feedbackButton;
+#endif
 
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
@@ -73,7 +75,9 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     self.title = @"DrupalCampNYC 10";
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Dashboard View"];
+#endif
 }
 
 - (void) viewWillDisappear:(BOOL)animated
@@ -117,7 +121,9 @@
 
 - (IBAction)feedback:(id)sender
 {
+#ifdef USE_TESTFLIGHT
     [TestFlight openFeedbackView];
+#endif
 }
 
 - (IBAction)gotoMaps:(id)sender

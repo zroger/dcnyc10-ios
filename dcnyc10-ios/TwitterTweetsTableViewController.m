@@ -78,7 +78,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Tweets Table View"];
+#endif
 }
 
 - (void)viewDidAppear:(BOOL)animated

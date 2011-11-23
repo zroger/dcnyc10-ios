@@ -72,7 +72,9 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Map view"];
+#endif
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -93,7 +95,9 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Map view - rotated"];
+#endif
 }
 
 #pragma mark - UITabBarDelegate 

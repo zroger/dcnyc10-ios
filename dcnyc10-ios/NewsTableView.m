@@ -84,7 +84,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Speakers Table View"];
+#endif
 }
 
 #pragma mark - Table view data source

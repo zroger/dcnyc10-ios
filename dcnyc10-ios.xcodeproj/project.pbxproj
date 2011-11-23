@@ -43,7 +43,6 @@
 		625EFCED14717C0B00DDED6F /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFCE314717C0B00DDED6F /* UIButton+WebCache.m */; };
 		625EFCEE14717C0B00DDED6F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFCE514717C0B00DDED6F /* UIImageView+WebCache.m */; };
 		625EFCF014717D3900DDED6F /* Contact.png in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCEF14717D3900DDED6F /* Contact.png */; };
-		625EFCF61471951F00DDED6F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 625EFCF21471951F00DDED6F /* libTestFlight.a */; };
 		625EFCF71471951F00DDED6F /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF31471951F00DDED6F /* README.txt */; };
 		625EFCF81471951F00DDED6F /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF41471951F00DDED6F /* release_notes.txt */; };
 		625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */; };
@@ -478,7 +477,6 @@
 				6215E2C01464853B00EC7C9D /* UIKit.framework in Frameworks */,
 				6215E2C21464853B00EC7C9D /* Foundation.framework in Frameworks */,
 				6215E2C41464853B00EC7C9D /* CoreGraphics.framework in Frameworks */,
-				625EFCF61471951F00DDED6F /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1236,6 +1234,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
@@ -1294,6 +1293,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roger Lopez (78BM6XU8Y3)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dcnyc10-ios/dcnyc10-ios-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "USE_TESTFLIGHT=1";
 				HEADER_SEARCH_PATHS = "\"$(SOURCE_ROOT)/RestKit/Build\"";
 				INFOPLIST_FILE = "dcnyc10-ios/dcnyc10-ios-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
@@ -1301,7 +1301,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/TestFlightSDK0.8\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-lTestFlight",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C85D428E-728A-42F3-BE8E-D037E1DB1752";
 				WRAPPER_EXTENSION = app;

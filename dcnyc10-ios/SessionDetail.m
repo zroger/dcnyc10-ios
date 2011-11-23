@@ -185,7 +185,9 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Session Detail View"];
+#endif
 }
 
 #pragma mark - Table view data source
@@ -277,7 +279,9 @@
     NSError *error = nil;
     [session.managedObjectContext save:&error];
     
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Favorite toggled from session detail view"];
+#endif
 }
 
 @end

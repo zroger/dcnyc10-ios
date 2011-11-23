@@ -117,7 +117,9 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Sponsor Detail View"];
+#endif
 }
 
 - (void)gotoSponsorUrl:(id)sender

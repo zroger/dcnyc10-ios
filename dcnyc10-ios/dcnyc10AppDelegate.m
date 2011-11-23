@@ -61,7 +61,9 @@
     [self demoReachability];
     [self loadRemoteObjects];
     
+#ifdef USE_TESTFLIGHT
     [TestFlight takeOff:@"e950ffa307d0514132a19056b73baebb_NDA4NDkyMDExLTExLTE0IDEwOjQ3OjUxLjQ4OTM2Mw "];
+#endif
     
     NSLog(@"launchOptions: %@", launchOptions);
 

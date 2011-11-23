@@ -107,7 +107,9 @@
     NSError *error = nil;
     [session.managedObjectContext save:&error];
     
+#ifdef USE_TESTFLIGHT
     [TestFlight passCheckpoint:@"Favorite toggled from table cell"];
+#endif
 }
 
 @end
