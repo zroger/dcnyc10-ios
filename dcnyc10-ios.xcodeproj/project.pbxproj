@@ -141,6 +141,7 @@
 		62B9A8CF147C88F900AFE113 /* floorplan-floor6.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8CD147C88F900AFE113 /* floorplan-floor6.png */; };
 		62B9A8D2147C89D800AFE113 /* cafeteria.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8D0147C89D800AFE113 /* cafeteria.png */; };
 		62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8D1147C89D800AFE113 /* cafeteria@2x.png */; };
+		62B9A8D5147C8CF600AFE113 /* MapView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B9A8D4147C8CF600AFE113 /* MapView~ipad.xib */; };
 		62CAFC69146FF6D10020DB6E /* SessionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */; };
 		62CAFC6E146FF8EC0020DB6E /* SessionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */; };
 		62CAFC71147069F70020DB6E /* CodSpeaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62CAFC70147069F70020DB6E /* CodSpeaker.m */; };
@@ -426,6 +427,7 @@
 		62B9A8CD147C88F900AFE113 /* floorplan-floor6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "floorplan-floor6.png"; sourceTree = "<group>"; };
 		62B9A8D0147C89D800AFE113 /* cafeteria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafeteria.png; sourceTree = "<group>"; };
 		62B9A8D1147C89D800AFE113 /* cafeteria@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cafeteria@2x.png"; sourceTree = "<group>"; };
+		62B9A8D4147C8CF600AFE113 /* MapView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MapView~ipad.xib"; sourceTree = "<group>"; };
 		62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SessionTableViewCell.xib; sourceTree = "<group>"; };
 		62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionTableViewCell.h; sourceTree = "<group>"; };
 		62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionTableViewCell.m; sourceTree = "<group>"; };
@@ -741,6 +743,7 @@
 				627D438114733972001256B8 /* MapView.h */,
 				627D438214733972001256B8 /* MapView.m */,
 				627D438314733972001256B8 /* MapView.xib */,
+				62B9A8D4147C8CF600AFE113 /* MapView~ipad.xib */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -1101,6 +1104,7 @@
 				62B9A8CF147C88F900AFE113 /* floorplan-floor6.png in Resources */,
 				62B9A8D2147C89D800AFE113 /* cafeteria.png in Resources */,
 				62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */,
+				62B9A8D5147C8CF600AFE113 /* MapView~ipad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

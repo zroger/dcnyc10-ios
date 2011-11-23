@@ -55,6 +55,9 @@
 
     [scrollView setDelegate:scrollView];
     [scrollView displayImage:[images objectAtIndex:0]];
+   
+    NSLog(@"zoomScale: %f", scrollView.zoomScale);
+    NSLog(@"minimumZoomScale: %f", scrollView.minimumZoomScale);
     
     [tabBar setSelectedItem:[[tabBar items] objectAtIndex:0]];
 }
@@ -97,6 +100,9 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     [scrollView displayImage:[images objectAtIndex:item.tag]];    
+
+    NSLog(@"zoomScale: %f", scrollView.zoomScale);
+    NSLog(@"minimumZoomScale: %f", scrollView.minimumZoomScale);
 }
 
 @end
