@@ -37,7 +37,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBUIScrollView" id="645902138">
+					<object class="IBUIScrollView" id="32942420">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">274</int>
 						<string key="NSFrameSize">{768, 911}</string>
@@ -50,7 +50,7 @@
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<float key="IBUIMinimumZoomScale">0.5</float>
 					</object>
-					<object class="IBUITabBar" id="428954819">
+					<object class="IBUITabBar" id="472924905">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 911}, {768, 49}}</string>
@@ -63,16 +63,16 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<array class="NSMutableArray" key="IBUIItems">
-							<object class="IBUITabBarItem" id="159978050">
+							<object class="IBUITabBarItem" id="45083221">
 								<string key="IBUITitle">2nd Floor</string>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">two.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUITabBar" ref="428954819"/>
+								<reference key="IBUITabBar" ref="472924905"/>
 							</object>
-							<object class="IBUITabBarItem" id="656252228">
+							<object class="IBUITabBarItem" id="1020746278">
 								<int key="IBUITag">1</int>
 								<string key="IBUITitle">3rd Floor</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -80,9 +80,9 @@
 									<string key="NSResourceName">three.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUITabBar" ref="428954819"/>
+								<reference key="IBUITabBar" ref="472924905"/>
 							</object>
-							<object class="IBUITabBarItem" id="821141193">
+							<object class="IBUITabBarItem" id="689191651">
 								<int key="IBUITag">2</int>
 								<string key="IBUITitle">6th Floor</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -90,9 +90,9 @@
 									<string key="NSResourceName">six.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUITabBar" ref="428954819"/>
+								<reference key="IBUITabBar" ref="472924905"/>
 							</object>
-							<object class="IBUITabBarItem" id="590890992">
+							<object class="IBUITabBarItem" id="866223414">
 								<int key="IBUITag">3</int>
 								<string key="IBUITitle">Cafeteria</string>
 								<object class="NSCustomResource" key="IBUIImage">
@@ -100,7 +100,7 @@
 									<string key="NSResourceName">cafeteria.png</string>
 								</object>
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<reference key="IBUITabBar" ref="428954819"/>
+								<reference key="IBUITabBar" ref="472924905"/>
 							</object>
 						</array>
 					</object>
@@ -131,7 +131,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">scrollView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="645902138"/>
+						<reference key="destination" ref="32942420"/>
 					</object>
 					<int key="connectionID">9</int>
 				</object>
@@ -139,7 +139,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">tabBar</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="428954819"/>
+						<reference key="destination" ref="472924905"/>
 					</object>
 					<int key="connectionID">10</int>
 				</object>
@@ -150,6 +150,14 @@
 						<reference key="destination" ref="191373211"/>
 					</object>
 					<int key="connectionID">11</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">delegate</string>
+						<reference key="source" ref="472924905"/>
+						<reference key="destination" ref="372490531"/>
+					</object>
+					<int key="connectionID">12</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -164,8 +172,8 @@
 						<int key="objectID">1</int>
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="428954819"/>
-							<reference ref="645902138"/>
+							<reference ref="472924905"/>
+							<reference ref="32942420"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -182,38 +190,38 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">3</int>
-						<reference key="object" ref="428954819"/>
+						<reference key="object" ref="472924905"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="159978050"/>
-							<reference ref="656252228"/>
-							<reference ref="821141193"/>
-							<reference ref="590890992"/>
+							<reference ref="45083221"/>
+							<reference ref="1020746278"/>
+							<reference ref="689191651"/>
+							<reference ref="866223414"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">7</int>
-						<reference key="object" ref="159978050"/>
-						<reference key="parent" ref="428954819"/>
+						<reference key="object" ref="45083221"/>
+						<reference key="parent" ref="472924905"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">6</int>
-						<reference key="object" ref="656252228"/>
-						<reference key="parent" ref="428954819"/>
+						<reference key="object" ref="1020746278"/>
+						<reference key="parent" ref="472924905"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
-						<reference key="object" ref="821141193"/>
-						<reference key="parent" ref="428954819"/>
+						<reference key="object" ref="689191651"/>
+						<reference key="parent" ref="472924905"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">4</int>
-						<reference key="object" ref="590890992"/>
-						<reference key="parent" ref="428954819"/>
+						<reference key="object" ref="866223414"/>
+						<reference key="parent" ref="472924905"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">8</int>
-						<reference key="object" ref="645902138"/>
+						<reference key="object" ref="32942420"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>
@@ -236,7 +244,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">11</int>
+			<int key="maxID">12</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
