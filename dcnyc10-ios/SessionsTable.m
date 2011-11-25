@@ -8,8 +8,10 @@
 
 #import "SessionsTable.h"
 #import "CodSession.h"
+#import "CodScheduleItem.h"
 #import "SessionDetail.h"
 #import "SessionTableViewCell.h"
+#import "ScheduleItemTableViewCell.h"
 #import "TestFlight.h"
 
 @implementation SessionsTable
@@ -59,10 +61,11 @@
     self.title = NSLocalizedString(@"Sessions", @"Sessions");
 
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
-    self.fetchedResultsController = [CodSession fetchRequestAllGroupedBy:@"start" 
+    self.fetchedResultsController = [CodScheduleItem fetchRequestAllGroupedBy:@"start" 
                                                            withPredicate:predicate
                                                                 sortedBy:@"start" 
                                                                ascending:true];
+    self.fetchedResultsController.fetchRequest.includesSubentities = YES;
     self.fetchedResultsController.delegate = self;
 
     NSError *error;
@@ -71,6 +74,8 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
+
+    NSLog(@"%@", self.fetchedResultsController.fetchedObjects);
 }
 
 - (void)viewDidUnload
@@ -121,7 +126,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
-    CodSession *session = [[sectionInfo objects] objectAtIndex:0];
+    CodScheduleItem *session = [[sectionInfo objects] objectAtIndex:0];
 
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"EST"];
@@ -140,21 +145,40 @@
     return [sectionInfo numberOfObjects];
 }
 
-- (void)configureCell:(SessionTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    cell.session = [fetchedResultsController objectAtIndexPath:indexPath];
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
+    if (cell.class == [SessionTableViewCell class]) {
+        [(SessionTableViewCell *)cell setSession:[fetchedResultsController objectAtIndexPath:indexPath]];
+    }
+    else {
+        [(ScheduleItemTableViewCell *)cell setScheduleItem:[fetchedResultsController objectAtIndexPath:indexPath]];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SessionTableViewCell";
     static int cellCount = 0;
-    
-    SessionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+
+    CodScheduleItem *item = [fetchedResultsController objectAtIndexPath:indexPath];
+
+    NSString *cellIdentifier;
+    NSString *nibName;
+    UITableViewCell *cell;
+
+    if (item.class == [CodSession class]) {
+        cellIdentifier = @"SessionTableViewCell";
+        nibName = @"SessionTableViewCell";
+    }
+    else {
+        cellIdentifier = @"ScheduleItemTableViewCell";
+        nibName = @"ScheduleItemTableViewCell";
+    }
+
+    cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         // Create a temporary UIViewController to instantiate the custom cell.
-        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:@"SessionTableViewCell" bundle:nil];
+        UIViewController *temporaryController = [[UIViewController alloc] initWithNibName:nibName bundle:nil];
         // Grab a pointer to the custom cell.
-        cell = (SessionTableViewCell *)temporaryController.view;
+        cell = (UITableViewCell *)temporaryController.view;
         // Release the temporary UIViewController.
         [temporaryController release];
         cellCount++;
@@ -165,44 +189,17 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    CodScheduleItem *item = [fetchedResultsController objectAtIndexPath:indexPath];
+    
+    if (item.class == [CodSession class]) {
+        return 72.0;
+    }
+    else {
+        return 52.0;
+    }
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
@@ -277,7 +274,7 @@
 
 - (void) refresh
 {
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/schedule" delegate:self]; 
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {

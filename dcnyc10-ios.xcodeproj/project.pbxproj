@@ -20,7 +20,6 @@
 		6215E32314648CE300EC7C9D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E32014648CE300EC7C9D /* CFNetwork.framework */; };
 		6215E32414648CE300EC7C9D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E32114648CE300EC7C9D /* MobileCoreServices.framework */; };
 		6215E32514648CE300EC7C9D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6215E32214648CE300EC7C9D /* SystemConfiguration.framework */; };
-		6215E32A146490C300EC7C9D /* CodSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6215E329146490C300EC7C9D /* CodSession.m */; };
 		622CD4D114748FB5003C8CBD /* CodNews.m in Sources */ = {isa = PBXBuildFile; fileRef = 622CD4D014748FB5003C8CBD /* CodNews.m */; };
 		622CD4D61474935D003C8CBD /* NewsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 622CD4D41474935D003C8CBD /* NewsTableView.m */; };
 		622CD4D71474935D003C8CBD /* NewsTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 622CD4D51474935D003C8CBD /* NewsTableView.xib */; };
@@ -47,6 +46,10 @@
 		625EFCF81471951F00DDED6F /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF41471951F00DDED6F /* release_notes.txt */; };
 		625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */; };
 		625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */; };
+		627573AE148026870004924B /* CodSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573AD148026870004924B /* CodSession.m */; };
+		627573B1148029490004924B /* CodScheduleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B0148029490004924B /* CodScheduleItem.m */; };
+		627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B31480358B0004924B /* ScheduleItemTableViewCell.m */; };
+		627573B6148035AC0004924B /* ScheduleItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */; };
 		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
 		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
 		62786E8F146F80B0001E00A1 /* CodSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E8E146F80B0001E00A1 /* CodSponsor.m */; };
@@ -266,8 +269,7 @@
 		6215E32014648CE300EC7C9D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6215E32114648CE300EC7C9D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		6215E32214648CE300EC7C9D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		6215E328146490C300EC7C9D /* CodSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSession.h; sourceTree = "<group>"; };
-		6215E329146490C300EC7C9D /* CodSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSession.m; sourceTree = "<group>"; };
+		621FA95B147FF28500A26CE9 /* v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = v2.xcdatamodel; sourceTree = "<group>"; };
 		622CD4CF14748FB5003C8CBD /* CodNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodNews.h; sourceTree = "<group>"; };
 		622CD4D014748FB5003C8CBD /* CodNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodNews.m; sourceTree = "<group>"; };
 		622CD4D31474935D003C8CBD /* NewsTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableView.h; sourceTree = "<group>"; };
@@ -315,6 +317,13 @@
 		625EFD0F1471ED8D00DDED6F /* SponsorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTableViewCell.h; sourceTree = "<group>"; };
 		625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTableViewCell.m; sourceTree = "<group>"; };
 		625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		627573AC148026870004924B /* CodSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSession.h; sourceTree = "<group>"; };
+		627573AD148026870004924B /* CodSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSession.m; sourceTree = "<group>"; };
+		627573AF148029490004924B /* CodScheduleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodScheduleItem.h; sourceTree = "<group>"; };
+		627573B0148029490004924B /* CodScheduleItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodScheduleItem.m; sourceTree = "<group>"; };
+		627573B21480358B0004924B /* ScheduleItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleItemTableViewCell.h; sourceTree = "<group>"; };
+		627573B31480358B0004924B /* ScheduleItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleItemTableViewCell.m; sourceTree = "<group>"; };
+		627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleItemTableViewCell.xib; sourceTree = "<group>"; };
 		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
 		62786E8D146F80B0001E00A1 /* CodSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSponsor.h; sourceTree = "<group>"; };
@@ -573,6 +582,10 @@
 		6215E3271464909400EC7C9D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				627573AF148029490004924B /* CodScheduleItem.h */,
+				627573B0148029490004924B /* CodScheduleItem.m */,
+				627573AC148026870004924B /* CodSession.h */,
+				627573AD148026870004924B /* CodSession.m */,
 				627977941479649C0011DD81 /* TwitterMessage.h */,
 				627977951479649C0011DD81 /* TwitterMessage.m */,
 				627977911479649B0011DD81 /* TwitterUser.h */,
@@ -581,8 +594,6 @@
 				622CD4D014748FB5003C8CBD /* CodNews.m */,
 				62CAFC6F147069F70020DB6E /* CodSpeaker.h */,
 				62CAFC70147069F70020DB6E /* CodSpeaker.m */,
-				6215E328146490C300EC7C9D /* CodSession.h */,
-				6215E329146490C300EC7C9D /* CodSession.m */,
 				62786E8D146F80B0001E00A1 /* CodSponsor.h */,
 				62786E8E146F80B0001E00A1 /* CodSponsor.m */,
 			);
@@ -810,6 +821,9 @@
 				62CAFC67146FF6D10020DB6E /* SessionTableViewCell.xib */,
 				62CAFC6C146FF8EC0020DB6E /* SessionTableViewCell.h */,
 				62CAFC6D146FF8EC0020DB6E /* SessionTableViewCell.m */,
+				627573B21480358B0004924B /* ScheduleItemTableViewCell.h */,
+				627573B31480358B0004924B /* ScheduleItemTableViewCell.m */,
+				627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */,
 			);
 			name = Sessions;
 			sourceTree = "<group>";
@@ -1103,6 +1117,7 @@
 				62B9A8D2147C89D800AFE113 /* cafeteria.png in Resources */,
 				62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */,
 				62B9A8D5147C8CF600AFE113 /* MapView~ipad.xib in Resources */,
+				627573B6148035AC0004924B /* ScheduleItemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,7 +1130,6 @@
 			files = (
 				6215E2CC1464853B00EC7C9D /* main.m in Sources */,
 				6215E2D01464853B00EC7C9D /* dcnyc10AppDelegate.m in Sources */,
-				6215E32A146490C300EC7C9D /* CodSession.m in Sources */,
 				62A1B2821465C76000140C9F /* CoreDataModel.xcdatamodeld in Sources */,
 				62336F61146D7017003E1F6D /* SessionsTable.m in Sources */,
 				62467361146DED400014D13D /* SessionDetail.m in Sources */,
@@ -1159,6 +1173,9 @@
 				62D8EE06147B2B4100627404 /* ImageScrollView.m in Sources */,
 				62D8EE09147B2D4000627404 /* TilingView.m in Sources */,
 				62B9A8CB147C22C600AFE113 /* UIColor+CustomColors.m in Sources */,
+				627573AE148026870004924B /* CodSession.m in Sources */,
+				627573B1148029490004924B /* CodScheduleItem.m in Sources */,
+				627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1340,9 +1357,10 @@
 		62A1B2801465C76000140C9F /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				621FA95B147FF28500A26CE9 /* v2.xcdatamodel */,
 				62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */,
 			);
-			currentVersion = 62A1B2811465C76000140C9F /* CoreDataModel.xcdatamodel */;
+			currentVersion = 621FA95B147FF28500A26CE9 /* v2.xcdatamodel */;
 			path = CoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

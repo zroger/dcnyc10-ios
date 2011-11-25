@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CodSession.h"
+#import "CodScheduleItem.h"
 
 @interface NotificationsController : NSObject
 
-+ (void)scheduleNotificationForSession:(CodSession *)session;
-+ (void)cancelNotificationForSession:(CodSession *)session;
++ (void)scheduleNotificationForSession:(CodScheduleItem *)session;
++ (void)cancelNotificationForSession:(CodScheduleItem *)session;
 
 + (void) cancelAllSessionNotifications;
 + (void) rescheduleAllSessionNotifications;

@@ -12,6 +12,7 @@
 #import "DashboardViewController.h"
 #import "SessionDetail.h"
 
+#import "CodScheduleItem.h"
 #import "CodSession.h"
 #import "CodSponsor.h"
 #import "CodSpeaker.h"
@@ -108,21 +109,36 @@
 }
 
 - (void) initObjectManager {
-    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.zroger.com/cod-api"];
-    RKManagedObjectStore* objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
-    manager.objectStore = objectStore;
+//    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.zroger.com/cod-api"];
+    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.dev:3000/cod-api"];
+    manager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
 
-    [CodSession initObjectMapping];
+    // Mapping for CodScheduleItem
+    RKManagedObjectMapping* scheduleItemMapping = [RKManagedObjectMapping mappingForClass:[CodScheduleItem class]];
+    [scheduleItemMapping mapAttributes:@"nid", @"title", @"uri",
+        @"created", @"changed", @"accepted",
+        @"body", @"room", @"start", @"end", nil];
+    scheduleItemMapping.primaryKeyAttribute = @"nid";
+    [[RKObjectManager sharedManager].mappingProvider setMapping:scheduleItemMapping forKeyPath:@"schedule_item"];
+    
+    // Mapping for CodSession
+    RKManagedObjectMapping* sessionMapping = [RKManagedObjectMapping mappingForClass:[CodSession class]];
+    [sessionMapping mapAttributes:@"nid", @"title", @"uri",
+        @"created", @"changed", @"accepted",
+        @"body", @"experience", @"track",
+        @"room", @"capacity", @"start", @"end", nil];
+    sessionMapping.primaryKeyAttribute = @"nid";
+    [[RKObjectManager sharedManager].mappingProvider setMapping:sessionMapping forKeyPath:@"session"];
+
     [CodSponsor initObjectMapping];
     [CodSpeaker initObjectMapping];
     [CodNews initObjectMapping];
     [TwitterMessage initObjectMapping];
 
 
-    RKObjectMapping *sessionMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSession class]];
     RKObjectMapping *speakerMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[CodSpeaker class]];
 
-    // Define the relationship mapping
+    // Define the speakers relationship mapping
     [sessionMapping mapKeyPath:@"speakers" toRelationship:@"speakers" withMapping:speakerMapping];
 }
 

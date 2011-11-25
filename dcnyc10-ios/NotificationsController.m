@@ -10,7 +10,7 @@
 
 @implementation NotificationsController
 
-+ (void)scheduleNotificationForSession:(CodSession *)session
++ (void)scheduleNotificationForSession:(CodScheduleItem *)session
 {    
     if (![[NSUserDefaults standardUserDefaults] boolForKey:@"sessionNotifications"]) {
         return;
@@ -41,7 +41,7 @@
     [localNotif release];
 }
 
-+ (void)cancelNotificationForSession:(CodSession *)session 
++ (void)cancelNotificationForSession:(CodScheduleItem *)session 
 {    
     NSArray *oldNotifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
     for (UILocalNotification *notification in oldNotifications) {
@@ -63,8 +63,8 @@
     [self cancelAllSessionNotifications];
     
     NSPredicate* predicate = [NSPredicate predicateWithFormat:@"favorite = %@ && start > %@", [NSNumber numberWithBool:YES], [NSDate dateWithTimeIntervalSinceNow:0]];
-    NSArray *sessions = [CodSession objectsWithPredicate:predicate];
-    for (CodSession *session in sessions) {
+    NSArray *sessions = [CodScheduleItem objectsWithPredicate:predicate];
+    for (CodScheduleItem *session in sessions) {
         [self scheduleNotificationForSession:session];
     }
 }
