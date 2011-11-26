@@ -50,6 +50,8 @@
 		627573B1148029490004924B /* CodScheduleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B0148029490004924B /* CodScheduleItem.m */; };
 		627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B31480358B0004924B /* ScheduleItemTableViewCell.m */; };
 		627573B6148035AC0004924B /* ScheduleItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */; };
+		627573BA148080EE0004924B /* ScheduleItemDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B8148080ED0004924B /* ScheduleItemDetailView.m */; };
+		627573BB148080EE0004924B /* ScheduleItemDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 627573B9148080EE0004924B /* ScheduleItemDetailView.xib */; };
 		62786E88146F6E73001E00A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E87146F6E73001E00A1 /* Default@2x.png */; };
 		62786E8A146F6EEB001E00A1 /* bg_dark-brown-repeating.png in Resources */ = {isa = PBXBuildFile; fileRef = 62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */; };
 		62786E8F146F80B0001E00A1 /* CodSponsor.m in Sources */ = {isa = PBXBuildFile; fileRef = 62786E8E146F80B0001E00A1 /* CodSponsor.m */; };
@@ -324,6 +326,9 @@
 		627573B21480358B0004924B /* ScheduleItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleItemTableViewCell.h; sourceTree = "<group>"; };
 		627573B31480358B0004924B /* ScheduleItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleItemTableViewCell.m; sourceTree = "<group>"; };
 		627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleItemTableViewCell.xib; sourceTree = "<group>"; };
+		627573B7148080ED0004924B /* ScheduleItemDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleItemDetailView.h; sourceTree = "<group>"; };
+		627573B8148080ED0004924B /* ScheduleItemDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleItemDetailView.m; sourceTree = "<group>"; };
+		627573B9148080EE0004924B /* ScheduleItemDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScheduleItemDetailView.xib; sourceTree = "<group>"; };
 		62786E87146F6E73001E00A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		62786E89146F6EEB001E00A1 /* bg_dark-brown-repeating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_dark-brown-repeating.png"; sourceTree = "<group>"; };
 		62786E8D146F80B0001E00A1 /* CodSponsor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSponsor.h; sourceTree = "<group>"; };
@@ -824,6 +829,9 @@
 				627573B21480358B0004924B /* ScheduleItemTableViewCell.h */,
 				627573B31480358B0004924B /* ScheduleItemTableViewCell.m */,
 				627573B5148035AC0004924B /* ScheduleItemTableViewCell.xib */,
+				627573B7148080ED0004924B /* ScheduleItemDetailView.h */,
+				627573B8148080ED0004924B /* ScheduleItemDetailView.m */,
+				627573B9148080EE0004924B /* ScheduleItemDetailView.xib */,
 			);
 			name = Sessions;
 			sourceTree = "<group>";
@@ -1118,6 +1126,7 @@
 				62B9A8D3147C89D800AFE113 /* cafeteria@2x.png in Resources */,
 				62B9A8D5147C8CF600AFE113 /* MapView~ipad.xib in Resources */,
 				627573B6148035AC0004924B /* ScheduleItemTableViewCell.xib in Resources */,
+				627573BB148080EE0004924B /* ScheduleItemDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1185,7 @@
 				627573AE148026870004924B /* CodSession.m in Sources */,
 				627573B1148029490004924B /* CodScheduleItem.m in Sources */,
 				627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */,
+				627573BA148080EE0004924B /* ScheduleItemDetailView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "SessionDetail.h"
 #import "SessionTableViewCell.h"
 #import "ScheduleItemTableViewCell.h"
+#import "ScheduleItemDetailView.h"
 #import "TestFlight.h"
 
 @implementation SessionsTable
@@ -60,7 +61,7 @@
     [super viewDidLoad];
     self.title = NSLocalizedString(@"Sessions", @"Sessions");
 
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"start != NULL"];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"accepted = %@ && start != NULL", [NSNumber numberWithBool:YES]];
     self.fetchedResultsController = [CodScheduleItem fetchRequestAllGroupedBy:@"start" 
                                                            withPredicate:predicate
                                                                 sortedBy:@"start" 
@@ -205,11 +206,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    SessionDetail *detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
-
-    // Pass the selected object to the new view controller.
-    detailViewController.session = [fetchedResultsController objectAtIndexPath:indexPath];
+    CodScheduleItem *item = [fetchedResultsController objectAtIndexPath:indexPath];
+    UIViewController *detailViewController;
+    
+    if (item.class == [CodSession class]) {
+        // Navigation logic may go here. Create and push another view controller.
+        detailViewController = [[SessionDetail alloc] initWithNibName:@"SessionDetail" bundle:nil];
+        // Pass the selected object to the new view controller.
+        [(SessionDetail *)detailViewController setSession:(CodSession *)item];
+    }
+    else {
+        // Navigation logic may go here. Create and push another view controller.
+        detailViewController = [[ScheduleItemDetailView alloc] initWithNibName:@"ScheduleItemDetailView" bundle:nil];
+        // Pass the selected object to the new view controller.
+        [(ScheduleItemDetailView *)detailViewController setScheduleItem:item];
+    }
 
     [self.navigationController pushViewController:detailViewController animated:YES];
     [detailViewController release];
@@ -278,6 +289,12 @@
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+    NSError *error = nil;
+    if (![self.fetchedResultsController performFetch:&error]) {
+        NSLog(@"Error in refetch: %@",[error localizedDescription]);
+        abort();
+    }
+
     [self.tableView reloadData];
     [self stopLoading];
 }
