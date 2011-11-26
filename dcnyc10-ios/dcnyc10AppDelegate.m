@@ -109,8 +109,7 @@
 }
 
 - (void) initObjectManager {
-//    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.zroger.com/cod-api"];
-    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dcnyc10.dev:3000/cod-api"];
+    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dev.drupalcampnyc.org/cod-api"];
     manager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
 
     // Mapping for CodScheduleItem
@@ -143,7 +142,7 @@
 }
 
 - (void)loadRemoteObjects {
-    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/session" delegate:self]; 
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/schedule" delegate:self]; 
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/sponsor" delegate:self]; 
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/news" delegate:self]; 
 }
