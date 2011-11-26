@@ -53,12 +53,23 @@
      [NSURL URLWithString:@"http://groups.drupal.org/nyc"],
      [NSURL URLWithString:@"http://github.com/zroger/dcnyc10-ios"],
      [NSURL URLWithString:@"http://treehouseagency.com"], nil] retain];
-    
-    versionLabel.text = [[[NSBundle mainBundle] infoDictionary] objectForKey:(NSString*)kCFBundleVersionKey];
+        
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+    NSString *name = [infoDictionary objectForKey:@"CFBundleDisplayName"];
+    NSString *version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    NSString *build = [infoDictionary objectForKey:@"CFBundleVersion"];
+    versionLabel.text = [NSString stringWithFormat:@"%@ v%@ (build %@)", name, version, build];
     
     UIImage *tileImage = [UIImage imageNamed:@"bg-repeat_light.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:tileImage];
     
+    tableView.backgroundColor = [UIColor clearColor];
+    // The following is necessary for iPad builds.
+    // See: http://stackoverflow.com/q/7636439
+    if ([self.tableView respondsToSelector:@selector(setBackgroundView:)]) {
+        [self.tableView setBackgroundView:nil];
+    }
+
     self.title = @"Info";
     // Do any additional setup after loading the view from its nib.
 }
