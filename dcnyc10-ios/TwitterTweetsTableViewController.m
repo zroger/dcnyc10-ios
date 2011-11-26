@@ -65,6 +65,8 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
+    
+    [self refresh];
 }
 
 - (void)viewDidUnload
@@ -225,6 +227,16 @@
 
 - (void) refresh
 {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSDate *lastRefresh = [defaults objectForKey:@"refresh.TwitterTweetsTableViewController"];
+    
+    if (lastRefresh != nil && [lastRefresh timeIntervalSinceNow] < 60) 
+    {
+        NSLog(@"Aborting refresh.  Last refresh: %@", lastRefresh);
+        [self stopLoading];
+        return;
+    }
+
     RKObjectMapping* twitterMessageMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[TwitterMessage class]];
     RKObjectManager *twitterManager = [[RKObjectManager objectManagerWithBaseURL:@"http://api.twitter.com/1"] retain];
     
@@ -239,6 +251,9 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSDate dateWithTimeIntervalSinceNow:0] forKey:@"refresh.TwitterTweetsTableViewController"];
 
     [self.tableView reloadData];
     [self stopLoading];

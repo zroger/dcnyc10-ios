@@ -210,10 +210,23 @@
 
 - (void) refresh
 {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSDate *lastRefresh = [defaults objectForKey:@"refresh.NewsTableView"];
+    
+    if (lastRefresh != nil && [lastRefresh timeIntervalSinceNow] < 60) 
+    {
+        NSLog(@"Aborting refresh.  Last refresh: %@", lastRefresh);
+        [self stopLoading];
+        return;
+    }
+    
     [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/news" delegate:self]; 
 }
 
 - (void)objectLoader:(RKObjectLoader *)objectLoader didLoadObjects:(NSArray *)objects {
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSDate dateWithTimeIntervalSinceNow:0] forKey:@"refresh.NewsTableView"];
+    
     [self.tableView reloadData];
     [self stopLoading];
 }
