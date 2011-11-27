@@ -46,6 +46,8 @@
 		625EFCF81471951F00DDED6F /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 625EFCF41471951F00DDED6F /* release_notes.txt */; };
 		625EFD111471ED8D00DDED6F /* SponsorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */; };
 		625EFD131471EEB800DDED6F /* SponsorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */; };
+		62696A341482B7210016E223 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62696A331482B7210016E223 /* MapKit.framework */; };
+		62696A371482BE000016E223 /* SimpleAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 62696A361482BE000016E223 /* SimpleAnnotation.m */; };
 		627573AE148026870004924B /* CodSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573AD148026870004924B /* CodSession.m */; };
 		627573B1148029490004924B /* CodScheduleItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B0148029490004924B /* CodScheduleItem.m */; };
 		627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 627573B31480358B0004924B /* ScheduleItemTableViewCell.m */; };
@@ -319,6 +321,9 @@
 		625EFD0F1471ED8D00DDED6F /* SponsorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SponsorTableViewCell.h; sourceTree = "<group>"; };
 		625EFD101471ED8D00DDED6F /* SponsorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SponsorTableViewCell.m; sourceTree = "<group>"; };
 		625EFD121471EEB800DDED6F /* SponsorTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SponsorTableViewCell.xib; sourceTree = "<group>"; };
+		62696A331482B7210016E223 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		62696A351482BE000016E223 /* SimpleAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAnnotation.h; sourceTree = "<group>"; };
+		62696A361482BE000016E223 /* SimpleAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAnnotation.m; sourceTree = "<group>"; };
 		627573AC148026870004924B /* CodSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodSession.h; sourceTree = "<group>"; };
 		627573AD148026870004924B /* CodSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodSession.m; sourceTree = "<group>"; };
 		627573AF148029490004924B /* CodScheduleItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodScheduleItem.h; sourceTree = "<group>"; };
@@ -477,6 +482,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62696A341482B7210016E223 /* MapKit.framework in Frameworks */,
 				627977A81479CC4C0011DD81 /* CoreText.framework in Frameworks */,
 				62797737147710070011DD81 /* QuartzCore.framework in Frameworks */,
 				62A1B27D1465C04600140C9F /* CoreData.framework in Frameworks */,
@@ -500,6 +506,7 @@
 		6215E2B01464853A00EC7C9D = {
 			isa = PBXGroup;
 			children = (
+				62696A331482B7210016E223 /* MapKit.framework */,
 				627977A71479CC4B0011DD81 /* CoreText.framework */,
 				62797736147710070011DD81 /* QuartzCore.framework */,
 				627D4431147376AA001256B8 /* Default-Landscape~ipad.png */,
@@ -758,6 +765,8 @@
 				627D438214733972001256B8 /* MapView.m */,
 				627D438314733972001256B8 /* MapView.xib */,
 				62B9A8D4147C8CF600AFE113 /* MapView~ipad.xib */,
+				62696A351482BE000016E223 /* SimpleAnnotation.h */,
+				62696A361482BE000016E223 /* SimpleAnnotation.m */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -1186,6 +1195,7 @@
 				627573B1148029490004924B /* CodScheduleItem.m in Sources */,
 				627573B41480358B0004924B /* ScheduleItemTableViewCell.m in Sources */,
 				627573BA148080EE0004924B /* ScheduleItemDetailView.m in Sources */,
+				62696A371482BE000016E223 /* SimpleAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

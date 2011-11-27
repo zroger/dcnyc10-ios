@@ -10,16 +10,19 @@
 
 #import "MapView.h"
 #import "TestFlight.h"
+#import "SimpleAnnotation.h"
 
 @implementation MapView
 
 @synthesize scrollView;
+@synthesize mapView;
 @synthesize tabBar;
 
 - (void) dealloc
 {
     [images release];
     [scrollView release];
+    [mapView release];
     [tabBar release];
     [super dealloc];
 }
@@ -57,6 +60,12 @@
     [scrollView displayImage:[images objectAtIndex:0]];
    
     [tabBar setSelectedItem:[[tabBar items] objectAtIndex:0]];
+    
+    CLLocationCoordinate2D coordinate;
+    coordinate.latitude = 40.770329;
+    coordinate.longitude = -73.987754;
+    SimpleAnnotation *annotation = [[[SimpleAnnotation alloc] initWithName:@"John Jay College" address:@"899 10th Avenue\nNew York, 10019" coordinate:coordinate] autorelease];
+    [mapView addAnnotation:annotation];            
 }
 
 - (void)viewDidUnload
@@ -100,6 +109,24 @@
 #pragma mark - UITabBarDelegate 
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
+    if (item.tag == 99) {
+        SimpleAnnotation *annotation = [mapView.annotations objectAtIndex:0];
+
+        // Center view on annotation
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 0.5*METERS_PER_MILE, 0.5*METERS_PER_MILE);
+        MKCoordinateRegion adjustedRegion = [mapView regionThatFits:viewRegion];                
+        [mapView setRegion:adjustedRegion animated:NO];        
+
+        // Open annotation view
+        [mapView selectAnnotation:annotation animated:NO];
+        
+        [mapView setHidden:NO];
+        [scrollView setHidden:YES];
+        return;
+    }
+
+    [mapView setHidden:YES];
+    [scrollView setHidden:NO];
     [scrollView displayImage:[images objectAtIndex:item.tag]];
 }
 
