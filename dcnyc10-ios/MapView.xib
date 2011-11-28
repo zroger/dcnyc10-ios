@@ -38,7 +38,7 @@
 				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
-					<object class="IBMKMapView" id="815551616">
+					<object class="IBMKMapView" id="301185684">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">-2147483374</int>
 						<string key="NSFrame">{{-14, 0}, {334, 367}}</string>
@@ -117,9 +117,13 @@
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="97909994"/>
 							</object>
-							<object class="IBUITabBarItem" id="934385511">
+							<object class="IBUITabBarItem" id="1059831253">
 								<int key="IBUITag">99</int>
 								<string key="IBUITitle">Local Map</string>
+								<object class="NSCustomResource" key="IBUIImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">103-map.png</string>
+								</object>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<reference key="IBUITabBar" ref="97909994"/>
 							</object>
@@ -129,7 +133,7 @@
 				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="815551616"/>
+				<reference key="NSNextKeyView" ref="301185684"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -175,7 +179,7 @@
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">mapView</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="815551616"/>
+						<reference key="destination" ref="301185684"/>
 					</object>
 					<int key="connectionID">35</int>
 				</object>
@@ -202,7 +206,7 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="284841645"/>
 							<reference ref="97909994"/>
-							<reference ref="815551616"/>
+							<reference ref="301185684"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -231,7 +235,7 @@
 							<reference ref="668555125"/>
 							<reference ref="217610142"/>
 							<reference ref="597365035"/>
-							<reference ref="934385511"/>
+							<reference ref="1059831253"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -257,12 +261,12 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">33</int>
-						<reference key="object" ref="815551616"/>
+						<reference key="object" ref="301185684"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">34</int>
-						<reference key="object" ref="934385511"/>
+						<reference key="object" ref="1059831253"/>
 						<reference key="parent" ref="97909994"/>
 					</object>
 				</array>
@@ -333,6 +337,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="103-map.png">{26, 21}</string>
 			<string key="cafeteria.png">{30, 30}</string>
 			<string key="six.png">{30, 30}</string>
 			<string key="three.png">{30, 30}</string>
