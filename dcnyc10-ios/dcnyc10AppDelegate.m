@@ -109,7 +109,7 @@
 }
 
 - (void) initObjectManager {
-    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://dev.drupalcampnyc.org/cod-api"];
+    RKObjectManager *manager = [RKObjectManager objectManagerWithBaseURL:@"http://drupalcampnyc.org/cod-api"];
     manager.objectStore = [RKManagedObjectStore objectStoreWithStoreFilename:@"MyApp.sqlite"];
 
     // Mapping for CodScheduleItem
