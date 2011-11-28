@@ -75,7 +75,10 @@
         NSArray *speakersArray = [session.speakers allObjects];
         CodSpeaker *firstSpeaker = [speakersArray objectAtIndex:0];
 
-        if ([speakersArray count] == 1) {
+        if ([speakersArray count] == 0) {
+            speakerLabel.text = @"";
+        }
+        else if ([speakersArray count] == 1) {
             speakerLabel.text = [NSString stringWithFormat:@"%@ %@", firstSpeaker.first_name, firstSpeaker.last_name];
         }
         else if ([speakersArray count] == 2) {
