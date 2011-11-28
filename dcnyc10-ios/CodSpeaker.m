@@ -32,6 +32,9 @@
 
 - (NSString *) firstInitial {
     [self willAccessValueForKey:@"firstInitial"];
+    if (self.first_name == nil || [self.first_name isEqualToString:@""]) {
+        return @"#";
+    }
     NSString * initial = [[[self first_name] substringToIndex:1] uppercaseString];
     [self didAccessValueForKey:@"firstInitial"];
     return initial;
@@ -39,13 +42,13 @@
 
 - (NSArray *) acceptedSessions 
 {
-    [self willAccessValueForKey:@"approvedSessions"];
+    [self willAccessValueForKey:@"acceptedSessions"];
 
     NSArray *sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"created" ascending:YES]];
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"accepted == TRUE"];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"accepted == TRUE and start != nil"];
     NSArray *results = [[self.sessions filteredSetUsingPredicate:predicate] sortedArrayUsingDescriptors:sortDescriptors];
 
-    [self didAccessValueForKey:@"approvedSessions"];
+    [self didAccessValueForKey:@"acceptedSessions"];
     return results;    
 }
 @end

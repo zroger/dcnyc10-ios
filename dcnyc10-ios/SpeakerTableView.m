@@ -51,7 +51,7 @@
 
     self.title = NSLocalizedString(@"Speakers", @"Speakers");
     
-    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"ANY sessions.accepted == TRUE"];
+    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"first_name != '#' AND first_name != '' AND ANY sessions.start != nil"];
     self.fetchedResultsController = [CodSpeaker fetchRequestAllGroupedBy:@"firstInitial" 
                                                            withPredicate:predicate
                                                                 sortedBy:@"first_name" 
