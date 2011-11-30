@@ -75,8 +75,8 @@
 							</object>
 							<object class="IBUIButton" id="241919608">
 								<reference key="NSNextResponder" ref="998624766"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrameSize">{66, 63}</string>
+								<int key="NSvFlags">276</int>
+								<string key="NSFrameSize">{50, 52}</string>
 								<reference key="NSSuperview" ref="998624766"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="182558319"/>
@@ -440,7 +440,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="bg_list-row-tall-highlighted.png">{320, 72}</string>
 			<string key="bg_list-row-tall.png">{320, 72}</string>
-			<string key="btn_favorite-inactive.png">{66, 63}</string>
+			<string key="btn_favorite-inactive.png">{50, 50}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">933</string>
 	</data>
