@@ -66,6 +66,11 @@
                                                            withPredicate:predicate
                                                                 sortedBy:@"start" 
                                                                ascending:true];
+
+    self.fetchedResultsController.fetchRequest.sortDescriptors = [NSArray arrayWithObjects:
+        [NSSortDescriptor sortDescriptorWithKey:@"start" ascending:true],
+        [NSSortDescriptor sortDescriptorWithKey:@"room" ascending:TRUE], nil];
+
     self.fetchedResultsController.fetchRequest.includesSubentities = YES;
     self.fetchedResultsController.delegate = self;
 
