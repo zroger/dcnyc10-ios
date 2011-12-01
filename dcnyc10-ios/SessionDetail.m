@@ -199,6 +199,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    if ([[[session.speakers allObjects] objectAtIndex:0] first_name] == nil) {
+        [tableView setHidden:YES];
+        return 0;
+    }
     return [session.speakers count];
 }
 
